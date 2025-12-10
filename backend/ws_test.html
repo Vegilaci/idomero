@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>WebSocket Lap Monitor</h2>
+
+<div id="log"></div>
+
+<script>
+const teamId = 1;
+const ws = new WebSocket(`ws://127.0.0.1:8000/ws/${teamId}`);
+
+ws.onopen = () => {
+    document.getElementById("log").innerHTML += "<p>Connected!</p>";
+};
+
+ws.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    document.getElementById("log").innerHTML += `<p>New lap: ${JSON.stringify(data)}</p>`;
+};
+</script>
+</body>
+</html>

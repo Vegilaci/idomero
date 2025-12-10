@@ -1,0 +1,7 @@
+.\env
+.\app\__pycache__
+/app/__pycache__
+/env
+/Front_end/node_modules
+/backend/app/__pycache__
+/backend/app/routers/__pycache__
