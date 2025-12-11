@@ -1,51 +1,34 @@
 import { useEffect, useState } from "react";
-import { Card } from "primereact/card";
-import { Tag } from "primereact/tag";
-import { connectToTeam } from "../wsClient";
-import type { LapEvent } from "../types";
 
-interface LiveStopperProps {
-    teamId: number;
-}
+export default function LiveStopper({ teamId  }) {
+  const [laps, setLaps] = useState([]);
 
-export default function LiveStopper({ teamId }: LiveStopperProps) {
-    const [laps, setLaps] = useState<LapEvent[]>([]);
+  useEffect(() => {
+    const ws = new WebSocket(`ws://localhost:8000/ws/team/${teamId}`);
 
-    useEffect(() => {
-        const ws = connectToTeam(teamId, (data) => {
-            if (data.event === "new_lap") {
-                setLaps((prev) => [...prev, data]);
-            }
-        });
+    ws.onmessage = (event) => {
+      const data = JSON.parse(event.data);
 
-        return () => ws.close();
-    }, [teamId]);
+      if (data.event === "new_lap") {
+        setLaps((prev) => [...prev, data]);
+      }
+    };
 
-    const lastLap = laps[laps.length - 1];
+    return () => ws.close();
+  }, [teamId]);
 
-    return (
-        <div className="flex flex-col gap-4 p-4 max-w-xl mx-auto">
+  return (
+    <div>
+      <h1>Csapat #{teamId}</h1>
+      <h2>
+        {laps.length > 0 ? laps[laps.length - 1].time_ms : "Ready"}
+      </h2>
 
-            <Card title={`Csapat #${teamId}`} className="text-center">
-                <h1 className="text-6xl font-bold text-blue-400">
-                    {lastLap ? `${lastLap.time_ms} ms` : "Ready"}
-                </h1>
-            </Card>
-
-            <Card title="Körök">
-                <div className="flex flex-col gap-2">
-                    {laps.map((lap, idx) => (
-                        <div
-                            key={idx}
-                            className="flex justify-between items-center p-3 bg-gray-800 rounded-lg animate-fadein"
-                        >
-                            <span className="text-lg">Kör {lap.lap_number}</span>
-                            <Tag severity="info" value={`${lap.time_ms} ms`} />
-                        </div>
-                    ))}
-                </div>
-            </Card>
-
-        </div>
-    );
+      <ul>
+        {laps.map((lap, idx) => (
+          <li key={idx}>{lap.time_ms} ms</li>
+        ))}
+      </ul>
+    </div>
+  );
 }

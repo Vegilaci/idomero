@@ -1,24 +1,19 @@
-from typing import Dict, List
+# backend/app/websocket_manager.py
+
 from fastapi import WebSocket
 
 class WebSocketManager:
     def __init__(self):
-        self.connections: Dict[int, List[WebSocket]] = {}
+        self.connections = {}
 
-    async def connect(self, team_id: int, websocket: WebSocket):
+    async def connect(self, websocket: WebSocket, member_id: int):
         await websocket.accept()
-        if team_id not in self.connections:
-            self.connections[team_id] = []
-        self.connections[team_id].append(websocket)
+        self.connections[member_id] = websocket
 
-    def disconnect(self, team_id: int, websocket: WebSocket):
-        if team_id in self.connections:
-            self.connections[team_id].remove(websocket)
+    def disconnect(self, member_id: int):
+        if member_id in self.connections:
+            del self.connections[member_id]
 
-    async def broadcast(self, team_id: int, message: dict):
-        if team_id in self.connections:
-            for ws in self.connections[team_id]:
-                await ws.send_json(message)
-
-# ---- >>> ADD THIS <<< ----
-manager = WebSocketManager()
+    async def send_lap(self, member_id: int, data):
+        if member_id in self.connections:
+            await self.connections[member_id].send_json(data)

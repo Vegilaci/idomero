@@ -1,24 +1,55 @@
+# backend/app/schemas.py
+
 from pydantic import BaseModel
-from typing import Optional
 from datetime import datetime
+from typing import List, Optional
 
-class TeamCreate(BaseModel):
-    name: str
-    preferred_laps: Optional[int] = None
 
-class TeamOut(BaseModel):
-    id: int
-    name: str
-    preferred_laps: Optional[int]
-
-class LapCreate(BaseModel):
-    team_id: int
-    lap_number: int
+class LapBase(BaseModel):
     time_ms: int
 
-class LapOut(BaseModel):
+
+class LapCreate(LapBase):
+    pass
+
+
+class Lap(LapBase):
+    id: int
+    created_at: datetime
+
+    class Config:
+        orm_mode = True
+
+
+class MemberBase(BaseModel):
+    name: str
+
+
+class MemberCreate(MemberBase):
+    team_id: int
+
+
+class Member(MemberBase):
     id: int
     team_id: int
-    lap_number: int
-    time_ms: int
-    timestamp: datetime
+    created_at: datetime
+    laps: List[Lap] = []
+
+    class Config:
+        orm_mode = True
+
+
+class TeamBase(BaseModel):
+    name: str
+
+
+class TeamCreate(TeamBase):
+    pass
+
+
+class Team(TeamBase):
+    id: int
+    members: List[Member] = []
+
+    class Config:
+        orm_mode = True
