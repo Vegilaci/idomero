@@ -2,21 +2,37 @@
 <html>
 <body>
 <h2>WebSocket Lap Monitor</h2>
+<input type="text" id="csapat">
+<button onclick="ws.close()">Close WebSocket</button>
+<button onclick="send('start')">Start</button>
+<button onclick="send('reset')">Köridő </button>
+<button onclick="send('stop')">Stop</button>
 
 <div id="log"></div>
 
 <script>
 const teamId = 1;
-const ws = new WebSocket(`ws://127.0.0.1:8000/ws/${teamId}`);
+const ws = new WebSocket(`ws://127.0.0.1:8000/ws/team/${teamId}`);
 
 ws.onopen = () => {
     document.getElementById("log").innerHTML += "<p>Connected!</p>";
 };
 
+
 ws.onmessage = (event) => {
     const data = JSON.parse(event.data);
-    document.getElementById("log").innerHTML += `<p>New lap: ${JSON.stringify(data)}</p>`;
+    document.getElementById("log").innerHTML = `<p>New lap: ${JSON.stringify(data)}</p>`;
 };
+
+function send(state) {
+    ws.send(JSON.stringify({ action: state }));
+    if (state === 'reset') {
+        fetch("http://127.0.0.1:8000/ws/stats/reset",{method: 'POST'});
+    }
+}
+
+
 </script>
+
 </body>
 </html>

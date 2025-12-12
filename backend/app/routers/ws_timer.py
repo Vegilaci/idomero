@@ -1,4 +1,4 @@
-from fastapi import APIRouter, WebSocket
+from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 from app.ws.connection_manager import manager
 
 router = APIRouter()
@@ -9,9 +9,18 @@ async def websocket_team(websocket: WebSocket, team_id: str):
 
     try:
         while True:
-            # csak keepalive — backend küld eventeket
-            await websocket.receive_text()
-    except:
+            # fogadunk JSON üzeneteket: {"action":"start"|"stop"|"reset"}
+            data = await websocket.receive_json()
+
+            action = data.get("action")
+
+            if action == "start":
+                await manager.start_stopwatch(team_id)
+            elif action == "stop":
+                await manager.stop_stopwatch(team_id)
+            elif action == "reset":
+                await manager.reset_stopwatch(team_id)
+    except WebSocketDisconnect:
         pass
     finally:
         manager.disconnect(team_id, websocket)
