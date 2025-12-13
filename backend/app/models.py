@@ -17,7 +17,7 @@ class Member(Base):
     __tablename__ = "members"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, index=True)
+    name = Column(String, unique=True, index=True)
     created_at = Column(DateTime, default=datetime.utcnow)
 
     team_id = Column(Integer, ForeignKey("teams.id"))
