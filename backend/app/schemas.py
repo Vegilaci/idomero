@@ -32,7 +32,6 @@ class MemberCreate(MemberBase):
 class Member(MemberBase):
     id: int
     team_id: int
-    created_at: datetime
     laps: List[Lap] = []
 
     class Config:
@@ -50,6 +49,14 @@ class TeamCreate(TeamBase):
 class Team(TeamBase):
     id: int
     members: List[Member] = []
+
+    class Config:
+        orm_mode = True
+
+
+class TeamSummary(BaseModel):
+    id: int
+    name: str
 
     class Config:
         orm_mode = True
