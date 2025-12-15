@@ -1,7 +1,6 @@
 # backend/app/schemas.py
 
 from pydantic import BaseModel
-from datetime import datetime
 from typing import List, Optional
 
 
@@ -15,7 +14,6 @@ class LapCreate(LapBase):
 
 class Lap(LapBase):
     id: int
-    created_at: datetime
 
     class Config:
         orm_mode = True
@@ -27,10 +25,12 @@ class MemberBase(BaseModel):
 
 class MemberCreate(MemberBase):
     team_id: int
+    rajt_szam: int
 
 
 class Member(MemberBase):
     id: int
+    rajt_szam: int
     team_id: int
     laps: List[Lap] = []
 

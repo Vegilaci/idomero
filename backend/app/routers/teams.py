@@ -1,5 +1,3 @@
-# backend/app/routers/teams.py
-
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session, load_only
 from app.database import get_db

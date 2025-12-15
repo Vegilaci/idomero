@@ -30,14 +30,6 @@ class ConnectionManager:
 
         # team_id -> stopper
         self.stopwatches: Dict[str, TeamStopwatch] = {}
-        # stats
-        # per_team: team_id -> {bytes_sent, messages_sent}
-        self.stats: Dict[str, Dict] = {
-            "per_team": {},
-            "total_bytes": 0,
-            "total_messages": 0,
-            "start_time": time.time(),
-        }
 
     # -------- WS kezelés --------
 
@@ -62,38 +54,11 @@ class ConnectionManager:
         if team_id not in self.active_rooms:
             return
 
-        # prepare JSON bytes to estimate size
-        try:
-            payload_bytes = json.dumps(message, separators=(",", ":")).encode("utf-8")
-            size = len(payload_bytes)
-        except Exception:
-            size = 0
-
-        # update stats for team
-        team_stats = self.stats["per_team"].setdefault(team_id, {"bytes_sent": 0, "messages_sent": 0})
-        team_stats["bytes_sent"] += size
-        team_stats["messages_sent"] += 1
-        self.stats["total_bytes"] += size
-        self.stats["total_messages"] += 1
-
         for ws in list(self.active_rooms[team_id]):
             try:
                 await ws.send_json(message)
             except Exception:
                 self.disconnect(team_id, ws)
-
-    def get_stats(self):
-        # return a copy-safe summary
-        uptime = time.time() - self.stats.get("start_time", time.time())
-        return {
-            "uptime_s": int(uptime),
-            "total_bytes": int(self.stats.get("total_bytes", 0)),
-            "total_messages": int(self.stats.get("total_messages", 0)),
-            "per_team": self.stats.get("per_team", {}),
-        }
-
-    def reset_stats(self):
-        self.stats = {"per_team": {}, "total_bytes": 0, "total_messages": 0, "start_time": time.time()}
 
     # -------- Stopper logika --------
 
@@ -108,7 +73,7 @@ class ConnectionManager:
 
             await self.broadcast(team_id, {
                 "event": "tick",
-                    "elapsed_s": round(float(elapsed),3)
+                    "elapsed_s": int(elapsed)
             })
 
             await asyncio.sleep(1)
@@ -144,7 +109,7 @@ class ConnectionManager:
 
         await self.broadcast(team_id, {
             "event": "stopped",
-                "elapsed_s": round(float(sw.elapsed))
+                "elapsed_s": int(sw.elapsed)
         })
 
     async def reset_stopwatch(self, team_id: str):

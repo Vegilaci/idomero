@@ -1,5 +1,3 @@
-# backend/app/routers/members.py
-
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from app.database import get_db
@@ -16,7 +14,7 @@ def create_member(member: schemas.MemberCreate, db: Session = Depends(get_db)):
             detail="Member with this name already exists."
         )
 
-    db_member = models.Member(name=member.name, team_id=member.team_id)
+    db_member = models.Member(name=member.name,rajt_szam = member.rajt_szam, team_id=member.team_id,)
     db.add(db_member)
     db.commit()
     db.refresh(db_member)

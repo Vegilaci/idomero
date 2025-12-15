@@ -1,6 +1,5 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
-from datetime import datetime
 from .database import Base
 
 
@@ -17,8 +16,8 @@ class Member(Base):
     __tablename__ = "members"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, unique=True, index=True)
-
+    name = Column(String, index=True)
+    rajt_szam = Column(Integer, unique=True, index=True)
     team_id = Column(Integer, ForeignKey("teams.id"))
     team = relationship("Team", back_populates="members")
 
@@ -30,7 +29,6 @@ class Lap(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     time_ms = Column(Integer)
-    created_at = Column(DateTime, default=datetime.utcnow)
 
     member_id = Column(Integer, ForeignKey("members.id"))
     member = relationship("Member", back_populates="laps")
