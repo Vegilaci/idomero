@@ -1,6 +1,6 @@
 # backend/app/routers/laps.py
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from app.database import get_db
 from app import models, schemas
@@ -10,6 +10,18 @@ router = APIRouter(prefix="/laps", tags=["Laps"])
 @router.post("/{member_id}", response_model=schemas.Lap)
 def add_lap(member_id: int, lap: schemas.LapCreate, db: Session = Depends(get_db)):
     db_lap = models.Lap(member_id=member_id, time_ms=lap.time_ms)
+    existing_member = db.query(models.Member).filter(models.Member.id == member_id).first()
+
+    if existing_member is None:
+        raise HTTPException(
+            status_code=status.HTTP_418_IM_A_TEAPOT,
+            detail="☕ I'm a teapot – nincs ilyen versenyző"
+        )
+
+    else:
+        print(f"Adding lap for Member ID {member_id}.")
+
+
     db.add(db_lap)
     db.commit()
     db.refresh(db_lap)

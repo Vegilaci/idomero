@@ -1,23 +1,61 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Button } from "primereact/button";
 
-export default function LiveStopper({ teamId }) {
-  const [laps, setLaps] = useState([]);
+export default function LiveStopper({ teamId }: { teamId: number }) {
+  const [data, setData] = useState<any>(null);
+  const wsRef = useRef<WebSocket | null>(null);
+
   useEffect(() => {
-    const wsUri = "ws://127.0.0.1:8000/ws/team/" + teamId;
-    const ws = new WebSocket(wsUri);
-    const [data, setdata] = useState([]);
+    const ws = new WebSocket(`ws://127.0.0.1:8000/ws/team/${teamId}`);
+    wsRef.current = ws;
 
     ws.onmessage = (event) => {
-      setdata(JSON.parse(event.data));
+      try {
+        setData(JSON.parse(event.data));
+      } catch {
+        setData(event.data);
+      }
     };
 
-    return () => ws.close();
+    ws.onopen = () => console.log("WS connected");
+    ws.onclose = () => console.log("WS closed");
+    ws.onerror = (e) => console.error("WS error", e);
+
+    return () => {
+      ws.close();
+      wsRef.current = null;
+    };
   }, [teamId]);
+
+  function startLiveStopper(action: string) {
+    if (!wsRef.current || wsRef.current.readyState !== WebSocket.OPEN) {
+      console.warn("WS not ready");
+      return;
+    }
+
+    wsRef.current.send(JSON.stringify({ action }));
+  }
+
 
   return (
     <div>
       <h1>Csapat #{teamId}</h1>
-      <div>{data}</div>
+
+      <div>
+        {data ? JSON.stringify(data) : "-- várakozás --"}
+      </div>
+
+      <Button
+        label="Start"
+        icon="pi pi-play"
+        onClick={() => startLiveStopper("start")}
+      />
+
+      <Button
+        label="Stop"
+        icon="pi pi-stop"
+        onClick={() => startLiveStopper("stop")}
+      />
     </div>
   );
 }
