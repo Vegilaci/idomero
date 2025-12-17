@@ -1,11 +1,11 @@
 @import "primereact/resources/themes/lara-dark-purple/theme.css";
-
 @import "primereact/resources/primereact.min.css";
 @import "primeicons/primeicons.css";
-@import "tailwindcss";
+@import "primeflex/primeflex.css";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* PrimeReact theme */
+/* opcionális saját global css */
+html,
+body {
+  margin: 0;
+  height: 100%;
+}

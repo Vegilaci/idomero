@@ -1,18 +1,21 @@
 import LiveStopper from "./components/LiveStopper";
-import { Divider } from 'primereact/divider';
 
 export default function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
-      <div className="w-full max-w-4xl flex flex-col md:flex-row items-center justify-center gap-6">
-        <div className="flex-1 flex items-center justify-center p-4 bg-white rounded shadow">
-          <LiveStopper teamId={1} />
+    <div className="flex align-items-center justify-content-center min-h-screen">
+      <div className="grid">
+        <div className="col-12 md:col-6">
+          <div className="surface-card p-4 border-round shadow-2 text-center">
+            <h2 className="mb-3">Csapat #1</h2>
+            <LiveStopper teamId={1} />
+          </div>
         </div>
 
-        <Divider layout="vertical" />
-
-        <div className="flex-1 flex items-center justify-center p-4 bg-white rounded shadow">
-          <LiveStopper teamId={2} />
+        <div className="col-12 md:col-6">
+          <div className="surface-card p-4 border-round shadow-2 text-center">
+            <h2 className="mb-3">Csapat #2</h2>
+            <LiveStopper teamId={2} />
+          </div>
         </div>
       </div>
     </div>

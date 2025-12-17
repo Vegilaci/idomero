@@ -36,26 +36,26 @@ export default function LiveStopper({ teamId }: { teamId: number }) {
     wsRef.current.send(JSON.stringify({ action }));
   }
 
-
   return (
-    <div>
+    <div className="flex flex-column align-items-center gap-3">
       <h1>Csapat #{teamId}</h1>
 
-      <div>
+      <div className="text-color-secondary">
         {data ? JSON.stringify(data) : "-- várakozás --"}
       </div>
 
-      <Button
-        label="Start"
-        icon="pi pi-play"
-        onClick={() => startLiveStopper("start")}
-      />
-
-      <Button
-        label="Stop"
-        icon="pi pi-stop"
-        onClick={() => startLiveStopper("stop")}
-      />
+      <div className="flex gap-3">
+        <Button
+          label="Start"
+          icon="pi pi-play"
+          onClick={() => startLiveStopper("start")}
+        />
+        <Button
+          label="Stop"
+          icon="pi pi-stop"
+          onClick={() => startLiveStopper("stop")}
+        />
+      </div>
     </div>
   );
 }
