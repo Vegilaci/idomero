@@ -41,6 +41,15 @@ class ConnectionManager:
 
         self.active_rooms[team_id].append(websocket)
 
+        try:
+            await websocket.send_json(self.get_state(team_id))
+        except WebSocketDisconnect:
+            # kliens már bontott
+            self.disconnect(team_id, websocket)
+        except Exception:
+            self.disconnect(team_id, websocket)
+
+
     def disconnect(self, team_id: str, websocket: WebSocket):
         if team_id in self.active_rooms:
             if websocket in self.active_rooms[team_id]:
@@ -61,6 +70,26 @@ class ConnectionManager:
                 self.disconnect(team_id, ws)
 
     # -------- Stopper logika --------
+    def get_state(self, team_id: str) -> dict:
+        sw = self.stopwatches.get(team_id)
+
+        if not sw:
+            return {
+                "event": "state",
+                "running": False,
+                "elapsed_s": 0
+            }
+
+        if sw.running:
+            elapsed = time.monotonic() - sw.start_time + sw.elapsed
+        else:
+            elapsed = sw.elapsed
+
+        return {
+            "event": "state",
+            "running": sw.running,
+            "elapsed_s": int(elapsed)
+        }
 
     async def _run_stopwatch(self, team_id: str):
         """
@@ -128,6 +157,7 @@ class ConnectionManager:
             "event": "reset",
                 "elapsed_s": 0
         })
+
 
 
 # globális manager

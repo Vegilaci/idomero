@@ -1,23 +1,28 @@
-import LiveStopper from "./components/LiveStopper";
+import { Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import AppLayout from "./layout/AppLayout";
+import { ProgressSpinner } from "primereact/progressspinner";
+
+// lazy page importok
+const Home = lazy(() => import("./Home"));
+const Csapatok = lazy(() => import("./components/Csapatok"));
+
+const Loader = () => (
+  <div className="flex justify-content-center align-items-center h-screen">
+    <ProgressSpinner />
+  </div>
+);
+
 
 export default function App() {
   return (
-    <div className="flex align-items-center justify-content-center min-h-screen">
-      <div className="grid">
-        <div className="col-12 md:col-6">
-          <div className="surface-card p-4 border-round shadow-2 text-center">
-            <h2 className="mb-3">Csapat #1</h2>
-            <LiveStopper teamId={1} />
-          </div>
-        </div>
-
-        <div className="col-12 md:col-6">
-          <div className="surface-card p-4 border-round shadow-2 text-center">
-            <h2 className="mb-3">Csapat #2</h2>
-            <LiveStopper teamId={2} />
-          </div>
-        </div>
-      </div>
-    </div>
+    <Suspense fallback={<Loader />}>
+      <Routes>
+        <Route element={<AppLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/csapatok" element={<Csapatok />} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
 }

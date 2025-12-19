@@ -1,0 +1,12 @@
+{
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "dev",
+            "path": "idomero-ui",
+            "problemMatcher": [],
+            "label": "npm: dev - idomero-ui",
+            "detail": "vite"
+        }
+    ]
+}
