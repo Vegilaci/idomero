@@ -14,6 +14,7 @@ class LapCreate(LapBase):
 
 class Lap(LapBase):
     id: int
+    lap_no: int
 
     class Config:
         orm_mode = True

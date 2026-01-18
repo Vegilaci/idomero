@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session, load_only
 from app.database import get_db
 from app import models, schemas
 
-router = APIRouter(prefix="/teams", tags=["Teams"])
+router = APIRouter(prefix="/api/teams", tags=["Teams"])
 
 @router.post("/", response_model=schemas.Team)
 def create_team(team: schemas.TeamCreate, db: Session = Depends(get_db)):

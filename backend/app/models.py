@@ -29,6 +29,7 @@ class Lap(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     time_ms = Column(Integer)
+    lap_no = Column(Integer, index=True)
 
     member_id = Column(Integer, ForeignKey("members.id"))
     member = relationship("Member", back_populates="laps")

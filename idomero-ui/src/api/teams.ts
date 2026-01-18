@@ -15,3 +15,10 @@ export async function getTeams(): Promise<TeamDetail[]> {
   const res = await api.get<TeamDetail[]>("/teams/");
   return res.data;
 }
+
+export async function createTeam(name: string): Promise<TeamDetail> {
+  const res = await api.post<TeamDetail>("/teams/", {
+    name,
+  });
+  return res.data;
+}

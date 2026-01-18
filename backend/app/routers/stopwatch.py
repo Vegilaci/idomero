@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from app.services.stopwatch_service import stopwatch_service
 from app.ws.connection_manager import manager
 
-router = APIRouter(prefix="/stopwatch")
+router = APIRouter(prefix="/ws/stopwatch")
 
 @router.post("/{team_id}/start")
 async def start_timer(team_id: str):
