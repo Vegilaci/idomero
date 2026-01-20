@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "primereact/button";
+import { Global_ip } from "../global_ip";
 
 export default function LiveStopper({
   teamId,
@@ -10,9 +11,9 @@ export default function LiveStopper({
 }) {
   const [data, setData] = useState<any>(null);
   const wsRef = useRef<WebSocket | null>(null);
-  const ip = "192.168.0.40";
+
   useEffect(() => {
-    const ws = new WebSocket(`ws://${ip}:8000/ws/team/${teamId}`);
+    const ws = new WebSocket(`ws://${Global_ip()}:8000/ws/team/${teamId}`);
     wsRef.current = ws;
 
     ws.onmessage = (event) => {

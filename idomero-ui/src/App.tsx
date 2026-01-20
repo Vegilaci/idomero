@@ -5,7 +5,6 @@ import { ProgressSpinner } from "primereact/progressspinner";
 
 // lazy page importok
 const Home = lazy(() => import("./Home"));
-const Csapatok = lazy(() => import("./components/Csapatok"));
 const Mezony = lazy(() => import("./components/Mezony"));
 
 const Loader = () => (

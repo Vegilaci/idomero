@@ -1,21 +1,14 @@
 import LiveStopper from "./components/LiveStopper";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import "./assets/home.css";
+import { getTeamSummary } from "./api/teams";
 import type { TeamSummary } from "./types/teams";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [csapatok, setCsapatok] = useState<TeamSummary[]>([]);
   const navigate = useNavigate();
-
-  const url = "http://192.168.0.40:8000/api/teams/summary";
-
-  async function getTeamSummary() {
-    const res = await axios.get(url);
-    return res.data;
-  }
 
   useEffect(() => {
     getTeamSummary().then((data) => {
@@ -38,9 +31,9 @@ export default function Home() {
         </div>
       ) : (
         <>
-          <div className="grid">
+          <div className="grid  grid-nogutter	">
             {csapatok.map((csapat) => (
-              <div className="col-3">
+              <div className="col-6 p-8">
                 <LiveStopper
                   key={csapat.id}
                   teamName={csapat.name}
