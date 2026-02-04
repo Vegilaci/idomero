@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "primereact/button";
 import { Global_ip } from "../global_ip";
+import { Divider } from "primereact/divider";
+import { secondsToHHMMSS } from "../Clock//idovalto";
 
 export default function LiveStopper({
   teamId,
@@ -10,6 +12,7 @@ export default function LiveStopper({
   teamName: string;
 }) {
   const [data, setData] = useState<any>(null);
+  const [ido, setido] = useState<number[]>([]);
   const wsRef = useRef<WebSocket | null>(null);
 
   useEffect(() => {
@@ -39,6 +42,12 @@ export default function LiveStopper({
       console.warn("WS not ready");
       return;
     }
+    if (action === "reset" && data) {
+      setido([...ido, data.elapsed_s]);
+      wsRef.current.send(JSON.stringify({ action }));
+      action = "start";
+      wsRef.current.send(JSON.stringify({ action }));
+    }
 
     wsRef.current.send(JSON.stringify({ action }));
   }
@@ -48,8 +57,18 @@ export default function LiveStopper({
       <h1>{teamName}</h1>
 
       <div className="text-color-secondary">
-        {data ? JSON.stringify(data) : "-- várakozás --"}
+        {data ? (
+          <>{secondsToHHMMSS(data.elapsed_s)}</>
+        ) : (
+          "-- várakozá a szerverre --"
+        )}
       </div>
+      <div className="pt-6">
+        {ido.map((ido) => (
+          <div key={ido}>{secondsToHHMMSS(ido)}</div>
+        ))}
+      </div>
+      <Divider />
 
       <div className="flex gap-2">
         <Button

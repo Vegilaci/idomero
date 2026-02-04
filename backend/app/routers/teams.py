@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session, load_only
 from app.database import get_db
 from app import models, schemas
@@ -21,3 +21,15 @@ def list_teams(db: Session = Depends(get_db)):
 def list_team_summaries(db: Session = Depends(get_db)):
     # Use load_only so the query only selects the needed columns
     return db.query(models.Team).options(load_only(models.Team.id, models.Team.name)).all()
+
+@router.delete("/{team_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_team(team_id: int, db: Session = Depends(get_db)):
+    db_team = db.query(models.Team).filter(models.Team.id == team_id).first()
+    if not db_team:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Team not found."
+        )
+
+    db.delete(db_team)
+    db.commit()

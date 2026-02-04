@@ -1,3 +1,3 @@
 export function Global_ip(): string {
-  return `192.168.0.40`;
+  return `192.168.0.13`;
 }

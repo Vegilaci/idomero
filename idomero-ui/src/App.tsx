@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import AppLayout from "./layout/AppLayout";
 import { ProgressSpinner } from "primereact/progressspinner";
+import Admin from "./components/Admin";
 
 // lazy page importok
 const Home = lazy(() => import("./Home"));
@@ -20,6 +21,7 @@ export default function App() {
         <Route element={<AppLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/mezony" element={<Mezony />} />
+          <Route path="/admin" element={<Admin />} />
         </Route>
       </Routes>
     </Suspense>

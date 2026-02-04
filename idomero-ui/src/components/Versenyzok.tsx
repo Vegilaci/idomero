@@ -106,10 +106,11 @@ export default function Versenyzok() {
 
   return (
     <>
-      <Toast ref={toast} />
       <div className="mt-5 border-round">
         {isMobile ? (
           <>
+            <Toast ref={toast} position="top-center" />
+
             <form
               className="flex flex-column align-items-center gap-4 pt-3 pb-5"
               onSubmit={(e) => {
@@ -182,6 +183,7 @@ export default function Versenyzok() {
           </>
         ) : (
           <>
+            <Toast ref={toast} />
             <form
               className="flex flex-column align-items-center gap-4 pt-3"
               onSubmit={(e) => {
