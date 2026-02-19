@@ -38,6 +38,14 @@ class Member(MemberBase):
     class Config:
         orm_mode = True
 
+class MemberSummary(BaseModel):
+    id: int
+    name: str
+    rajt_szam: int
+
+    class Config:
+        orm_mode = True
+
 
 class TeamBase(BaseModel):
     name: str
@@ -50,6 +58,14 @@ class TeamCreate(TeamBase):
 class Team(TeamBase):
     id: int
     members: List[Member] = []
+
+    class Config:
+        orm_mode = True
+
+class Team_versenyzok(BaseModel):
+    id: int
+    name: str
+    members : List[MemberSummary] = []
 
     class Config:
         orm_mode = True
