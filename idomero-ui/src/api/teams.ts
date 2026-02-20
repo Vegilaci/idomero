@@ -22,3 +22,8 @@ export async function createTeam(name: string): Promise<TeamDetail> {
   });
   return res.data;
 }
+
+export async function Get_team_and_members(id: number) {
+  const res = await api.get(`/teams/${id}`);
+  return res.data;
+}

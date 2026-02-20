@@ -7,3 +7,10 @@ export interface Member {
   team_id: number;
   laps: Lap[];
 }
+
+export interface MemberSummary {
+  id: number;
+  name: string;
+  rajt_szam: number;
+  team_id: number;
+}
