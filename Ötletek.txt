@@ -1,0 +1,9 @@
+Ötletek 
+
+Versenyző nyomon követés épp melyik versenyző jön  és ki lesz a kövi ezt mind backenden lehetne megoldani szépen el is kezdtem on_click_event mappában
+
+viszont a resetet is megkéne oldani hogy figyelje hogy melyik a jelenleg aktví rider mert a starnál lesz betölve a csapatba berakott első ember
+jelenleg a front-end úgy csinálja hogy reseteli a stopper "ment" egy időd amit még nem csinál és utána megint start-olja a stoppert ami felül írná az aktív rider mindig az team.members listában szereplőbe
+ide valahogy megkéne oldani azt hogy a reset mezőbe "connection_manaager" legyen figyelve ki hogy és akkor esetleg ott legyen lementve az idő ne front enden keresztül!
+
+plusz a váltogatást megoldani hogy mikor melyik rider lesz 

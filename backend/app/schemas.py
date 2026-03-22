@@ -66,6 +66,8 @@ class Team_versenyzok(BaseModel):
     id: int
     name: str
     members : List[MemberSummary] = []
+    rider_now: int
+    rider_next: int
 
     class Config:
         orm_mode = True

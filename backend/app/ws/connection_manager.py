@@ -1,6 +1,7 @@
 import asyncio
 import time
 import json
+from on_click_event.switch_active_riders import switch_active_riders_onStart,switch_on_stop, on_reset
 from typing import Dict, List, Optional
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
@@ -76,7 +77,7 @@ class ConnectionManager:
         if not sw:
             return {
                 "event": "state",
-                "running": False,
+                "is_running": False,
                 "elapsed_s": 0
             }
 
@@ -87,7 +88,7 @@ class ConnectionManager:
 
         return {
             "event": "state",
-            "running": sw.running,
+            "is_running": sw.running,
             "elapsed_s": int(elapsed)
         }
 
@@ -102,16 +103,21 @@ class ConnectionManager:
 
             await self.broadcast(team_id, {
                 "event": "tick",
-                    "elapsed_s": int(elapsed)
+                "is_running": sw.running,
+                "elapsed_s": int(elapsed)
             })
 
             await asyncio.sleep(1)
 
-    async def start_stopwatch(self, team_id: str):
+    async def start_stopwatch(self, team_id: str, switch_active_rider: bool = True):
         if team_id not in self.stopwatches:
             self.stopwatches[team_id] = TeamStopwatch()
 
         sw = self.stopwatches[team_id]
+
+        if switch_active_rider:
+            switch_active_riders_onStart(int(team_id))
+
 
         if sw.running:
             return
@@ -124,13 +130,27 @@ class ConnectionManager:
             "event": "started"
         })
 
+        await self.broadcast(team_id, {
+            "event": "refresh"
+        })
+
     async def stop_stopwatch(self, team_id: str):
         sw = self.stopwatches.get(team_id)
         if not sw or not sw.running:
             return
 
+        elapsed_before_stop = time.monotonic() - sw.start_time + sw.elapsed
+
         sw.running = False
-        sw.elapsed += time.monotonic() - sw.start_time
+        sw.elapsed = elapsed_before_stop
+
+        # Stopnál elmentjük az aktuális versenyző idejét, majd váltunk a következőre.
+        on_reset(int(team_id), int(elapsed_before_stop))
+
+        switch_on_stop(int(team_id))
+
+        sw.running = False
+        sw.elapsed = 0.0
 
         if sw.task:
             sw.task.cancel()
@@ -141,22 +161,47 @@ class ConnectionManager:
                 "elapsed_s": int(sw.elapsed)
         })
 
-    async def reset_stopwatch(self, team_id: str):
-        sw = self.stopwatches.get(team_id)
-        if not sw:
-            return
+        await self.broadcast(team_id, {
+            "event": "refresh"
+        })
 
-        sw.running = False
-        sw.elapsed = 0.0
+        await self.start_stopwatch(team_id, switch_active_rider=False)
+
+    async def reset_stopwatch(self, team_id: str):
+        if team_id not in self.stopwatches:
+            self.stopwatches[team_id] = TeamStopwatch()
+
+        sw = self.stopwatches[team_id]
+
+        # Compute the live elapsed value before resetting.
+        if sw.running:
+            elapsed_before_reset = time.monotonic() - sw.start_time + sw.elapsed
+        else:
+            elapsed_before_reset = sw.elapsed
+
+        print(f"reset_gom megnyomva ennyi aaz ido jelenleg {elapsed_before_reset}", flush=True)
+
+        # Resetnél elmentjük az aktív versenyző jelenlegi idejét a DB-be (ms-ban).
+        on_reset(int(team_id), int(elapsed_before_reset))
 
         if sw.task:
             sw.task.cancel()
             sw.task = None
 
+        sw.running = False
+        sw.elapsed = 0.0
+
         await self.broadcast(team_id, {
             "event": "reset",
                 "elapsed_s": 0
         })
+
+        await self.broadcast(team_id, {
+            "event": "refresh"
+        })
+
+        # Reset után azonnal újraindítjuk a stoppert.
+        await self.start_stopwatch(team_id, switch_active_rider=False)
 
 
 

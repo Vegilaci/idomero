@@ -13,11 +13,46 @@ export default function LiveStopper({
   teamName: string;
 }) {
   const [data, setData] = useState<any>(null); //websoket adatainak tárolása
-  const [ido, setido] = useState<number[]>([]); // köridő tárolása
   const [csapat, setCsapat] = useState<any>(null); //csapat adatainak tárolása
-  const [aktiv_tekero, setAktiv_tekero] = useState<number>(9); //aktív tekerő tárolása
+  const [aktiv_tekero, setAktiv_tekero] = useState<number | null>(null); //aktív tekerő tárolása
 
   const wsRef = useRef<WebSocket | null>(null);
+
+  function getActiveRiderId(teamData: any): number | null {
+    if (!teamData) return null;
+
+    if (typeof teamData.rider_now === "number") return teamData.rider_now;
+
+    if (Array.isArray(teamData.members)) {
+      const activeMember = teamData.members.find(
+        (member: any) => member?.is_active === true || member?.active === true,
+      );
+      if (typeof activeMember?.id === "number") return activeMember.id;
+    }
+
+    return null;
+  }
+
+  function hasRefreshEvent(payload: any): boolean {
+    return (
+      payload?.event === "refresh" ||
+      payload?.event === "refres" ||
+      payload?.event?.refresh ||
+      payload?.event?.refres ||
+      payload?.refresh === true ||
+      payload?.refres === true
+    );
+  }
+
+  async function refreshTeamAndActiveRider() {
+    const teamData = await Get_team_and_members(teamId);
+    setCsapat(teamData);
+
+    const activeRiderId = getActiveRiderId(teamData);
+    if (typeof activeRiderId === "number") {
+      setAktiv_tekero(activeRiderId);
+    }
+  }
 
   useEffect(() => {
     const ws = new WebSocket(`ws://${Global_ip()}:8000/ws/team/${teamId}`);
@@ -25,7 +60,29 @@ export default function LiveStopper({
 
     ws.onmessage = (event) => {
       try {
-        setData(JSON.parse(event.data));
+        const parsed = JSON.parse(event.data);
+
+        if (hasRefreshEvent(parsed)) {
+          refreshTeamAndActiveRider().catch((error) => {
+            console.error("Nem sikerult a refresh event feldolgozasa", error);
+          });
+          return;
+        }
+
+        setData(parsed);
+
+        const wsActiveRiderId =
+          typeof parsed?.active_member_id === "number"
+            ? parsed.active_member_id
+            : typeof parsed?.active_rider_id === "number"
+              ? parsed.active_rider_id
+              : typeof parsed?.active_tekero === "number"
+                ? parsed.active_tekero
+                : null;
+
+        if (typeof wsActiveRiderId === "number") {
+          setAktiv_tekero(wsActiveRiderId);
+        }
       } catch {
         setData(event.data);
       }
@@ -42,34 +99,44 @@ export default function LiveStopper({
 
   //csapat adatainak lekérése (csapat neve, tagok nevei, id stb.)
   useEffect(() => {
-    const response = Get_team_and_members(teamId);
-    if (response) {
-      response.then((res) => {
-        setCsapat(res);
-      });
-    }
-  }, []);
+    refreshTeamAndActiveRider().catch((error) => {
+      console.error("Nem sikerult frissiteni a csapat adatokat", error);
+    });
+  }, [teamId]);
 
-  function startLiveStopper(action: string) {
+  async function startLiveStopper(action: string) {
     if (!wsRef.current || wsRef.current.readyState !== WebSocket.OPEN) {
       console.warn("WS not ready");
       return;
     }
-    if (action === "reset" && data) {
-      setido([...ido, data.elapsed_s]);
-      wsRef.current.send(JSON.stringify({ action }));
-      action = "start";
-      wsRef.current.send(JSON.stringify({ action }));
-    }
 
-    wsRef.current.send(JSON.stringify({ action }));
+    try {
+      switch (action) {
+        case "start":
+          if (!data?.is_running) {
+            wsRef.current.send(JSON.stringify({ action }));
+            await refreshTeamAndActiveRider();
+          }
+          break;
+        case "stop":
+          if (data?.is_running) {
+            wsRef.current.send(JSON.stringify({ action }));
+            await refreshTeamAndActiveRider();
+          }
+          break;
+        case "reset":
+          wsRef.current.send(JSON.stringify({ action }));
+          break;
+      }
+    } catch (error) {
+      console.error("Nem sikerult frissiteni a stopper allapotot", error);
+    }
   }
 
   function Active_rider(member: any) {
     if (member.id === aktiv_tekero) {
       return (
         <>
-          {" "}
           <p key={member.id} className="text-primary font-bold text-3xl">
             {member.name}
           </p>
@@ -91,11 +158,7 @@ export default function LiveStopper({
           ) : (
             "-- várakozá a szerverre --"
           )}
-        </div>
-        <div className="pt-6">
-          {ido.map((ido) => (
-            <div key={ido}>{secondsToHHMMSS(ido)}</div>
-          ))}
+          <div>{JSON.stringify(data)}</div>
         </div>
         {csapat && (
           <div className="pt-6">
