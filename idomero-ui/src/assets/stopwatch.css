@@ -1,0 +1,62 @@
+.stopper {
+  --stopper-size: clamp(180px, 52vw, 220px);
+  --stopper-ring-color: #2f3b52;
+  --stopper-face-color: #071d35;
+  --stopper-border-color: #c9d0d8;
+  --stopper-time-color: #17d7ff;
+  --stopper-font: Arial, sans-serif;
+
+  position: relative;
+  width: var(--stopper-size);
+  height: calc(var(--stopper-size) + 40px);
+  margin: clamp(20px, 6vw, 40px) auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stopper-btn {
+  position: absolute;
+  width: calc(var(--stopper-size) * 0.18);
+  height: calc(var(--stopper-size) * 0.18);
+  border: max(3px, calc(var(--stopper-size) * 0.018)) solid
+    var(--stopper-ring-color);
+  border-radius: 40%;
+  z-index: 0;
+  transform: translateX(-30%) rotate(20deg)
+    translateY(calc(var(--stopper-size) * -0.5));
+  transform-origin: center calc(var(--stopper-size) * 0.545);
+}
+
+.stopper-ring {
+  position: absolute;
+  top: calc(var(--stopper-size) * 0.118);
+  width: var(--stopper-size);
+  height: var(--stopper-size);
+  border-radius: 50%;
+  background: var(--stopper-ring-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+}
+
+.stopper-face {
+  width: calc(var(--stopper-size) * 0.91);
+  height: calc(var(--stopper-size) * 0.91);
+  border-radius: 50%;
+  background: var(--stopper-face-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: max(8px, calc(var(--stopper-size) * 0.055)) solid
+    var(--stopper-border-color);
+  box-sizing: border-box;
+}
+
+.stopper-time {
+  color: var(--stopper-time-color);
+  font-size: clamp(32px, calc(var(--stopper-size) * 0.19), 42px);
+  font-weight: 800;
+  font-family: var(--stopper-font);
+}

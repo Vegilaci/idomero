@@ -7,3 +7,20 @@ jelenleg a front-end úgy csinálja hogy reseteli a stopper "ment" egy időd ami
 ide valahogy megkéne oldani azt hogy a reset mezőbe "connection_manaager" legyen figyelve ki hogy és akkor esetleg ott legyen lementve az idő ne front enden keresztül!
 
 plusz a váltogatást megoldani hogy mikor melyik rider lesz 
+
+    /\
+    ||
+Done :D 
+
+
+
+Backend most már csak hibákat kell kivenni a képből mint pl:
+    Rapid Stop gomb nyomkodás -> Backend lefagyás. 
+    Megoldani hogy az utolsó körök le is állajnak kell egy special karakter legördülő menük (front end) lehetne az event neve "kill"
+
+Front end:
+    Minimális animáció 
+    jobban átdolgozott/kialakított komponensek
+    
+    Nagyonfontos Telefonos nézet !!! 
+    24 órás vissza számlálás. valamelyik sarokba.

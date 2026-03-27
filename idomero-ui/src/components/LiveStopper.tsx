@@ -4,6 +4,7 @@ import { Global_ip } from "../global_ip";
 import { Divider } from "primereact/divider";
 import { secondsToHHMMSS } from "../Clock//idovalto";
 import { Get_team_and_members } from "../api/teams";
+import "../assets/stopwatch.css";
 
 export default function LiveStopper({
   teamId,
@@ -153,12 +154,32 @@ export default function LiveStopper({
         <h1>{teamName}</h1>
 
         <div className="text-color-secondary">
-          {data ? (
-            <>{secondsToHHMMSS(data.elapsed_s)}</>
-          ) : (
-            "-- várakozá a szerverre --"
-          )}
-          <div>{JSON.stringify(data)}</div>
+          <div className="stopper">
+            <div className="stopper-btn"></div>
+            <div className="stopper-ring">
+              <div className="stopper-face">
+                <span className="stopper-time">
+                  {" "}
+                  {data ? (
+                    <>{secondsToHHMMSS(data.elapsed_s)}</>
+                  ) : (
+                    "-- várakozá a szerverre --"
+                  )}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="stopwatch">
+            <div className="time-text">
+              {" "}
+              {data ? (
+                <>{secondsToHHMMSS(data.elapsed_s)}</>
+              ) : (
+                "-- várakozá a szerverre --"
+              )}
+            </div>
+          </div>
         </div>
         {csapat && (
           <div className="pt-6">
