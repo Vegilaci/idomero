@@ -20,6 +20,9 @@ async def websocket_team(websocket: WebSocket, team_id: str):
                 await manager.stop_stopwatch(team_id)
             elif action == "reset":
                 await manager.reset_stopwatch(team_id)
+            elif action == "kill":
+                await manager.kill_stopwatch(team_id)
+                break
     except WebSocketDisconnect:
         pass
     finally:

@@ -1,5 +1,5 @@
 //react
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 //#region prime react
 import { InputText } from "primereact/inputtext";
@@ -23,9 +23,10 @@ import type { TeamSummary } from "../types/teams";
 import type { Member } from "../types/members";
 import type { Lap } from "../types/lap";
 import { secondsToHHMMSS } from "../Clock/idovalto";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 export default function Versenyzok() {
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const isMobile = useIsMobile();
 
   const [neve, setneve] = useState<string>("");
   const [rajt, setrajt] = useState<number>(0);

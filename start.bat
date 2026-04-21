@@ -8,7 +8,7 @@ echo ===============================
 REM ===== BACKEND =====
 start "Backend (FastAPI)" cmd /k ^
 cd /d "%~dp0backend" ^& ^
-call env\Scripts\activate ^& ^
+call venv\Scripts\activate ^& ^
 uvicorn app.main:app --reload --host 0.0.0.0
 
 

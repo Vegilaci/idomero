@@ -1,8 +1,12 @@
+import { useIsMobile } from "../hooks/useIsMobile";
+
 export default function Admin() {
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const isMobile = useIsMobile();
   return (
     <>
-      <h1>admin site itt lesz minden adat kezelve</h1>
+      <h1 className={isMobile ? "px-3" : ""}>
+        admin site itt lesz minden adat kezelve
+      </h1>
     </>
   );
 }

@@ -196,7 +196,7 @@ export default function LiveStopper({
           />
           <Button
             label="Köridő"
-            icon="pi pi-play"
+            icon="pi pi-replay"
             onClick={() => startLiveStopper("reset")}
           />
           <Button

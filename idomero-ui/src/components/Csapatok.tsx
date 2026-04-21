@@ -1,8 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { InputText } from "primereact/inputtext";
 import { FloatLabel } from "primereact/floatlabel";
-import { Dropdown } from "primereact/dropdown";
-import { Button } from "primereact/button";
 import { Accordion } from "primereact/accordion";
 import { AccordionTab } from "primereact/accordion";
 import { DataTable } from "primereact/datatable";
@@ -12,13 +10,14 @@ import { getTeams, createTeam } from "../api/teams";
 import type { TeamDetail } from "../types/teams";
 import type { Member } from "../types/members";
 import { secondsToHHMMSS } from "../Clock/idovalto";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 export default function Csapatok() {
   const [value, setValue] = useState<string>("");
   const [csapatok, setCsapatok] = useState<TeamDetail[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [expandedRows, setExpandedRows] = useState<any>(null);
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const isMobile = useIsMobile();
 
   const reloadTeams = async () => {
     setLoading(true);

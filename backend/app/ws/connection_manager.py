@@ -202,6 +202,21 @@ class ConnectionManager:
 
         # Reset után azonnal újraindítjuk a stoppert.
         await self.start_stopwatch(team_id, switch_active_rider=False)
+    async def kill_stopwatch(self, team_id: str):
+        sw = self.stopwatches.get(team_id)
+        if not sw:
+            return
+
+        sw.running = False
+        sw.elapsed = 0.0
+
+        if sw.task:
+            sw.task.cancel()
+            sw.task = None
+
+        await self.broadcast(team_id, {
+            "event": "killed"
+        })
 
 
 
@@ -230,6 +245,11 @@ async def ws_timer(websocket: WebSocket, team_id: str):
 
             elif action == "reset":
                 await manager.reset_stopwatch(team_id)
+            elif action == "kill": # teljes stopper stop ha vége a versenynek
+                await manager.kill_stopwatch(team_id)
+                break
 
     except WebSocketDisconnect:
+        pass
+    finally:
         manager.disconnect(team_id, websocket)

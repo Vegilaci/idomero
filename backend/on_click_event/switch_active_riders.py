@@ -3,6 +3,26 @@ from sqlalchemy import func
 from app.database import get_db
 from app import models
 
+import logging
+import sys
+
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+formatter = logging.Formatter('%(asctime)s | %(levelname)s | %(message)s')
+
+stdout_handler = logging.StreamHandler(sys.stdout)
+stdout_handler.setLevel(logging.DEBUG)
+stdout_handler.setFormatter(formatter)
+
+file_handler = logging.FileHandler('logs.log', encoding='utf-8')
+file_handler.setLevel(logging.DEBUG)
+file_handler.setFormatter(formatter)
+
+
+logger.addHandler(file_handler)
+logger.addHandler(stdout_handler)
+
+
 
 def _get_team_members_in_order(db_team):
     return sorted(db_team.members, key=lambda m: m.id)
@@ -23,13 +43,11 @@ def switch_active_riders_onStart(team_id: int):
         db.commit()
         db.refresh(db_team)
 
-        print(
-            f"Start beállítás: rider_now={db_team.rider_now}, rider_next={db_team.rider_next}",
-            flush=True,
+        logger.info(
+            f"Start beállítás: rider_now={db_team.rider_now}, rider_next={db_team.rider_next}"
         )
     else:
-        print("A csapat vagy a csapattagok nem találhatóak.", flush=True)
-
+        logger.warning("A csapat vagy a csapattagok nem találhatóak.")
 
 def switch_on_stop(team_id: int):
     db = next(get_db())
@@ -37,7 +55,7 @@ def switch_on_stop(team_id: int):
     db_team = db.query(models.Team).filter(models.Team.id == team_id).first()
 
     if not db_team or not db_team.members:
-        print("switch_on_stop: csapat vagy tagok nem találhatók", flush=True)
+        logger.warning("switch_on_stop: csapat vagy tagok nem találhatók")
         return
 
     members = _get_team_members_in_order(db_team)
@@ -55,9 +73,8 @@ def switch_on_stop(team_id: int):
     db.commit()
     db.refresh(db_team)
 
-    print(
-        f"Stop utáni váltás: rider_now={db_team.rider_now}, rider_next={db_team.rider_next}",
-        flush=True,
+    logger.info(
+        f"Stop utáni váltás: rider_now={db_team.rider_now}, rider_next={db_team.rider_next}"
     )
 
 
@@ -65,16 +82,16 @@ def on_reset(team_id: int, korido: int):
     db = next(get_db())
     db_team = db.query(models.Team).filter(models.Team.id == team_id).first()
     if not db_team:
-        print("on_reset: csapat nem található", flush=True)
+        logger.warning("on_reset: csapat nem található")
         return
 
     db_member = db.query(models.Member).filter(models.Member.id == db_team.rider_now).first()
 
     if not db_member:
-        print("on_reset: aktív versenyző nem található", flush=True)
+        logger.warning("on_reset: aktív versenyző nem található")
         return
 
-    print(f"on_reset: {db_member.name} - eltelt idő: {korido} ms", flush=True)
+    logger.info(f"on_reset: {db_member.name} - eltelt idő: {korido} ms")
 
     max_lap_no = (
         db.query(func.max(models.Lap.lap_no))
@@ -88,4 +105,20 @@ def on_reset(team_id: int, korido: int):
     db.commit()
     db.refresh(db_lap)
 
-    print(f"on_reset: lap elmentve – lap_no={db_lap.lap_no}, time_ms={db_lap.time_ms}", flush=True)
+    logger.info(f"on_reset: lap elmentve – lap_no={db_lap.lap_no}, time_ms={db_lap.time_ms}")
+
+
+def on_kill(team_id: int): #utsó mentés stopper leállításakor
+    db = next(get_db())
+    db_team = db.query(models.Team).filter(models.Team.id == team_id).first()
+    if not db_team:
+        logger.warning("on_kill: csapat nem található")
+        return
+
+    db_member = db.query(models.Member).filter(models.Member.id == db_team.rider_now).first()
+
+    if not db_member:
+        logger.warning("on_kill: aktív versenyző nem található")
+        return
+
+    logger.info(f"on_kill: {db_member.name} - stopper leállítva")

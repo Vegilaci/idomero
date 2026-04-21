@@ -60,3 +60,45 @@
   font-weight: 800;
   font-family: var(--stopper-font);
 }
+
+.stopper-panel {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 0 0.5rem 1rem;
+  box-sizing: border-box;
+}
+
+.stopper-team-title {
+  text-align: center;
+  margin: 0.5rem 0 0;
+  word-break: break-word;
+}
+
+.stopper-actions {
+  width: 100%;
+}
+
+.stopper-actions .p-button {
+  min-width: 110px;
+}
+
+@media (max-width: 768px) {
+  .stopper {
+    --stopper-size: clamp(160px, 62vw, 220px);
+    margin: 12px auto 20px;
+  }
+
+  .stopper-time {
+    font-size: clamp(26px, calc(var(--stopper-size) * 0.17), 36px);
+  }
+
+  .stopper-team-title {
+    font-size: 1.35rem;
+  }
+
+  .stopper-actions .p-button {
+    flex: 1 1 30%;
+    min-width: 95px;
+  }
+}

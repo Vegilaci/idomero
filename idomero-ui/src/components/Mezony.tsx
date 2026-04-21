@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
 import Csapatok from "./Csapatok";
 import Versenyzok from "./Versenyzok";
 import { TabView, TabPanel } from "primereact/tabview";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 export default function Mezony() {
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const isMobile = useIsMobile();
 
   function padding_vagy_se() {
     if (isMobile) {
