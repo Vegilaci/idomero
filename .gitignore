@@ -8,3 +8,4 @@
 /backend/venv
 backend/app/ws/__pycache__/connection_manager.cpython-312.pyc
 *.db
+backend/logs.log

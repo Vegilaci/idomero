@@ -169,17 +169,6 @@ export default function LiveStopper({
               </div>
             </div>
           </div>
-
-          <div className="stopwatch">
-            <div className="time-text">
-              {" "}
-              {data ? (
-                <>{secondsToHHMMSS(data.elapsed_s)}</>
-              ) : (
-                "-- várakozá a szerverre --"
-              )}
-            </div>
-          </div>
         </div>
         {csapat && (
           <div className="pt-6">
