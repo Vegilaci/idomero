@@ -1,18 +1,45 @@
-// layout/AppLayout.tsx
 import { Menubar } from "primereact/menubar";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import "./AppLayout.css";
 
 export default function AppLayout() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const items = [
-    { label: "Home", icon: "pi pi-home", url: "/" },
-    { label: "Mezőny", icon: "pi pi-server", url: "/mezony" },
-    { label: "Admin", icon: "pi pi-wrench", url: "/admin" },
+    {
+      label: "Home",
+      icon: "pi pi-home",
+      command: () => navigate("/"),
+      className: location.pathname === "/" ? "app-menu-active" : "",
+    },
+    {
+      label: "Mezőny",
+      icon: "pi pi-users",
+      command: () => navigate("/mezony"),
+      className: location.pathname.startsWith("/mezony")
+        ? "app-menu-active"
+        : "",
+    },
+    {
+      label: "Admin",
+      icon: "pi pi-cog",
+      command: () => navigate("/admin"),
+      className: location.pathname.startsWith("/admin")
+        ? "app-menu-active"
+        : "",
+    },
   ];
 
   return (
-    <>
-      <Menubar model={items} />
-      <Outlet />
-    </>
+    <div className="app-layout">
+      <header className="app-header">
+        <Menubar model={items} className="app-menubar" />
+      </header>
+
+      <main className="app-content">
+        <Outlet />
+      </main>
+    </div>
   );
 }

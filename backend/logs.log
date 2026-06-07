@@ -51,3 +51,20 @@
 2026-04-12 16:37:15,682 | INFO | on_reset: Qwertzg - eltelt idő: 43 ms
 2026-04-12 16:37:15,690 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=43
 2026-04-12 16:37:15,694 | INFO | Stop utáni váltás: rider_now=2, rider_next=5
+2026-06-04 23:22:06,474 | INFO | Start beállítás: rider_now=2, rider_next=5
+2026-06-04 23:22:10,646 | INFO | on_reset: Én - eltelt idő: 4 ms
+2026-06-04 23:22:10,664 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=4
+2026-06-04 23:22:10,678 | INFO | Stop utáni váltás: rider_now=5, rider_next=2
+2026-06-04 23:22:10,725 | INFO | 3 changes detected
+2026-06-04 23:22:12,566 | INFO | on_reset: Qwertzg - eltelt idő: 1 ms
+2026-06-04 23:22:12,583 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=1
+2026-06-04 23:22:12,600 | INFO | Stop utáni váltás: rider_now=2, rider_next=5
+2026-06-04 23:22:12,650 | INFO | 3 changes detected
+2026-06-07 12:43:45,353 | INFO | 3 changes detected
+2026-06-07 12:43:45,711 | INFO | 4 changes detected
+2026-06-07 12:43:46,064 | INFO | 1 change detected
+2026-06-07 12:43:47,525 | INFO | 1 change detected
+2026-06-07 12:45:43,367 | INFO | 1 change detected
+2026-06-07 12:45:49,213 | INFO | 1 change detected
+2026-06-07 12:47:04,808 | INFO | 4 changes detected
+2026-06-07 12:52:23,273 | INFO | 1 change detected

@@ -1,0 +1,80 @@
+.app-layout {
+  min-height: 100vh;
+  background: var(--surface-ground);
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0.75rem 1rem 0;
+}
+
+.app-menubar {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+
+  border: 1px solid var(--surface-border);
+  border-radius: 14px;
+  background: var(--surface-card);
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+.app-menubar .p-menubar-root-list {
+  margin: 0 auto;
+  gap: 0.35rem;
+}
+
+.app-menubar .p-menuitem-content {
+  border-radius: 10px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.app-menubar .p-menuitem-link {
+  padding: 0.85rem 1.15rem;
+  border-radius: 10px;
+}
+
+.app-menubar .p-menuitem-content:hover {
+  transform: translateY(-1px);
+}
+
+.app-menubar .app-menu-active > .p-menuitem-content {
+  background: var(--primary-color);
+}
+
+.app-menubar .app-menu-active > .p-menuitem-content .p-menuitem-link,
+.app-menubar .app-menu-active > .p-menuitem-content .p-menuitem-icon,
+.app-menubar .app-menu-active > .p-menuitem-content .p-menuitem-text {
+  color: var(--primary-color-text);
+}
+
+.app-content {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 960px) {
+  .app-header {
+    padding: 0.5rem 0.5rem 0;
+  }
+
+  .app-menubar {
+    border-radius: 12px;
+  }
+
+  .app-menubar .p-menubar-root-list {
+    margin: 0;
+  }
+
+  .app-content {
+    padding: 0.75rem;
+  }
+}
