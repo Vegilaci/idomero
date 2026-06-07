@@ -1,31 +1,28 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { InputText } from "primereact/inputtext";
-import { FloatLabel } from "primereact/floatlabel";
-import { Accordion } from "primereact/accordion";
-import { AccordionTab } from "primereact/accordion";
-import { DataTable } from "primereact/datatable";
-import { Column } from "primereact/column";
+import { Button } from "primereact/button";
 
 import { getTeams, createTeam } from "../api/teams";
 import type { TeamDetail } from "../types/teams";
-import type { Member } from "../types/members";
 import { secondsToHHMMSS } from "../Clock/idovalto";
-import { useIsMobile } from "../hooks/useIsMobile";
+
+import "../assets/teams.css";
 
 export default function Csapatok() {
-  const [value, setValue] = useState<string>("");
+  const [teamName, setTeamName] = useState("");
+  const [search, setSearch] = useState("");
   const [csapatok, setCsapatok] = useState<TeamDetail[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [expandedRows, setExpandedRows] = useState<any>(null);
-  const isMobile = useIsMobile();
+  const [loading, setLoading] = useState(true);
+  const [expandedTeams, setExpandedTeams] = useState<number[]>([]);
 
   const reloadTeams = async () => {
     setLoading(true);
+
     try {
       const data = await getTeams();
       setCsapatok(data);
-    } catch (err) {
-      console.error("Csapatok betöltése sikertelen", err);
+    } catch (error) {
+      console.error("Csapatok betöltése sikertelen", error);
     } finally {
       setLoading(false);
     }
@@ -35,103 +32,238 @@ export default function Csapatok() {
     reloadTeams();
   }, []);
 
+  const filteredTeams = useMemo(() => {
+    const normalizedSearch = search.trim().toLocaleLowerCase("hu-HU");
+
+    if (!normalizedSearch) {
+      return csapatok;
+    }
+
+    return csapatok.filter((team) => {
+      const teamMatch = team.name
+        .toLocaleLowerCase("hu-HU")
+        .includes(normalizedSearch);
+
+      const memberMatch = team.members.some((member) =>
+        member.name
+          .toLocaleLowerCase("hu-HU")
+          .includes(normalizedSearch),
+      );
+
+      return teamMatch || memberMatch;
+    });
+  }, [csapatok, search]);
+
   const handleSaveTeam = async () => {
-    if (!value.trim()) return;
+    const normalizedName = teamName.trim();
+
+    if (!normalizedName) return;
 
     try {
-      await createTeam(value.trim());
-      setValue("");
-      // opcionális: lista frissítés
+      await createTeam(normalizedName);
+      setTeamName("");
       await reloadTeams();
-    } catch (err) {
-      console.error("Csapat mentése sikertelen", err);
+    } catch (error) {
+      console.error("Csapat mentése sikertelen", error);
     }
   };
 
-  const teamExpansionTemplate = (team: TeamDetail) => (
-    <div style={{ padding: "1rem" }}>
-      <h4>{team.name} – versenyzők</h4>
+  const toggleTeam = (teamId: number) => {
+    setExpandedTeams((current) =>
+      current.includes(teamId)
+        ? current.filter((id) => id !== teamId)
+        : [...current, teamId],
+    );
+  };
 
-      <DataTable value={team.members} size="small">
-        <Column field="rajt_szam" header="Rajt #" />
-        <Column field="name" header="Név" />
-        <Column header="Körök" body={(m: Member) => m.laps.length} />
-        <Column
-          header="Összidő"
-          body={(m: Member) =>
-            secondsToHHMMSS(m.laps.reduce((sum, l) => sum + l.time_ms, 0))
-          }
-        />
-      </DataTable>
-    </div>
-  );
+  const getTotalTeamLaps = (team: TeamDetail) =>
+    team.members.reduce(
+      (total, member) => total + member.laps.length,
+      0,
+    );
+
+  const getMemberTotalTime = (teamMember: TeamDetail["members"][number]) =>
+    teamMember.laps.reduce(
+      (total, lap) => total + lap.time_ms,
+      0,
+    );
 
   return (
-    <>
-      <div className="card flex justify-content-center gap-3">
-        <FloatLabel>
+    <section className="teams-page">
+      <header className="teams-page-header">
+        <div>
+          <span className="teams-page-eyebrow">
+            Nevezési lista
+          </span>
+
+          <h1>Csapatok és résztvevők</h1>
+
+          <p>
+            A benevezett csapatok, versenyzők és mért körök áttekintése.
+          </p>
+        </div>
+
+        <div className="teams-page-total">
+          <i className="pi pi-users" />
+
+          <div>
+            <span>Összes csapat</span>
+            <strong>{csapatok.length}</strong>
+          </div>
+        </div>
+      </header>
+
+      <div className="teams-toolbar">
+        <div className="teams-search">
+          <i className="pi pi-search" />
+
           <InputText
-            id="teamname"
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                e.preventDefault();
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
+            placeholder="Keresés csapatra vagy versenyzőre"
+          />
+        </div>
+
+        <div className="teams-create">
+          <InputText
+            value={teamName}
+            onChange={(event) => setTeamName(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                event.preventDefault();
                 handleSaveTeam();
               }
             }}
-          />{" "}
-          <label htmlFor="teamname">Csapat név</label>
-        </FloatLabel>
+            placeholder="Új csapat neve"
+          />
+
+          <Button
+            label="Hozzáadás"
+            icon="pi pi-plus"
+            onClick={handleSaveTeam}
+            disabled={!teamName.trim()}
+          />
+        </div>
       </div>
 
-      <div className="mt-5 border-round">
-        {isMobile ? (
-          <Accordion multiple>
-            {csapatok.map((team) => (
-              <AccordionTab
+      <div className="teams-list">
+        {loading ? (
+          <div className="teams-empty-state">
+            <span className="loader" />
+            <p>Csapatok betöltése...</p>
+          </div>
+        ) : filteredTeams.length === 0 ? (
+          <div className="teams-empty-state">
+            <i className="pi pi-search" />
+            <strong>Nincs találat</strong>
+            <p>A megadott keresésre nem található csapat vagy versenyző.</p>
+          </div>
+        ) : (
+          filteredTeams.map((team, teamIndex) => {
+            const isExpanded = expandedTeams.includes(team.id);
+
+            return (
+              <article
+                className={`team-list-card ${
+                  isExpanded ? "team-list-card-expanded" : ""
+                }`}
                 key={team.id}
-                header={`${team.name} (${team.members.length} fő)`}
               >
-                {team.members.map((m) => (
-                  <div
-                    key={m.id}
-                    style={{
-                      borderBottom: "1px solid #ddd",
-                      padding: "0.5rem 0",
-                    }}
-                  >
-                    <strong>{m.name}</strong> (#{m.rajt_szam})
-                    <div>Körök: {m.laps.length}</div>
-                    <div>
-                      Összidő:{" "}
-                      {secondsToHHMMSS(
-                        m.laps.reduce((s, l) => s + l.time_ms, 0),
-                      )}{" "}
+                <button
+                  type="button"
+                  className="team-list-header"
+                  onClick={() => toggleTeam(team.id)}
+                  aria-expanded={isExpanded}
+                >
+                  <div className="team-list-main">
+                    <div className="team-list-number">
+                      {teamIndex + 1}
+                    </div>
+
+                    <div className="team-list-title">
+                      <strong>{team.name}</strong>
+
+                      <span>
+                        {team.members.length} versenyző
+                        {" · "}
+                        {getTotalTeamLaps(team)} mért kör
+                      </span>
                     </div>
                   </div>
-                ))}
-              </AccordionTab>
-            ))}
-          </Accordion>
-        ) : (
-          /* DESKTOP */
-          <DataTable
-            value={csapatok}
-            dataKey="id"
-            expandedRows={expandedRows}
-            onRowToggle={(e) => setExpandedRows(e.data)}
-            rowExpansionTemplate={teamExpansionTemplate}
-          >
-            <Column expander style={{ width: "3rem" }} />
-            <Column field="name" header="Csapat" />
-            <Column
-              header="Versenyzők"
-              body={(t: TeamDetail) => t.members.length}
-            />
-          </DataTable>
+
+                  <div className="team-list-meta">
+                    <span className="team-member-count">
+                      <i className="pi pi-users" />
+                      {team.members.length} fő
+                    </span>
+
+                    <i
+                      className={`pi ${
+                        isExpanded
+                          ? "pi-chevron-up"
+                          : "pi-chevron-down"
+                      }`}
+                    />
+                  </div>
+                </button>
+
+                {isExpanded && (
+                  <div className="team-members-panel">
+                    {team.members.length === 0 ? (
+                      <div className="team-no-members">
+                        <i className="pi pi-user-plus" />
+                        <span>
+                          Ehhez a csapathoz még nincs versenyző hozzáadva.
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="team-members-table">
+                        <div className="team-members-table-header">
+                          <span>Rajtszám</span>
+                          <span>Versenyző</span>
+                          <span>Körök</span>
+                          <span>Összidő</span>
+                        </div>
+
+                        {team.members.map((member) => (
+                          <div
+                            className="team-member-row"
+                            key={member.id}
+                          >
+                            <span
+                              className="team-member-start-number"
+                              data-label="Rajtszám"
+                            >
+                              #{member.rajt_szam}
+                            </span>
+
+                            <strong data-label="Versenyző">
+                              {member.name}
+                            </strong>
+
+                            <span data-label="Körök">
+                              {member.laps.length}
+                            </span>
+
+                            <span
+                              className="team-member-time"
+                              data-label="Összidő"
+                            >
+                              {secondsToHHMMSS(
+                                getMemberTotalTime(member),
+                              )}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </article>
+            );
+          })
         )}
       </div>
-    </>
+    </section>
   );
 }

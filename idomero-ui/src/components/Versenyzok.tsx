@@ -1,252 +1,376 @@
-//react
-import { useEffect, useRef, useState } from "react";
-
-//#region prime react
+import { useEffect, useMemo, useState } from "react";
 import { InputText } from "primereact/inputtext";
 import { InputNumber } from "primereact/inputnumber";
 import type { InputNumberValueChangeEvent } from "primereact/inputnumber";
-import { FloatLabel } from "primereact/floatlabel";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
-import { Accordion } from "primereact/accordion";
-import { AccordionTab } from "primereact/accordion";
-import { DataTable } from "primereact/datatable";
-import { Column } from "primereact/column";
-import { Toast } from "primereact/toast";
-//#endregion prime react
 
-//saját importok
 import { GetVersenyzo, Add_versenyzo } from "../api/versenyzok";
-
 import { getTeamSummary } from "../api/teams";
+
 import type { TeamSummary } from "../types/teams";
 import type { Member } from "../types/members";
-import type { Lap } from "../types/lap";
+
 import { secondsToHHMMSS } from "../Clock/idovalto";
-import { useIsMobile } from "../hooks/useIsMobile";
+
+import "../assets/racers.css";
 
 export default function Versenyzok() {
-  const isMobile = useIsMobile();
+  const [name, setName] = useState("");
+  const [startNumber, setStartNumber] = useState<number>(0);
+  const [selectedTeam, setSelectedTeam] =
+    useState<TeamSummary | null>(null);
 
-  const [neve, setneve] = useState<string>("");
-  const [rajt, setrajt] = useState<number>(0);
-  const [kiv_csapat, setkiv_csapat] = useState<TeamSummary | null>(null);
+  const [search, setSearch] = useState("");
+  const [racers, setRacers] = useState<Member[]>([]);
+  const [teams, setTeams] = useState<TeamSummary[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [expandedRacers, setExpandedRacers] =
+    useState<number[]>([]);
 
-  //Listák
-  const [versenyzok, setVersenyzok] = useState<Member[]>([]);
-  const [csapatok, setcsapatok] = useState<TeamSummary[]>([]);
-
-  const [loading, setLoading] = useState<boolean>(true);
-  const toast = useRef<Toast>(null);
-  //Datatable
-  const [expandedRows, setExpandedRows] = useState<any>(null);
-
-  const Sikeres_save = () => {
-    toast.current?.show({
-      severity: "success",
-      summary: "Siker",
-      detail: "Sikeres mentés",
-      life: 4000,
-    });
-  };
-
-  const Sikertelen_save = () => {
-    toast.current?.show({
-      severity: "error",
-      summary: "mentés Sikertelen",
-      detail: "Nincs megfelelően kitöltve az összes mező",
-      life: 4000,
-    });
-  };
-
-  const GetRacers = async () => {
+  const loadData = async () => {
     setLoading(true);
+
     try {
-      const data = await GetVersenyzo();
-      const csapat = await getTeamSummary();
-      setcsapatok(csapat);
-      setVersenyzok(data);
-    } catch (err) {
-      console.error("Csapatok betöltése sikertelen", err);
+      const [racersData, teamsData] = await Promise.all([
+        GetVersenyzo(),
+        getTeamSummary(),
+      ]);
+
+      setRacers(racersData);
+      setTeams(teamsData);
+    } catch (error) {
+      console.error("Versenyzők betöltése sikertelen", error);
     } finally {
       setLoading(false);
     }
   };
 
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  const filteredRacers = useMemo(() => {
+    const normalizedSearch = search
+      .trim()
+      .toLocaleLowerCase("hu-HU");
+
+    if (!normalizedSearch) {
+      return racers;
+    }
+
+    return racers.filter((racer) => {
+      const racerMatch = racer.name
+        .toLocaleLowerCase("hu-HU")
+        .includes(normalizedSearch);
+
+      const team = teams.find(
+        (currentTeam) => currentTeam.id === racer.team_id,
+      );
+
+      const teamMatch = team?.name
+        .toLocaleLowerCase("hu-HU")
+        .includes(normalizedSearch);
+
+      const startNumberMatch = racer.rajt_szam
+        .toString()
+        .includes(normalizedSearch);
+
+      return racerMatch || teamMatch || startNumberMatch;
+    });
+  }, [racers, teams, search]);
+
+  const getTeamName = (teamId: number) =>
+    teams.find((team) => team.id === teamId)?.name ??
+    "Nincs csapat";
+
+  const getTotalTime = (racer: Member) =>
+    racer.laps.reduce(
+      (total, lap) => total + lap.time_ms,
+      0,
+    );
+
+  const getBestLap = (racer: Member) => {
+    if (racer.laps.length === 0) {
+      return null;
+    }
+
+    return racer.laps.reduce((best, current) =>
+      current.time_ms < best.time_ms ? current : best,
+    );
+  };
+
   const handleSave = async () => {
-    console.log("majd mentés lesz itt :D ");
-    if (!kiv_csapat) {
-      console.error("Nincs kiválasztott csapat");
+    const normalizedName = name.trim();
+
+    if (
+      !normalizedName ||
+      !selectedTeam ||
+      startNumber <= 0
+    ) {
       return;
     }
+
     try {
-      await Add_versenyzo(neve, rajt, kiv_csapat.id);
-      setneve("");
-      setrajt(0);
-      setkiv_csapat(null);
-      await GetRacers();
-      Sikeres_save();
-    } catch (err) {
-      console.error("Csapat mentése sikertelen", err);
-      Sikertelen_save();
+      await Add_versenyzo(
+        normalizedName,
+        startNumber,
+        selectedTeam.id,
+      );
+
+      setName("");
+      setStartNumber(0);
+      setSelectedTeam(null);
+
+      await loadData();
+    } catch (error) {
+      console.error("Versenyző mentése sikertelen", error);
     }
   };
 
-  useEffect(() => {
-    GetRacers();
-  }, []);
-
-  const racer_expanded = (member: Member) => (
-    <div style={{ padding: "0.75rem 1.5rem" }}>
-      <DataTable value={member.laps} size="small">
-        <Column field="lap_no" header="Körök" />
-        <Column header="Idő" body={(l: Lap) => secondsToHHMMSS(l.time_ms)} />
-      </DataTable>
-    </div>
-  );
+  const toggleRacer = (racerId: number) => {
+    setExpandedRacers((current) =>
+      current.includes(racerId)
+        ? current.filter((id) => id !== racerId)
+        : [...current, racerId],
+    );
+  };
 
   return (
-    <>
-      <div className="mt-5 border-round">
-        {isMobile ? (
-          <>
-            <Toast ref={toast} position="top-center" />
+    <section className="racers-page">
+      <header className="racers-page-header">
+        <div>
+          <span className="racers-page-eyebrow">
+            Nevezési lista
+          </span>
 
-            <form
-              className="flex flex-column align-items-center gap-4 pt-3 pb-5"
-              onSubmit={(e) => {
-                e.preventDefault();
-              }}
-            >
-              <FloatLabel>
-                <InputText
-                  id="racer"
-                  value={neve}
-                  onChange={(e) => setneve(e.target.value)}
-                />
-                <label htmlFor="racer">Versenyző neve</label>
-              </FloatLabel>
-              <FloatLabel>
-                <InputNumber
-                  id="race_num"
-                  value={rajt}
-                  onValueChange={(e: InputNumberValueChangeEvent) =>
-                    setrajt(e.value ?? 0)
-                  }
-                  useGrouping={false}
-                />
-                <label htmlFor="race_num">Rajtszám</label>
-              </FloatLabel>
-              <div className="flex flex-inline gap-4">
-                <p>Csapatok</p>
-                <Dropdown
-                  value={kiv_csapat}
-                  options={csapatok}
-                  optionLabel="name"
-                  onChange={(e) => {
-                    setkiv_csapat(e.value);
-                    console.log(e.value);
-                  }}
-                ></Dropdown>
-              </div>
-              <Button
-                type="submit"
-                label="Hozzáad"
-                className="w-5"
-                onClick={(e) => {
-                  handleSave();
-                }}
-              />
-            </form>
-            <Accordion multiple>
-              {versenyzok.map((racer) => (
-                <AccordionTab key={racer.id} header={`${racer.name}`}>
-                  <p>
-                    Rajt szám:{" "}
-                    <span className="font-bold text-xl">{racer.rajt_szam}</span>
-                  </p>
-                  {racer.laps.length > 0 ? (
-                    racer.laps.map((korok) => (
-                      <>
-                        <div key={korok.id}>
-                          {korok.lap_no}. kör: {secondsToHHMMSS(korok.time_ms)}
-                        </div>
-                      </>
-                    ))
-                  ) : (
-                    <>
-                      <p>Még nincs mért kör</p>
-                    </>
-                  )}
-                </AccordionTab>
-              ))}
-            </Accordion>
-          </>
+          <h1>Versenyzők</h1>
+
+          <p>
+            Versenyzők, rajtszámok, csapatok és mért körök
+            áttekintése.
+          </p>
+        </div>
+
+        <div className="racers-page-total">
+          <i className="pi pi-user" />
+
+          <div>
+            <span>Összes versenyző</span>
+            <strong>{racers.length}</strong>
+          </div>
+        </div>
+      </header>
+
+      <div className="racers-toolbar">
+        <div className="racers-search">
+          <i className="pi pi-search" />
+
+          <InputText
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
+            placeholder="Keresés névre, csapatra vagy rajtszámra"
+          />
+        </div>
+
+        <div className="racers-create">
+          <InputText
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            placeholder="Versenyző neve"
+          />
+
+          <InputNumber
+            value={startNumber}
+            onValueChange={(
+              event: InputNumberValueChangeEvent,
+            ) => setStartNumber(event.value ?? 0)}
+            useGrouping={false}
+            min={1}
+            placeholder="Rajtszám"
+          />
+
+          <Dropdown
+            value={selectedTeam}
+            options={teams}
+            optionLabel="name"
+            onChange={(event) =>
+              setSelectedTeam(event.value)
+            }
+            placeholder="Csapat"
+          />
+
+          <Button
+            label="Hozzáadás"
+            icon="pi pi-plus"
+            onClick={handleSave}
+            disabled={
+              !name.trim() ||
+              !selectedTeam ||
+              startNumber <= 0
+            }
+          />
+        </div>
+      </div>
+
+      <div className="racers-list">
+        {loading ? (
+          <div className="racers-empty-state">
+            <span className="loader" />
+            <p>Versenyzők betöltése...</p>
+          </div>
+        ) : filteredRacers.length === 0 ? (
+          <div className="racers-empty-state">
+            <i className="pi pi-search" />
+            <strong>Nincs találat</strong>
+            <p>
+              A megadott keresésre nem található versenyző.
+            </p>
+          </div>
         ) : (
-          <>
-            <Toast ref={toast} />
-            <form
-              className="flex flex-column align-items-center gap-4 pt-3"
-              onSubmit={(e) => {
-                e.preventDefault();
-              }}
-            >
-              <FloatLabel>
-                <InputText
-                  id="racer"
-                  value={neve}
-                  onChange={(e) => setneve(e.target.value)}
-                />
-                <label htmlFor="racer">Versenyző neve</label>
-              </FloatLabel>
-              <FloatLabel>
-                <InputNumber
-                  id="race_num"
-                  value={rajt}
-                  onValueChange={(e: InputNumberValueChangeEvent) =>
-                    setrajt(e.value ?? 0)
-                  }
-                  useGrouping={false}
-                />
-                <label htmlFor="race_num">Rajtszám</label>
-              </FloatLabel>
+          filteredRacers.map((racer) => {
+            const isExpanded =
+              expandedRacers.includes(racer.id);
 
-              <div className="flex flex-inline gap-4">
-                <p>Csapatok</p>
-                <Dropdown
-                  value={kiv_csapat}
-                  options={csapatok}
-                  optionLabel="name"
-                  onChange={(e) => {
-                    setkiv_csapat(e.value);
-                    console.log(e.value);
-                  }}
-                ></Dropdown>
-              </div>
+            const bestLap = getBestLap(racer);
 
-              <Button
-                type="submit"
-                label="Hozzáad"
-                className="w-2"
-                onClick={(e) => {
-                  handleSave();
-                }}
-              />
-            </form>
-            <DataTable
-              value={versenyzok}
-              dataKey="id"
-              expandedRows={expandedRows}
-              onRowToggle={(e) => setExpandedRows(e.data)}
-              rowExpansionTemplate={racer_expanded}
-            >
-              <Column expander style={{ width: "3rem" }}></Column>
-              <Column field="name" header="Név"></Column>
-              <Column field="rajt_szam" header="Rajtszám"></Column>
-            </DataTable>
-          </>
+            return (
+              <article
+                className={`racer-card ${
+                  isExpanded
+                    ? "racer-card-expanded"
+                    : ""
+                }`}
+                key={racer.id}
+              >
+                <button
+                  type="button"
+                  className="racer-card-header"
+                  onClick={() => toggleRacer(racer.id)}
+                  aria-expanded={isExpanded}
+                >
+                  <div className="racer-card-main">
+                    <div className="racer-start-number">
+                      #{racer.rajt_szam}
+                    </div>
+
+                    <div className="racer-card-title">
+                      <strong>{racer.name}</strong>
+
+                      <span>
+                        {getTeamName(racer.team_id)}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="racer-card-summary">
+                    <div>
+                      <span>Körök</span>
+                      <strong>{racer.laps.length}</strong>
+                    </div>
+
+                    <div>
+                      <span>Összidő</span>
+                      <strong>
+                        {secondsToHHMMSS(
+                          getTotalTime(racer),
+                        )}
+                      </strong>
+                    </div>
+
+                    <i
+                      className={`pi ${
+                        isExpanded
+                          ? "pi-chevron-up"
+                          : "pi-chevron-down"
+                      }`}
+                    />
+                  </div>
+                </button>
+
+                {isExpanded && (
+                  <div className="racer-laps-panel">
+                    <div className="racer-statistics">
+                      <div>
+                        <span>Csapat</span>
+                        <strong>
+                          {getTeamName(racer.team_id)}
+                        </strong>
+                      </div>
+
+                      <div>
+                        <span>Mért körök</span>
+                        <strong>
+                          {racer.laps.length}
+                        </strong>
+                      </div>
+
+                      <div>
+                        <span>Legjobb kör</span>
+                        <strong>
+                          {bestLap
+                            ? secondsToHHMMSS(
+                                bestLap.time_ms,
+                              )
+                            : "--:--:--"}
+                        </strong>
+                      </div>
+
+                      <div>
+                        <span>Összidő</span>
+                        <strong>
+                          {secondsToHHMMSS(
+                            getTotalTime(racer),
+                          )}
+                        </strong>
+                      </div>
+                    </div>
+
+                    {racer.laps.length === 0 ? (
+                      <div className="racer-no-laps">
+                        <i className="pi pi-stopwatch" />
+                        <span>
+                          Ehhez a versenyzőhöz még nincs
+                          rögzített kör.
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="racer-laps-table">
+                        <div className="racer-laps-table-header">
+                          <span>Kör</span>
+                          <span>Idő</span>
+                        </div>
+
+                        {[...racer.laps]
+                          .sort(
+                            (a, b) =>
+                              a.lap_no - b.lap_no,
+                          )
+                          .map((lap) => (
+                            <div
+                              className="racer-lap-row"
+                              key={lap.id}
+                            >
+                              <span data-label="Kör">
+                                {lap.lap_no}. kör
+                              </span>
+
+                              <strong data-label="Idő">
+                                {secondsToHHMMSS(
+                                  lap.time_ms,
+                                )}
+                              </strong>
+                            </div>
+                          ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </article>
+            );
+          })
         )}
       </div>
-    </>
+    </section>
   );
 }

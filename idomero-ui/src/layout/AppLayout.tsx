@@ -8,13 +8,13 @@ export default function AppLayout() {
 
   const items = [
     {
-      label: "Home",
+      label: "Áttekintés",
       icon: "pi pi-home",
       command: () => navigate("/"),
       className: location.pathname === "/" ? "app-menu-active" : "",
     },
     {
-      label: "Mezőny",
+      label: "Csapatok",
       icon: "pi pi-users",
       command: () => navigate("/mezony"),
       className: location.pathname.startsWith("/mezony")
@@ -22,7 +22,7 @@ export default function AppLayout() {
         : "",
     },
     {
-      label: "Admin",
+      label: "Beállítások",
       icon: "pi pi-cog",
       command: () => navigate("/admin"),
       className: location.pathname.startsWith("/admin")
@@ -31,10 +31,27 @@ export default function AppLayout() {
     },
   ];
 
+  const start = (
+    <div className="app-brand">
+      <div className="app-brand-icon">
+        <i className="pi pi-stopwatch" />
+      </div>
+
+      <div className="app-brand-text">
+        <span className="app-brand-title">Kerékpáros időmérés</span>
+        <span className="app-brand-subtitle">Race Control</span>
+      </div>
+    </div>
+  );
+
   return (
     <div className="app-layout">
       <header className="app-header">
-        <Menubar model={items} className="app-menubar" />
+        <Menubar
+          model={items}
+          start={start}
+          className="app-menubar"
+        />
       </header>
 
       <main className="app-content">

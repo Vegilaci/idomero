@@ -68,3 +68,244 @@
 2026-06-07 12:45:49,213 | INFO | 1 change detected
 2026-06-07 12:47:04,808 | INFO | 4 changes detected
 2026-06-07 12:52:23,273 | INFO | 1 change detected
+2026-06-07 13:21:43,639 | INFO | 1 change detected
+2026-06-07 13:21:44,298 | INFO | 1 change detected
+2026-06-07 13:21:44,658 | INFO | 1 change detected
+2026-06-07 13:28:58,029 | INFO | Start beállítás: rider_now=2, rider_next=5
+2026-06-07 13:29:10,055 | INFO | on_reset: Én - eltelt idő: 12 ms
+2026-06-07 13:29:10,082 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=12
+2026-06-07 13:29:10,168 | INFO | 3 changes detected
+2026-06-07 13:29:12,564 | INFO | on_reset: Én - eltelt idő: 2 ms
+2026-06-07 13:29:12,604 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=2
+2026-06-07 13:29:12,616 | INFO | Stop utáni váltás: rider_now=5, rider_next=2
+2026-06-07 13:29:12,653 | INFO | 3 changes detected
+2026-06-07 13:29:16,561 | INFO | Start beállítás: rider_now=1, rider_next=3
+2026-06-07 13:29:16,651 | INFO | 3 changes detected
+2026-06-07 13:29:19,497 | INFO | on_reset: Pogi - eltelt idő: 2 ms
+2026-06-07 13:29:19,513 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=2
+2026-06-07 13:29:19,526 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-06-07 13:29:19,593 | INFO | 3 changes detected
+2026-06-07 13:29:20,805 | INFO | on_reset: Anyááád - eltelt idő: 1 ms
+2026-06-07 13:29:20,822 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=1
+2026-06-07 13:29:20,834 | INFO | Stop utáni váltás: rider_now=4, rider_next=1
+2026-06-07 13:29:20,909 | INFO | 3 changes detected
+2026-06-07 13:29:26,313 | INFO | on_reset: Dogó3 - eltelt idő: 5 ms
+2026-06-07 13:29:26,334 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=5
+2026-06-07 13:29:26,337 | INFO | Stop utáni váltás: rider_now=1, rider_next=3
+2026-06-07 13:29:26,529 | INFO | 3 changes detected
+2026-06-07 13:29:29,906 | INFO | on_reset: Pogi - eltelt idő: 3 ms
+2026-06-07 13:29:29,926 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=3
+2026-06-07 13:29:29,931 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-06-07 13:29:30,027 | INFO | 3 changes detected
+2026-06-07 13:29:32,127 | INFO | on_reset: Anyááád - eltelt idő: 2 ms
+2026-06-07 13:29:32,162 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=2
+2026-06-07 13:29:32,175 | INFO | Stop utáni váltás: rider_now=4, rider_next=1
+2026-06-07 13:29:32,259 | INFO | 3 changes detected
+2026-06-07 13:29:34,102 | INFO | on_reset: Dogó3 - eltelt idő: 1 ms
+2026-06-07 13:29:34,126 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=1
+2026-06-07 13:29:34,132 | INFO | Stop utáni váltás: rider_now=1, rider_next=3
+2026-06-07 13:29:34,194 | INFO | 3 changes detected
+2026-06-07 13:29:38,552 | INFO | on_reset: Pogi - eltelt idő: 4 ms
+2026-06-07 13:29:38,559 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=4
+2026-06-07 13:29:38,567 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-06-07 13:29:38,651 | INFO | 3 changes detected
+2026-06-07 13:29:41,835 | INFO | on_reset: Anyááád - eltelt idő: 3 ms
+2026-06-07 13:29:41,853 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=3
+2026-06-07 13:29:41,859 | INFO | Stop utáni váltás: rider_now=4, rider_next=1
+2026-06-07 13:29:41,903 | INFO | 3 changes detected
+2026-06-07 13:29:48,021 | INFO | on_reset: Qwertzg - eltelt idő: 35 ms
+2026-06-07 13:29:48,028 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=35
+2026-06-07 13:29:48,037 | INFO | Stop utáni váltás: rider_now=2, rider_next=5
+2026-06-07 13:29:48,095 | INFO | 3 changes detected
+2026-06-07 13:32:16,327 | INFO | on_reset: Dogó3 - eltelt idő: 154 ms
+2026-06-07 13:32:16,339 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=154
+2026-06-07 13:32:16,346 | INFO | Stop utáni váltás: rider_now=1, rider_next=3
+2026-06-07 13:32:16,584 | INFO | 3 changes detected
+2026-06-07 13:32:18,618 | INFO | on_reset: Pogi - eltelt idő: 2 ms
+2026-06-07 13:32:18,637 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=2
+2026-06-07 13:32:18,646 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-06-07 13:32:18,712 | INFO | 3 changes detected
+2026-06-07 13:32:20,194 | INFO | on_reset: Anyááád - eltelt idő: 1 ms
+2026-06-07 13:32:20,200 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=1
+2026-06-07 13:32:20,212 | INFO | Stop utáni váltás: rider_now=4, rider_next=1
+2026-06-07 13:32:20,278 | INFO | 3 changes detected
+2026-06-07 13:33:30,487 | INFO | on_reset: Én - eltelt idő: 222 ms
+2026-06-07 13:33:30,493 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=222
+2026-06-07 13:33:30,498 | INFO | Stop utáni váltás: rider_now=5, rider_next=2
+2026-06-07 13:33:30,575 | INFO | 3 changes detected
+2026-06-07 13:37:00,523 | INFO | on_reset: Qwertzg - eltelt idő: 210 ms
+2026-06-07 13:37:00,550 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=210
+2026-06-07 13:37:00,555 | INFO | Stop utáni váltás: rider_now=2, rider_next=5
+2026-06-07 13:37:00,651 | INFO | 3 changes detected
+2026-06-07 13:38:21,865 | INFO | on_reset: Én - eltelt idő: 81 ms
+2026-06-07 13:38:21,885 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=81
+2026-06-07 13:38:21,892 | INFO | Stop utáni váltás: rider_now=5, rider_next=2
+2026-06-07 13:38:21,949 | INFO | 3 changes detected
+2026-06-07 13:38:23,372 | INFO | on_reset: Dogó3 - eltelt idő: 363 ms
+2026-06-07 13:38:23,379 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=363
+2026-06-07 13:38:23,387 | INFO | Stop utáni váltás: rider_now=1, rider_next=3
+2026-06-07 13:38:23,474 | INFO | 3 changes detected
+2026-06-07 13:41:48,869 | INFO | Start beállítás: rider_now=2, rider_next=5
+2026-06-07 13:41:49,068 | INFO | 3 changes detected
+2026-06-07 13:41:50,438 | INFO | Start beállítás: rider_now=1, rider_next=3
+2026-06-07 13:42:41,620 | INFO | 1 change detected
+2026-06-07 13:42:43,238 | INFO | 1 change detected
+2026-06-07 13:42:50,813 | INFO | 1 change detected
+2026-06-07 13:46:16,994 | INFO | on_reset: Én - eltelt idő: 268 ms
+2026-06-07 13:46:17,006 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=268
+2026-06-07 13:46:17,014 | INFO | Stop utáni váltás: rider_now=5, rider_next=2
+2026-06-07 13:46:17,095 | INFO | 3 changes detected
+2026-06-07 13:46:17,718 | INFO | on_reset: Pogi - eltelt idő: 267 ms
+2026-06-07 13:46:17,727 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=267
+2026-06-07 13:46:17,734 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-06-07 13:46:17,808 | INFO | 3 changes detected
+2026-06-07 13:47:08,696 | INFO | Start beállítás: rider_now=2, rider_next=5
+2026-06-07 13:47:08,759 | INFO | 3 changes detected
+2026-06-07 13:47:10,404 | INFO | Start beállítás: rider_now=1, rider_next=3
+2026-06-07 13:47:10,471 | INFO | 3 changes detected
+2026-06-07 13:52:28,280 | INFO | 1 change detected
+2026-06-07 13:56:52,580 | INFO | on_reset: Én - eltelt idő: 583 ms
+2026-06-07 13:56:52,588 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=583
+2026-06-07 13:56:52,679 | INFO | 3 changes detected
+2026-06-07 13:56:53,227 | INFO | on_reset: Pogi - eltelt idő: 582 ms
+2026-06-07 13:56:53,263 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=582
+2026-06-07 13:56:53,331 | INFO | 3 changes detected
+2026-06-07 13:58:22,598 | INFO | on_reset: Én - eltelt idő: 90 ms
+2026-06-07 13:58:22,603 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=90
+2026-06-07 13:58:22,697 | INFO | 3 changes detected
+2026-06-07 13:58:23,228 | INFO | on_reset: Pogi - eltelt idő: 89 ms
+2026-06-07 13:58:23,239 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=89
+2026-06-07 13:58:23,300 | INFO | 3 changes detected
+2026-06-07 14:02:31,662 | INFO | on_reset: Én - eltelt idő: 249 ms
+2026-06-07 14:02:31,680 | INFO | on_reset: lap elmentve – lap_no=16, time_ms=249
+2026-06-07 14:02:31,755 | INFO | 3 changes detected
+2026-06-07 14:02:33,234 | INFO | on_reset: Pogi - eltelt idő: 249 ms
+2026-06-07 14:02:33,237 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=249
+2026-06-07 14:02:33,323 | INFO | 3 changes detected
+2026-06-07 14:03:52,492 | INFO | 3 changes detected
+2026-06-07 14:04:02,847 | INFO | 3 changes detected
+2026-06-07 14:04:13,787 | INFO | 3 changes detected
+2026-06-07 14:04:22,408 | INFO | 3 changes detected
+2026-06-07 14:04:32,961 | INFO | 3 changes detected
+2026-06-07 14:04:39,765 | INFO | 3 changes detected
+2026-06-07 14:04:55,914 | INFO | Start beállítás: rider_now=6, rider_next=7
+2026-06-07 14:04:56,014 | INFO | 3 changes detected
+2026-06-07 14:07:31,999 | INFO | on_reset: Én - eltelt idő: 300 ms
+2026-06-07 14:07:32,004 | INFO | on_reset: lap elmentve – lap_no=17, time_ms=300
+2026-06-07 14:07:32,085 | INFO | 3 changes detected
+2026-06-07 14:07:33,615 | INFO | on_reset: Pogi - eltelt idő: 300 ms
+2026-06-07 14:07:33,632 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=300
+2026-06-07 14:07:33,697 | INFO | 3 changes detected
+2026-06-07 14:07:35,268 | INFO | on_reset: nevetel - eltelt idő: 159 ms
+2026-06-07 14:07:35,286 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=159
+2026-06-07 14:07:35,368 | INFO | 3 changes detected
+2026-06-07 14:10:59,414 | INFO | on_reset: Én - eltelt idő: 207 ms
+2026-06-07 14:10:59,419 | INFO | on_reset: lap elmentve – lap_no=18, time_ms=207
+2026-06-07 14:10:59,500 | INFO | 3 changes detected
+2026-06-07 14:11:02,439 | INFO | on_reset: Én - eltelt idő: 3 ms
+2026-06-07 14:11:02,457 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=3
+2026-06-07 14:11:02,462 | INFO | Stop utáni váltás: rider_now=5, rider_next=2
+2026-06-07 14:11:02,529 | INFO | 3 changes detected
+2026-06-07 14:14:13,913 | INFO | on_reset: Qwertzg - eltelt idő: 191 ms
+2026-06-07 14:14:13,938 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=191
+2026-06-07 14:14:14,021 | INFO | 3 changes detected
+2026-06-07 14:14:16,949 | INFO | on_reset: Pogi - eltelt idő: 403 ms
+2026-06-07 14:14:16,967 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=403
+2026-06-07 14:14:17,059 | INFO | 3 changes detected
+2026-06-07 14:14:18,338 | INFO | on_reset: nevetel - eltelt idő: 403 ms
+2026-06-07 14:14:18,362 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=403
+2026-06-07 14:14:18,431 | INFO | 3 changes detected
+2026-06-07 14:14:59,816 | INFO | on_reset: Qwertzg - eltelt idő: 45 ms
+2026-06-07 14:14:59,822 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=45
+2026-06-07 14:14:59,907 | INFO | 3 changes detected
+2026-06-07 14:19:37,507 | INFO | on_reset: Qwertzg - eltelt idő: 277 ms
+2026-06-07 14:19:37,512 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=277
+2026-06-07 14:19:37,609 | INFO | 3 changes detected
+2026-06-07 14:21:45,262 | INFO | on_reset: Qwertzg - eltelt idő: 127 ms
+2026-06-07 14:21:45,301 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=127
+2026-06-07 14:21:45,367 | INFO | 3 changes detected
+2026-06-07 14:21:51,840 | INFO | on_reset: Qwertzg - eltelt idő: 6 ms
+2026-06-07 14:21:51,874 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=6
+2026-06-07 14:21:51,975 | INFO | 3 changes detected
+2026-06-07 14:21:54,987 | INFO | on_reset: Qwertzg - eltelt idő: 3 ms
+2026-06-07 14:21:55,009 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=3
+2026-06-07 14:21:55,011 | INFO | Stop utáni váltás: rider_now=2, rider_next=5
+2026-06-07 14:21:55,098 | INFO | 3 changes detected
+2026-06-07 14:22:06,111 | INFO | on_reset: Pogi - eltelt idő: 469 ms
+2026-06-07 14:22:06,114 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=469
+2026-06-07 14:22:06,178 | INFO | 3 changes detected
+2026-06-07 14:22:24,868 | INFO | on_reset: nevetel - eltelt idő: 486 ms
+2026-06-07 14:22:24,883 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=486
+2026-06-07 14:22:24,977 | INFO | 3 changes detected
+2026-06-07 14:24:05,765 | INFO | on_reset: nevetel - eltelt idő: 100 ms
+2026-06-07 14:24:05,788 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=100
+2026-06-07 14:24:05,794 | INFO | Stop utáni váltás: rider_now=7, rider_next=8
+2026-06-07 14:24:05,889 | INFO | 3 changes detected
+2026-06-07 14:24:08,953 | INFO | on_reset: dömötör - eltelt idő: 3 ms
+2026-06-07 14:24:08,977 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=3
+2026-06-07 14:24:08,984 | INFO | Stop utáni váltás: rider_now=8, rider_next=9
+2026-06-07 14:24:09,073 | INFO | 3 changes detected
+2026-06-07 14:24:09,777 | INFO | on_reset: pistu - eltelt idő: 0 ms
+2026-06-07 14:24:09,813 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=0
+2026-06-07 14:24:09,819 | INFO | Stop utáni váltás: rider_now=9, rider_next=10
+2026-06-07 14:24:09,882 | INFO | 3 changes detected
+2026-06-07 14:24:10,336 | INFO | on_reset: sokadik - eltelt idő: 0 ms
+2026-06-07 14:24:10,359 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=0
+2026-06-07 14:24:10,365 | INFO | Stop utáni váltás: rider_now=10, rider_next=6
+2026-06-07 14:24:10,437 | INFO | 3 changes detected
+2026-06-07 14:24:11,081 | INFO | on_reset: nem tudom - eltelt idő: 0 ms
+2026-06-07 14:24:11,091 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=0
+2026-06-07 14:24:11,099 | INFO | Stop utáni váltás: rider_now=6, rider_next=7
+2026-06-07 14:24:11,149 | INFO | 3 changes detected
+2026-06-07 14:24:14,540 | INFO | on_reset: Pogi - eltelt idő: 128 ms
+2026-06-07 14:24:14,565 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=128
+2026-06-07 14:24:14,623 | INFO | 3 changes detected
+2026-06-07 14:24:21,174 | INFO | on_reset: Pogi - eltelt idő: 6 ms
+2026-06-07 14:24:21,182 | INFO | on_reset: lap elmentve – lap_no=16, time_ms=6
+2026-06-07 14:24:21,273 | INFO | 3 changes detected
+2026-06-07 14:24:33,674 | INFO | on_reset: Én - eltelt idő: 158 ms
+2026-06-07 14:24:33,691 | INFO | on_reset: lap elmentve – lap_no=20, time_ms=158
+2026-06-07 14:24:33,695 | INFO | Stop utáni váltás: rider_now=5, rider_next=2
+2026-06-07 14:24:33,770 | INFO | 3 changes detected
+2026-06-07 14:24:54,720 | INFO | 1 change detected
+2026-06-07 16:17:07,704 | INFO | on_reset: Qwertzg - eltelt idő: 6754 ms
+2026-06-07 16:17:07,717 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=6754
+2026-06-07 16:17:07,789 | INFO | 3 changes detected
+2026-06-07 16:17:12,269 | INFO | on_reset: nevetel - eltelt idő: 6781 ms
+2026-06-07 16:17:12,283 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=6781
+2026-06-07 16:17:12,383 | INFO | 3 changes detected
+2026-06-07 16:17:13,884 | INFO | on_reset: Pogi - eltelt idő: 6772 ms
+2026-06-07 16:17:13,903 | INFO | on_reset: lap elmentve – lap_no=17, time_ms=6772
+2026-06-07 16:17:13,908 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-06-07 16:17:13,953 | INFO | 3 changes detected
+2026-06-07 16:17:15,222 | INFO | on_reset: nevetel - eltelt idő: 2 ms
+2026-06-07 16:17:15,228 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=2
+2026-06-07 16:17:15,232 | INFO | Stop utáni váltás: rider_now=7, rider_next=8
+2026-06-07 16:17:15,326 | INFO | 3 changes detected
+2026-06-07 16:26:56,416 | INFO | on_reset: Qwertzg - eltelt idő: 588 ms
+2026-06-07 16:26:56,423 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=588
+2026-06-07 16:26:56,428 | INFO | Stop utáni váltás: rider_now=2, rider_next=5
+2026-06-07 16:26:56,509 | INFO | 3 changes detected
+2026-06-07 16:26:58,533 | INFO | on_reset: dömötör - eltelt idő: 583 ms
+2026-06-07 16:26:58,538 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=583
+2026-06-07 16:26:58,631 | INFO | 3 changes detected
+2026-06-07 16:27:00,462 | INFO | on_reset: Anyááád - eltelt idő: 586 ms
+2026-06-07 16:27:00,472 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=586
+2026-06-07 16:27:00,550 | INFO | 3 changes detected
+2026-06-07 16:34:40,700 | INFO | 1 change detected
+2026-06-07 17:07:07,767 | INFO | 1 change detected
+2026-06-07 17:39:33,710 | INFO | 1 change detected
+2026-06-07 17:56:07,907 | INFO | Start beállítás: rider_now=2, rider_next=5
+2026-06-07 17:56:27,661 | INFO | on_reset: Én - eltelt idő: 19 ms
+2026-06-07 17:56:27,672 | INFO | on_reset: lap elmentve – lap_no=21, time_ms=19
+2026-06-07 17:56:27,679 | INFO | Stop utáni váltás: rider_now=5, rider_next=2
+2026-06-07 17:56:27,733 | INFO | 3 changes detected
+2026-06-07 17:56:29,905 | INFO | on_reset: Qwertzg - eltelt idő: 2 ms
+2026-06-07 17:56:29,926 | INFO | on_reset: lap elmentve – lap_no=16, time_ms=2
+2026-06-07 17:56:29,933 | INFO | Stop utáni váltás: rider_now=2, rider_next=5
+2026-06-07 17:56:30,004 | INFO | 3 changes detected
+2026-06-07 17:57:34,638 | INFO | on_reset: Én - eltelt idő: 64 ms
+2026-06-07 17:57:34,657 | INFO | on_reset: lap elmentve – lap_no=22, time_ms=64
+2026-06-07 17:57:34,663 | INFO | Stop utáni váltás: rider_now=5, rider_next=2
+2026-06-07 17:57:34,717 | INFO | 3 changes detected
+2026-06-07 17:57:35,222 | INFO | 1 change detected
