@@ -1,12 +1,23 @@
 import { Menubar } from "primereact/menubar";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import "./AppLayout.css";
 
 export default function AppLayout() {
   const navigate = useNavigate();
   const location = useLocation();
+  const [isAdmin,setIsAdmin] = useState<Boolean>(false);
 
-  const items = [
+  try {
+    const admin = localStorage.getItem("admin");
+    if (admin) {
+      setIsAdmin(true);
+    }
+  } catch (error) {
+    console.error("Error accessing localStorage:", error);
+  }
+
+  const ifadminitems = [
     {
       label: "Áttekintés",
       icon: "pi pi-home",
@@ -29,6 +40,30 @@ export default function AppLayout() {
         ? "app-menu-active"
         : "",
     },
+  ];
+
+  const items = isAdmin ? ifadminitems : 
+    [{
+      label: "Áttekintés",
+      icon: "pi pi-home",
+      command: () => navigate("/"),
+      className: location.pathname === "/" ? "app-menu-active" : "",
+    },
+    {
+      label: "Csapatok",
+      icon: "pi pi-users",
+      command: () => navigate("/mezony"),
+      className: location.pathname.startsWith("/mezony")
+        ? "app-menu-active"
+        : "",
+    },
+    {
+      label: "Bejelentkezés",
+      icon: "pi pi-sign-in",
+      command: () => navigate("/login"),
+    }
+
+  
   ];
 
   const start = (

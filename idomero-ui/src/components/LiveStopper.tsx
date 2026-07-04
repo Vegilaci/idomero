@@ -5,6 +5,9 @@ import { secondsToHHMMSS } from "../Clock/idovalto";
 import { Get_team_and_members } from "../api/teams";
 import { GetVersenyzo } from "../api/versenyzok";
 import type { Member } from "../types/members";
+
+import { Menu } from "primereact/menu";
+
 import "../assets/stopwatch.css";
 
 type ConnectionStatus = "connecting" | "connected" | "disconnected" | "error";
@@ -25,6 +28,9 @@ export default function LiveStopper({
   const [membersWithLaps, setMembersWithLaps] = useState<Member[]>([]);
 
   const wsRef = useRef<WebSocket | null>(null);
+  
+  const [isKilled, setIsKilled] = useState(false);
+  const stopMenuRef = useRef<Menu>(null);
 
   function getActiveRiderId(teamData: any): number | null {
     if (!teamData) return null;
@@ -47,7 +53,7 @@ export default function LiveStopper({
     return null;
   }
   
-  
+ 
   function hasRefreshEvent(payload: any): boolean {
     return (
       payload?.event === "refresh" ||
@@ -95,7 +101,15 @@ export default function LiveStopper({
     ws.onmessage = (event) => {
       try {
         const parsed = JSON.parse(event.data);
-
+        if (parsed?.event === "killed") {
+          setIsKilled(true);
+          setData({
+            event: "killed",
+            is_running: false,
+            elapsed_s: 0,
+          });
+          return;
+}
         if (hasRefreshEvent(parsed)) {
           refreshTeamAndActiveRider().catch((error) => {
             console.error(
@@ -175,6 +189,15 @@ export default function LiveStopper({
         case "reset":
           wsRef.current.send(JSON.stringify({ action }));
           break;
+        case "kill":
+          wsRef.current.send(JSON.stringify({ action }));
+          setIsKilled(true);
+          setData({
+            event: "killed",
+            is_running: false,
+            elapsed_s: 0,
+          });
+          break;
       }
     } catch (error) {
       console.error("Nem sikerült módosítani a stopper állapotát", error);
@@ -189,17 +212,21 @@ export default function LiveStopper({
     (member) => member.id === aktivTekero,
   );
 
-const previousLap =
-  activeMemberWithLaps?.laps?.length > 0
-    ? [...activeMemberWithLaps.laps].sort(
-        (a, b) => b.lap_no - a.lap_no,
-      )[0]
-    : null;
+  const previousLap =
+    activeMemberWithLaps?.laps?.length > 0
+      ? [...activeMemberWithLaps.laps].sort(
+          (a, b) => b.lap_no - a.lap_no,
+        )[0]
+      : null;
 
   const isConnected = connectionStatus === "connected";
   const isRunning = data?.is_running === true;
 
 function getStatusLabel() {
+  if (isKilled) {
+    return "Lezárva";
+  }
+
   if (connectionStatus === "connecting") {
     return "Kapcsolódás";
   }
@@ -211,9 +238,13 @@ function getStatusLabel() {
   if (connectionStatus === "disconnected") {
     return "Nincs kapcsolat";
   }
+  if (isKilled) {
+  return "Lezárva";
+}
 
   return isRunning ? "Aktív" : "Várakozik";
 }
+  
   const cardStatus =
   connectionStatus === "error" ||
   connectionStatus === "disconnected"
@@ -342,17 +373,42 @@ function getStatusLabel() {
             className="team-action-button"
           />
 
-          <Button
-            label="Stop"
-            icon="pi pi-stop"
-            onClick={() => startLiveStopper("stop")}
-            disabled={!isConnected || !isRunning}
-            severity="danger"
-            outlined
-            className="team-action-button"
-          />
-        </div>
+          <div className="team-stop-control">
+            <Button
+              label="Stop"
+              icon="pi pi-stop"
+              onClick={() => startLiveStopper("stop")}
+              disabled={!isConnected || !isRunning || isKilled}
+              severity="danger"
+              outlined
+              className="team-action-button team-stop-main"
+            />
 
+            <Menu
+              ref={stopMenuRef}
+              popup
+              className="team-stop-menu"
+              model={[
+                {
+                  label: "Full stop",
+                  icon: "pi pi-power-off",
+                  command: () => startLiveStopper("kill"),
+                  disabled: !isConnected || isKilled,
+                },
+              ]}
+            />
+
+            <Button
+              icon="pi pi-chevron-down"
+              onClick={(event) => stopMenuRef.current?.toggle(event)}
+              disabled={!isConnected || isKilled}
+              severity="danger"
+              outlined
+              className="team-stop-dropdown "
+              aria-label="További stop műveletek"
+            />
+          </div>
+        </div>
         <div className="team-connection">
           <span
             className={`connection-dot connection-${connectionStatus}`}
