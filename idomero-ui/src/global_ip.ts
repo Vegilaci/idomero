@@ -1,3 +1,3 @@
 export function Global_ip(): string {
-  return `localhost`;
+  return `192.168.0.31`;
 }

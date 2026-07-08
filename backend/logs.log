@@ -684,3 +684,21 @@
 2026-07-08 11:32:08,283 | INFO | on_kill: ver1 - eltelt idő: 7 ms
 2026-07-08 11:32:08,313 | INFO | on_kill: lap elmentve – lap_no=9, time_ms=7
 2026-07-08 11:32:08,413 | INFO | 3 changes detected
+2026-07-08 21:35:20,871 | INFO | 1 change detected
+2026-07-08 21:35:21,676 | INFO | 1 change detected
+2026-07-08 21:35:34,141 | INFO | 5 changes detected
+2026-07-08 21:35:38,630 | INFO | Start beállítás: rider_now=1, rider_next=3
+2026-07-08 21:35:38,689 | INFO | 3 changes detected
+2026-07-08 21:35:43,240 | INFO | on_reset: ver1 - eltelt idő: 4 ms
+2026-07-08 21:35:43,265 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=4
+2026-07-08 21:35:43,343 | INFO | 3 changes detected
+2026-07-08 21:35:47,457 | INFO | on_reset: ver1 - eltelt idő: 4 ms
+2026-07-08 21:35:47,473 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=4
+2026-07-08 21:35:47,562 | INFO | 3 changes detected
+2026-07-08 21:35:49,791 | INFO | on_reset: ver1 - eltelt idő: 2 ms
+2026-07-08 21:35:49,808 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=2
+2026-07-08 21:35:49,822 | INFO | Stop utáni váltás: rider_now=3, rider_next=1
+2026-07-08 21:35:49,897 | INFO | 3 changes detected
+2026-07-08 21:35:57,490 | INFO | on_kill: qwea - eltelt idő: 7 ms
+2026-07-08 21:35:57,501 | INFO | on_kill: lap elmentve – lap_no=7, time_ms=7
+2026-07-08 21:35:57,559 | INFO | 3 changes detected

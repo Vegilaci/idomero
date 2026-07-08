@@ -40,7 +40,7 @@ def switch_active_riders_onStart(team_id: int):
 
         db_team.rider_now = first_rider.id
         db_team.rider_next = next_rider.id
-        db_team.rider_lap = 0
+        db_team.rider_lap = 1
         db.commit()
         db.refresh(db_team)
 
@@ -71,7 +71,7 @@ def switch_on_stop(team_id: int):
 
     db_team.rider_now = member_ids[next_index]
     db_team.rider_next = member_ids[next_next_index]
-    db_team.rider_lap = 0
+    db_team.rider_lap = 1
     db.commit()
     db.refresh(db_team)
 
@@ -103,7 +103,7 @@ def on_reset(team_id: int, korido: int):
     next_lap_no = (max_lap_no or 0) + 1
 
     db_lap = models.Lap(member_id=db_member.id, time_ms=korido, lap_no=next_lap_no)
-    db_team.rider_lap = (db_team.rider_lap or 0) + 1
+    db_team.rider_lap = (db_team.rider_lap or 1) + 1
     db.add(db_lap)
     db.commit()
     db.refresh(db_lap)
@@ -134,7 +134,7 @@ def on_kill(team_id: int, korido: int): #utsó mentés stopper leállításakor
     next_lap_no = (max_lap_no or 0) + 1
 
     db_lap = models.Lap(member_id=db_member.id, time_ms=korido, lap_no=next_lap_no)
-    db_team.rider_lap  = 0 
+    db_team.rider_lap  = 1 
     db.add(db_lap)
     db.commit()
     db.refresh(db_lap)
