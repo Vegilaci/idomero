@@ -13,9 +13,35 @@ import type { Member } from "../types/members";
 
 import { secondsToHHMMSS } from "../Clock/idovalto";
 
+import { isAdmin } from "../auth/auth";
+
+
 import "../assets/racers.css";
 
 export default function Versenyzok() {
+//admin state ell
+  const [admin, setIsAdmin] = useState<boolean>(false);
+
+useEffect(() => {
+    function refreshAdminState() {
+      setIsAdmin(isAdmin());
+    }
+
+    refreshAdminState();
+
+    window.addEventListener("storage", refreshAdminState);
+    window.addEventListener("focus", refreshAdminState);
+    window.addEventListener("adminChanged", refreshAdminState);
+
+    return () => {
+      window.removeEventListener("storage", refreshAdminState);
+      window.removeEventListener("focus", refreshAdminState);
+      window.removeEventListener("adminChanged", refreshAdminState);
+    };
+  }, []);
+
+//admin state ell 
+
   const [name, setName] = useState("");
   const [startNumber, setStartNumber] = useState<number>(0);
   const [selectedTeam, setSelectedTeam] =
@@ -172,8 +198,9 @@ export default function Versenyzok() {
             placeholder="Keresés névre, csapatra vagy rajtszámra"
           />
         </div>
-
-        <div className="racers-create">
+        {admin ? (
+          <>
+                    <div className="racers-create">
           <InputText
             value={name}
             onChange={(event) => setName(event.target.value)}
@@ -211,6 +238,11 @@ export default function Versenyzok() {
             }
           />
         </div>
+
+          </>
+        )
+        
+        :""}
       </div>
 
       <div className="racers-list">

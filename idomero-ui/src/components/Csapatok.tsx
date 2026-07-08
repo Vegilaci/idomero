@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
+import { isAdmin } from "../auth/auth";
 
 import { getTeams, createTeam } from "../api/teams";
 import type { TeamDetail } from "../types/teams";
@@ -9,6 +10,31 @@ import { secondsToHHMMSS } from "../Clock/idovalto";
 import "../assets/teams.css";
 
 export default function Csapatok() {
+
+//admin state ell
+  const [admin, setIsAdmin] = useState<boolean>(false);
+
+useEffect(() => {
+    function refreshAdminState() {
+      setIsAdmin(isAdmin());
+    }
+
+    refreshAdminState();
+
+    window.addEventListener("storage", refreshAdminState);
+    window.addEventListener("focus", refreshAdminState);
+    window.addEventListener("adminChanged", refreshAdminState);
+
+    return () => {
+      window.removeEventListener("storage", refreshAdminState);
+      window.removeEventListener("focus", refreshAdminState);
+      window.removeEventListener("adminChanged", refreshAdminState);
+    };
+  }, []);
+
+//admin state ell 
+
+
   const [teamName, setTeamName] = useState("");
   const [search, setSearch] = useState("");
   const [csapatok, setCsapatok] = useState<TeamDetail[]>([]);
@@ -123,8 +149,9 @@ export default function Csapatok() {
             placeholder="Keresés csapatra vagy versenyzőre"
           />
         </div>
-
-        <div className="teams-create">
+        {admin ? (
+          <>
+                  <div className="teams-create">
           <InputText
             value={teamName}
             onChange={(event) => setTeamName(event.target.value)}
@@ -144,6 +171,10 @@ export default function Csapatok() {
             disabled={!teamName.trim()}
           />
         </div>
+
+          </>
+          
+          ):""}
       </div>
 
       <div className="teams-list">

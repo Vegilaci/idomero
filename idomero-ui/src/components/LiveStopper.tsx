@@ -5,6 +5,7 @@ import { secondsToHHMMSS } from "../Clock/idovalto";
 import { Get_team_and_members } from "../api/teams";
 import { GetVersenyzo } from "../api/versenyzok";
 import type { Member } from "../types/members";
+import { isAdmin } from "../auth/auth";
 
 import { Menu } from "primereact/menu";
 
@@ -19,9 +20,33 @@ export default function LiveStopper({
   teamId: number;
   teamName: string;
 }) {
+//admin state ell
+  const [admin, setIsAdmin] = useState<boolean>(false);
+
+useEffect(() => {
+    function refreshAdminState() {
+      setIsAdmin(isAdmin());
+    }
+
+    refreshAdminState();
+
+    window.addEventListener("storage", refreshAdminState);
+    window.addEventListener("focus", refreshAdminState);
+    window.addEventListener("adminChanged", refreshAdminState);
+
+    return () => {
+      window.removeEventListener("storage", refreshAdminState);
+      window.removeEventListener("focus", refreshAdminState);
+      window.removeEventListener("adminChanged", refreshAdminState);
+    };
+  }, []);
+
+//admin state ell 
+
   const [data, setData] = useState<any>(null);
   const [csapat, setCsapat] = useState<any>(null);
   const [aktivTekero, setAktivTekero] = useState<number | null>(null);
+  const [tekerokor,setTekerokor] = useState<number | null>(null);
   const [connectionStatus, setConnectionStatus] =
     useState<ConnectionStatus>("connecting");
 
@@ -80,11 +105,13 @@ export default function LiveStopper({
     setMembersWithLaps(teamMembersWithLaps);
 
     const activeRiderId = getActiveRiderId(teamData);
+    setTekerokor(teamData.rider_lap);
 
     setAktivTekero(
       typeof activeRiderId === "number" ? activeRiderId : null,
     );
   }
+
   useEffect(() => {
     setConnectionStatus("connecting");
 
@@ -316,7 +343,10 @@ function getStatusLabel() {
                 </div>
 
                 {isActive && (
-                  <i className="pi pi-bolt active-rider-icon" />
+                  <>
+                    <h4>Körök: {tekerokor}</h4>
+                    <i className="pi pi-bolt active-rider-icon" />
+                  </>
                 )}
               </div>
             );
@@ -356,7 +386,9 @@ function getStatusLabel() {
       </section>
       <footer className="team-card-footer">
         <div className="team-actions">
-          <Button
+          {admin ? 
+          (<>
+                    <Button
             label="Start"
             icon="pi pi-play"
             onClick={() => startLiveStopper("start")}
@@ -408,7 +440,14 @@ function getStatusLabel() {
               aria-label="További stop műveletek"
             />
           </div>
+          
+          </>)
+          : ""}
         </div>
+
+
+
+        
         <div className="team-connection">
           <span
             className={`connection-dot connection-${connectionStatus}`}

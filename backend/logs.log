@@ -360,3 +360,327 @@
 2026-06-29 17:38:58,990 | INFO | on_kill: Én - eltelt idő: 7 ms
 2026-06-29 17:38:59,019 | INFO | on_kill: lap elmentve – lap_no=30, time_ms=7
 2026-06-29 17:38:59,096 | INFO | 3 changes detected
+2026-07-08 09:36:08,920 | INFO | Start beállítás: rider_now=2, rider_next=5
+2026-07-08 09:36:10,395 | INFO | Start beállítás: rider_now=1, rider_next=3
+2026-07-08 09:36:10,482 | INFO | 3 changes detected
+2026-07-08 09:36:13,922 | INFO | on_reset: Én - eltelt idő: 5 ms
+2026-07-08 09:36:13,981 | INFO | on_reset: lap elmentve – lap_no=31, time_ms=5
+2026-07-08 09:36:14,064 | INFO | 3 changes detected
+2026-07-08 09:36:16,399 | INFO | on_reset: Én - eltelt idő: 2 ms
+2026-07-08 09:36:16,420 | INFO | on_reset: lap elmentve – lap_no=32, time_ms=2
+2026-07-08 09:36:16,442 | INFO | Stop utáni váltás: rider_now=5, rider_next=2
+2026-07-08 09:36:16,497 | INFO | 3 changes detected
+2026-07-08 09:36:19,099 | INFO | on_kill: Qwertzg - eltelt idő: 2 ms
+2026-07-08 09:36:19,166 | INFO | on_kill: lap elmentve – lap_no=18, time_ms=2
+2026-07-08 09:36:19,223 | INFO | 3 changes detected
+2026-07-08 09:37:01,825 | INFO | on_reset: Pogi - eltelt idő: 51 ms
+2026-07-08 09:37:01,882 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=51
+2026-07-08 09:37:01,954 | INFO | 3 changes detected
+2026-07-08 09:37:04,730 | INFO | on_reset: Pogi - eltelt idő: 2 ms
+2026-07-08 09:37:04,781 | INFO | on_reset: lap elmentve – lap_no=20, time_ms=2
+2026-07-08 09:37:04,803 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-07-08 09:37:04,873 | INFO | 3 changes detected
+2026-07-08 09:37:07,699 | INFO | on_reset: Anyááád - eltelt idő: 2 ms
+2026-07-08 09:37:07,742 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=2
+2026-07-08 09:37:07,781 | INFO | Stop utáni váltás: rider_now=4, rider_next=1
+2026-07-08 09:37:07,799 | INFO | 3 changes detected
+2026-07-08 09:37:11,095 | INFO | on_kill: Dogó3 - eltelt idő: 3 ms
+2026-07-08 09:37:11,152 | INFO | on_kill: lap elmentve – lap_no=6, time_ms=3
+2026-07-08 09:37:11,230 | INFO | 3 changes detected
+2026-07-08 10:32:33,134 | INFO | Start beállítás: rider_now=2, rider_next=5
+2026-07-08 10:32:33,204 | INFO | 3 changes detected
+2026-07-08 10:33:33,704 | INFO | on_reset: Én - eltelt idő: 60 ms
+2026-07-08 10:33:33,723 | INFO | on_reset: lap elmentve – lap_no=33, time_ms=60
+2026-07-08 10:33:33,730 | INFO | Stop utáni váltás: rider_now=5, rider_next=2
+2026-07-08 10:33:33,797 | INFO | 3 changes detected
+2026-07-08 10:33:39,680 | INFO | on_reset: Qwertzg - eltelt idő: 5 ms
+2026-07-08 10:33:39,697 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=5
+2026-07-08 10:33:39,713 | INFO | Stop utáni váltás: rider_now=2, rider_next=5
+2026-07-08 10:33:39,781 | INFO | 3 changes detected
+2026-07-08 10:33:41,795 | INFO | Start beállítás: rider_now=1, rider_next=3
+2026-07-08 10:33:41,863 | INFO | 3 changes detected
+2026-07-08 10:34:13,384 | INFO | on_kill: Én - eltelt idő: 33 ms
+2026-07-08 10:34:13,404 | INFO | on_kill: lap elmentve – lap_no=34, time_ms=33
+2026-07-08 10:34:13,478 | INFO | 3 changes detected
+2026-07-08 10:34:14,755 | INFO | on_kill: Pogi - eltelt idő: 32 ms
+2026-07-08 10:34:14,772 | INFO | on_kill: lap elmentve – lap_no=21, time_ms=32
+2026-07-08 10:34:14,849 | INFO | 3 changes detected
+2026-07-08 10:56:00,647 | INFO | Start beállítás: rider_now=2, rider_next=5
+2026-07-08 10:56:06,362 | INFO | on_reset: Én - eltelt idő: 5 ms
+2026-07-08 10:56:06,378 | INFO | on_reset: lap elmentve – lap_no=35, time_ms=5
+2026-07-08 10:56:06,437 | INFO | 3 changes detected
+2026-07-08 10:56:15,579 | INFO | on_reset: Én - eltelt idő: 9 ms
+2026-07-08 10:56:15,604 | INFO | on_reset: lap elmentve – lap_no=36, time_ms=9
+2026-07-08 10:56:15,705 | INFO | 3 changes detected
+2026-07-08 10:56:18,775 | INFO | on_reset: Én - eltelt idő: 3 ms
+2026-07-08 10:56:18,793 | INFO | on_reset: lap elmentve – lap_no=37, time_ms=3
+2026-07-08 10:56:18,804 | INFO | Stop utáni váltás: rider_now=5, rider_next=2
+2026-07-08 10:56:18,844 | INFO | 3 changes detected
+2026-07-08 10:56:22,525 | INFO | on_kill: Qwertzg - eltelt idő: 3 ms
+2026-07-08 10:56:22,547 | INFO | on_kill: lap elmentve – lap_no=20, time_ms=3
+2026-07-08 10:56:22,639 | INFO | 3 changes detected
+2026-07-08 10:57:32,143 | INFO | 1 change detected
+2026-07-08 10:57:32,948 | INFO | 1 change detected
+2026-07-08 10:57:33,903 | INFO | 6 changes detected
+2026-07-08 10:57:34,309 | INFO | 1 change detected
+2026-07-08 10:57:34,716 | INFO | 1 change detected
+2026-07-08 10:57:35,077 | INFO | 1 change detected
+2026-07-08 10:57:35,483 | INFO | 1 change detected
+2026-07-08 10:57:35,945 | INFO | 1 change detected
+2026-07-08 10:57:36,299 | INFO | 1 change detected
+2026-07-08 10:57:36,713 | INFO | 1 change detected
+2026-07-08 10:57:37,116 | INFO | 1 change detected
+2026-07-08 10:57:37,535 | INFO | 1 change detected
+2026-07-08 10:57:37,948 | INFO | 1 change detected
+2026-07-08 10:57:38,301 | INFO | 1 change detected
+2026-07-08 10:57:38,714 | INFO | 1 change detected
+2026-07-08 10:57:39,129 | INFO | 1 change detected
+2026-07-08 10:57:39,533 | INFO | 1 change detected
+2026-07-08 10:57:39,938 | INFO | 1 change detected
+2026-07-08 10:57:40,352 | INFO | 1 change detected
+2026-07-08 10:57:40,703 | INFO | 1 change detected
+2026-07-08 10:57:41,115 | INFO | 1 change detected
+2026-07-08 10:57:41,517 | INFO | 1 change detected
+2026-07-08 10:57:41,975 | INFO | 1 change detected
+2026-07-08 10:57:42,338 | INFO | 1 change detected
+2026-07-08 10:57:42,749 | INFO | 1 change detected
+2026-07-08 10:57:43,209 | INFO | 1 change detected
+2026-07-08 10:57:43,566 | INFO | 1 change detected
+2026-07-08 10:57:43,968 | INFO | 1 change detected
+2026-07-08 10:57:44,383 | INFO | 1 change detected
+2026-07-08 10:57:44,798 | INFO | 1 change detected
+2026-07-08 10:57:45,200 | INFO | 1 change detected
+2026-07-08 10:57:45,602 | INFO | 1 change detected
+2026-07-08 10:57:46,012 | INFO | 1 change detected
+2026-07-08 11:07:30,248 | INFO | 1 change detected
+2026-07-08 11:07:30,986 | INFO | 1 change detected
+2026-07-08 11:07:31,899 | INFO | 6 changes detected
+2026-07-08 11:07:32,270 | INFO | 1 change detected
+2026-07-08 11:07:32,638 | INFO | 1 change detected
+2026-07-08 11:07:33,051 | INFO | 1 change detected
+2026-07-08 11:07:33,454 | INFO | 1 change detected
+2026-07-08 11:07:33,864 | INFO | 1 change detected
+2026-07-08 11:07:34,271 | INFO | 1 change detected
+2026-07-08 11:07:34,683 | INFO | 1 change detected
+2026-07-08 11:07:35,088 | INFO | 1 change detected
+2026-07-08 11:07:35,499 | INFO | 1 change detected
+2026-07-08 11:07:35,904 | INFO | 1 change detected
+2026-07-08 11:07:36,321 | INFO | 1 change detected
+2026-07-08 11:07:36,737 | INFO | 1 change detected
+2026-07-08 11:07:37,140 | INFO | 1 change detected
+2026-07-08 11:07:37,555 | INFO | 1 change detected
+2026-07-08 11:07:37,970 | INFO | 1 change detected
+2026-07-08 11:07:38,338 | INFO | 1 change detected
+2026-07-08 11:07:38,742 | INFO | 1 change detected
+2026-07-08 11:07:39,155 | INFO | 1 change detected
+2026-07-08 11:07:39,571 | INFO | 1 change detected
+2026-07-08 11:07:39,976 | INFO | 1 change detected
+2026-07-08 11:07:40,389 | INFO | 1 change detected
+2026-07-08 11:07:40,797 | INFO | 1 change detected
+2026-07-08 11:07:41,205 | INFO | 1 change detected
+2026-07-08 11:07:41,620 | INFO | 1 change detected
+2026-07-08 11:07:42,025 | INFO | 1 change detected
+2026-07-08 11:07:42,437 | INFO | 1 change detected
+2026-07-08 11:07:42,849 | INFO | 1 change detected
+2026-07-08 11:07:43,251 | INFO | 1 change detected
+2026-07-08 11:07:43,655 | INFO | 1 change detected
+2026-07-08 11:07:44,069 | INFO | 1 change detected
+2026-07-08 11:07:44,472 | INFO | 1 change detected
+2026-07-08 11:07:44,837 | INFO | 1 change detected
+2026-07-08 11:07:45,254 | INFO | 1 change detected
+2026-07-08 11:07:45,658 | INFO | 1 change detected
+2026-07-08 11:07:46,061 | INFO | 1 change detected
+2026-07-08 11:07:46,468 | INFO | 1 change detected
+2026-07-08 11:07:46,872 | INFO | 1 change detected
+2026-07-08 11:07:47,276 | INFO | 1 change detected
+2026-07-08 11:07:47,635 | INFO | 1 change detected
+2026-07-08 11:07:48,053 | INFO | 1 change detected
+2026-07-08 11:07:48,418 | INFO | 1 change detected
+2026-07-08 11:07:48,821 | INFO | 1 change detected
+2026-07-08 11:07:49,223 | INFO | 1 change detected
+2026-07-08 11:07:49,637 | INFO | 1 change detected
+2026-07-08 11:07:50,050 | INFO | 1 change detected
+2026-07-08 11:07:50,454 | INFO | 1 change detected
+2026-07-08 11:07:50,808 | INFO | 1 change detected
+2026-07-08 11:07:51,220 | INFO | 1 change detected
+2026-07-08 11:07:51,576 | INFO | 1 change detected
+2026-07-08 11:07:51,978 | INFO | 1 change detected
+2026-07-08 11:07:52,387 | INFO | 1 change detected
+2026-07-08 11:07:52,803 | INFO | 1 change detected
+2026-07-08 11:07:53,217 | INFO | 1 change detected
+2026-07-08 11:07:53,634 | INFO | 1 change detected
+2026-07-08 11:07:54,038 | INFO | 1 change detected
+2026-07-08 11:07:54,401 | INFO | 1 change detected
+2026-07-08 11:07:54,805 | INFO | 1 change detected
+2026-07-08 11:07:55,220 | INFO | 1 change detected
+2026-07-08 11:07:55,637 | INFO | 2 changes detected
+2026-07-08 11:07:56,371 | INFO | 1 change detected
+2026-07-08 11:07:57,289 | INFO | 6 changes detected
+2026-07-08 11:07:57,654 | INFO | 1 change detected
+2026-07-08 11:07:58,019 | INFO | 1 change detected
+2026-07-08 11:07:58,436 | INFO | 1 change detected
+2026-07-08 11:07:58,803 | INFO | 1 change detected
+2026-07-08 11:07:59,205 | INFO | 1 change detected
+2026-07-08 11:07:59,620 | INFO | 1 change detected
+2026-07-08 11:08:00,035 | INFO | 1 change detected
+2026-07-08 11:08:00,437 | INFO | 1 change detected
+2026-07-08 11:08:00,855 | INFO | 1 change detected
+2026-07-08 11:08:01,271 | INFO | 1 change detected
+2026-07-08 11:08:01,673 | INFO | 1 change detected
+2026-07-08 11:08:02,088 | INFO | 1 change detected
+2026-07-08 11:08:02,503 | INFO | 1 change detected
+2026-07-08 11:08:02,907 | INFO | 1 change detected
+2026-07-08 11:08:03,320 | INFO | 1 change detected
+2026-07-08 11:08:03,686 | INFO | 1 change detected
+2026-07-08 11:08:04,101 | INFO | 1 change detected
+2026-07-08 11:08:04,503 | INFO | 1 change detected
+2026-07-08 11:08:04,918 | INFO | 1 change detected
+2026-07-08 11:08:05,274 | INFO | 1 change detected
+2026-07-08 11:08:05,685 | INFO | 1 change detected
+2026-07-08 11:08:06,102 | INFO | 1 change detected
+2026-07-08 11:08:06,509 | INFO | 1 change detected
+2026-07-08 11:08:06,915 | INFO | 1 change detected
+2026-07-08 11:08:07,329 | INFO | 1 change detected
+2026-07-08 11:08:07,682 | INFO | 1 change detected
+2026-07-08 11:08:08,087 | INFO | 1 change detected
+2026-07-08 11:08:08,489 | INFO | 1 change detected
+2026-07-08 11:08:08,899 | INFO | 1 change detected
+2026-07-08 11:08:09,313 | INFO | 1 change detected
+2026-07-08 11:08:09,716 | INFO | 1 change detected
+2026-07-08 11:08:10,121 | INFO | 1 change detected
+2026-07-08 11:08:10,525 | INFO | 1 change detected
+2026-07-08 11:08:10,930 | INFO | 1 change detected
+2026-07-08 11:08:11,346 | INFO | 1 change detected
+2026-07-08 11:08:11,713 | INFO | 1 change detected
+2026-07-08 11:08:12,120 | INFO | 1 change detected
+2026-07-08 11:08:12,537 | INFO | 1 change detected
+2026-07-08 11:08:12,954 | INFO | 1 change detected
+2026-07-08 11:08:13,309 | INFO | 1 change detected
+2026-07-08 11:08:13,725 | INFO | 1 change detected
+2026-07-08 11:08:14,135 | INFO | 1 change detected
+2026-07-08 11:08:14,497 | INFO | 1 change detected
+2026-07-08 11:08:14,912 | INFO | 1 change detected
+2026-07-08 11:08:15,326 | INFO | 1 change detected
+2026-07-08 11:08:15,690 | INFO | 1 change detected
+2026-07-08 11:08:16,103 | INFO | 1 change detected
+2026-07-08 11:08:16,515 | INFO | 1 change detected
+2026-07-08 11:08:16,917 | INFO | 1 change detected
+2026-07-08 11:08:17,323 | INFO | 1 change detected
+2026-07-08 11:08:17,735 | INFO | 1 change detected
+2026-07-08 11:08:18,102 | INFO | 1 change detected
+2026-07-08 11:08:18,508 | INFO | 1 change detected
+2026-07-08 11:08:18,912 | INFO | 1 change detected
+2026-07-08 11:08:19,315 | INFO | 1 change detected
+2026-07-08 11:08:19,732 | INFO | 1 change detected
+2026-07-08 11:08:20,137 | INFO | 1 change detected
+2026-07-08 11:08:20,539 | INFO | 1 change detected
+2026-07-08 11:08:20,943 | INFO | 1 change detected
+2026-07-08 11:08:21,348 | INFO | 1 change detected
+2026-07-08 11:08:21,749 | INFO | 1 change detected
+2026-07-08 11:08:22,116 | INFO | 1 change detected
+2026-07-08 11:08:22,533 | INFO | 1 change detected
+2026-07-08 11:08:22,946 | INFO | 1 change detected
+2026-07-08 11:08:23,308 | INFO | 1 change detected
+2026-07-08 11:08:23,725 | INFO | 1 change detected
+2026-07-08 11:08:24,135 | INFO | 1 change detected
+2026-07-08 11:08:24,538 | INFO | 1 change detected
+2026-07-08 11:08:24,897 | INFO | 1 change detected
+2026-07-08 11:08:25,304 | INFO | 1 change detected
+2026-07-08 11:08:25,706 | INFO | 1 change detected
+2026-07-08 11:08:26,069 | INFO | 1 change detected
+2026-07-08 11:08:26,484 | INFO | 1 change detected
+2026-07-08 11:08:26,898 | INFO | 1 change detected
+2026-07-08 11:08:27,310 | INFO | 1 change detected
+2026-07-08 11:08:27,661 | INFO | 1 change detected
+2026-07-08 11:08:28,070 | INFO | 1 change detected
+2026-07-08 11:08:28,486 | INFO | 1 change detected
+2026-07-08 11:08:28,901 | INFO | 1 change detected
+2026-07-08 11:08:29,308 | INFO | 1 change detected
+2026-07-08 11:08:29,668 | INFO | 1 change detected
+2026-07-08 11:08:30,070 | INFO | 1 change detected
+2026-07-08 11:08:30,484 | INFO | 1 change detected
+2026-07-08 11:08:30,898 | INFO | 1 change detected
+2026-07-08 11:08:31,305 | INFO | 1 change detected
+2026-07-08 11:08:31,715 | INFO | 1 change detected
+2026-07-08 11:08:32,123 | INFO | 1 change detected
+2026-07-08 11:08:32,489 | INFO | 1 change detected
+2026-07-08 11:08:32,903 | INFO | 1 change detected
+2026-07-08 11:08:33,304 | INFO | 1 change detected
+2026-07-08 11:08:33,719 | INFO | 1 change detected
+2026-07-08 11:08:34,136 | INFO | 1 change detected
+2026-07-08 11:08:34,504 | INFO | 1 change detected
+2026-07-08 11:08:34,956 | INFO | 1 change detected
+2026-07-08 11:08:35,369 | INFO | 1 change detected
+2026-07-08 11:08:35,734 | INFO | 1 change detected
+2026-07-08 11:08:36,141 | INFO | 1 change detected
+2026-07-08 11:08:36,602 | INFO | 1 change detected
+2026-07-08 11:08:37,010 | INFO | 1 change detected
+2026-07-08 11:08:37,370 | INFO | 1 change detected
+2026-07-08 11:08:37,772 | INFO | 1 change detected
+2026-07-08 11:08:38,185 | INFO | 1 change detected
+2026-07-08 11:08:38,587 | INFO | 1 change detected
+2026-07-08 11:08:39,002 | INFO | 1 change detected
+2026-07-08 11:08:39,404 | INFO | 1 change detected
+2026-07-08 11:08:39,808 | INFO | 1 change detected
+2026-07-08 11:08:40,219 | INFO | 1 change detected
+2026-07-08 11:08:40,621 | INFO | 1 change detected
+2026-07-08 11:08:41,033 | INFO | 1 change detected
+2026-07-08 11:08:41,434 | INFO | 1 change detected
+2026-07-08 11:08:41,837 | INFO | 1 change detected
+2026-07-08 11:08:42,201 | INFO | 1 change detected
+2026-07-08 11:08:42,620 | INFO | 1 change detected
+2026-07-08 11:10:02,944 | INFO | 3 changes detected
+2026-07-08 11:10:14,078 | INFO | 3 changes detected
+2026-07-08 11:10:22,365 | INFO | 3 changes detected
+2026-07-08 11:10:26,609 | INFO | 3 changes detected
+2026-07-08 11:10:32,750 | INFO | 3 changes detected
+2026-07-08 11:10:39,504 | INFO | 3 changes detected
+2026-07-08 11:10:44,079 | INFO | Start beállítás: rider_now=1, rider_next=3
+2026-07-08 11:10:44,147 | INFO | 3 changes detected
+2026-07-08 11:10:57,312 | INFO | on_reset: ver1 - eltelt idő: 13 ms
+2026-07-08 11:10:57,360 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=13
+2026-07-08 11:10:57,430 | INFO | 3 changes detected
+2026-07-08 11:12:13,659 | INFO | on_reset: ver1 - eltelt idő: 76 ms
+2026-07-08 11:12:13,678 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=76
+2026-07-08 11:12:13,755 | INFO | 3 changes detected
+2026-07-08 11:20:52,862 | INFO | on_reset: ver1 - eltelt idő: 519 ms
+2026-07-08 11:20:52,879 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=519
+2026-07-08 11:20:52,949 | INFO | 3 changes detected
+2026-07-08 11:20:55,051 | INFO | on_reset: ver1 - eltelt idő: 2 ms
+2026-07-08 11:20:55,069 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=2
+2026-07-08 11:20:55,126 | INFO | 3 changes detected
+2026-07-08 11:20:56,286 | INFO | on_reset: ver1 - eltelt idő: 1 ms
+2026-07-08 11:20:56,311 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=1
+2026-07-08 11:20:56,402 | INFO | 3 changes detected
+2026-07-08 11:20:58,282 | INFO | on_reset: ver1 - eltelt idő: 1 ms
+2026-07-08 11:20:58,303 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=1
+2026-07-08 11:20:58,321 | INFO | Stop utáni váltás: rider_now=3, rider_next=1
+2026-07-08 11:20:58,372 | INFO | 3 changes detected
+2026-07-08 11:21:01,199 | INFO | on_reset: qwea - eltelt idő: 2 ms
+2026-07-08 11:21:01,213 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=2
+2026-07-08 11:21:01,303 | INFO | 3 changes detected
+2026-07-08 11:21:02,594 | INFO | on_reset: qwea - eltelt idő: 1 ms
+2026-07-08 11:21:02,627 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=1
+2026-07-08 11:21:02,722 | INFO | 3 changes detected
+2026-07-08 11:21:03,746 | INFO | on_reset: qwea - eltelt idő: 1 ms
+2026-07-08 11:21:03,771 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=1
+2026-07-08 11:21:03,846 | INFO | 3 changes detected
+2026-07-08 11:21:04,628 | INFO | on_reset: qwea - eltelt idő: 0 ms
+2026-07-08 11:21:04,660 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=0
+2026-07-08 11:21:04,760 | INFO | 3 changes detected
+2026-07-08 11:21:23,509 | INFO | on_reset: qwea - eltelt idő: 18 ms
+2026-07-08 11:21:23,528 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=18
+2026-07-08 11:21:23,598 | INFO | 3 changes detected
+2026-07-08 11:21:28,378 | INFO | on_reset: qwea - eltelt idő: 4 ms
+2026-07-08 11:21:28,391 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=4
+2026-07-08 11:21:28,408 | INFO | Stop utáni váltás: rider_now=1, rider_next=3
+2026-07-08 11:21:28,454 | INFO | 3 changes detected
+2026-07-08 11:31:42,913 | INFO | on_reset: ver1 - eltelt idő: 614 ms
+2026-07-08 11:31:42,930 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=614
+2026-07-08 11:31:43,003 | INFO | 3 changes detected
+2026-07-08 11:32:00,519 | INFO | on_reset: ver1 - eltelt idő: 17 ms
+2026-07-08 11:32:00,546 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=17
+2026-07-08 11:32:00,646 | INFO | 3 changes detected
+2026-07-08 11:32:08,283 | INFO | on_kill: ver1 - eltelt idő: 7 ms
+2026-07-08 11:32:08,313 | INFO | on_kill: lap elmentve – lap_no=9, time_ms=7
+2026-07-08 11:32:08,413 | INFO | 3 changes detected
