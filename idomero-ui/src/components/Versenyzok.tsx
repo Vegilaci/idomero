@@ -15,14 +15,13 @@ import { secondsToHHMMSS } from "../Clock/idovalto";
 
 import { isAdmin } from "../auth/auth";
 
-
 import "../assets/racers.css";
 
 export default function Versenyzok() {
-//admin state ell
+  //admin state ell
   const [admin, setIsAdmin] = useState<boolean>(false);
 
-useEffect(() => {
+  useEffect(() => {
     function refreshAdminState() {
       setIsAdmin(isAdmin());
     }
@@ -40,19 +39,17 @@ useEffect(() => {
     };
   }, []);
 
-//admin state ell 
+  //admin state ell
 
   const [name, setName] = useState("");
   const [startNumber, setStartNumber] = useState<number>(0);
-  const [selectedTeam, setSelectedTeam] =
-    useState<TeamSummary | null>(null);
+  const [selectedTeam, setSelectedTeam] = useState<TeamSummary | null>(null);
 
   const [search, setSearch] = useState("");
   const [racers, setRacers] = useState<Member[]>([]);
   const [teams, setTeams] = useState<TeamSummary[]>([]);
   const [loading, setLoading] = useState(true);
-  const [expandedRacers, setExpandedRacers] =
-    useState<number[]>([]);
+  const [expandedRacers, setExpandedRacers] = useState<number[]>([]);
 
   const loadData = async () => {
     setLoading(true);
@@ -77,9 +74,7 @@ useEffect(() => {
   }, []);
 
   const filteredRacers = useMemo(() => {
-    const normalizedSearch = search
-      .trim()
-      .toLocaleLowerCase("hu-HU");
+    const normalizedSearch = search.trim().toLocaleLowerCase("hu-HU");
 
     if (!normalizedSearch) {
       return racers;
@@ -107,14 +102,16 @@ useEffect(() => {
   }, [racers, teams, search]);
 
   const getTeamName = (teamId: number) =>
-    teams.find((team) => team.id === teamId)?.name ??
-    "Nincs csapat";
+    teams.find((team) => team.id === teamId)?.name ?? "Nincs csapat";
 
   const getTotalTime = (racer: Member) =>
-    racer.laps.reduce(
-      (total, lap) => total + lap.time_ms,
-      0,
-    );
+    racer.laps.reduce((total, lap) => total + lap.time_ms, 0);
+
+  const get_avg = (racer: Member) =>
+    racer.laps.length > 0
+      ? racer.laps.reduce((total, lap) => total + lap.time_ms, 0) /
+        racer.laps.length
+      : 0;
 
   const getBestLap = (racer: Member) => {
     if (racer.laps.length === 0) {
@@ -129,20 +126,12 @@ useEffect(() => {
   const handleSave = async () => {
     const normalizedName = name.trim();
 
-    if (
-      !normalizedName ||
-      !selectedTeam ||
-      startNumber <= 0
-    ) {
+    if (!normalizedName || !selectedTeam || startNumber <= 0) {
       return;
     }
 
     try {
-      await Add_versenyzo(
-        normalizedName,
-        startNumber,
-        selectedTeam.id,
-      );
+      await Add_versenyzo(normalizedName, startNumber, selectedTeam.id);
 
       setName("");
       setStartNumber(0);
@@ -166,16 +155,11 @@ useEffect(() => {
     <section className="racers-page">
       <header className="racers-page-header">
         <div>
-          <span className="racers-page-eyebrow">
-            Nevezési lista
-          </span>
+          <span className="racers-page-eyebrow">Nevezési lista</span>
 
           <h1>Versenyzők</h1>
 
-          <p>
-            Versenyzők, rajtszámok, csapatok és mért körök
-            áttekintése.
-          </p>
+          <p>Versenyzők, rajtszámok, csapatok és mért körök áttekintése.</p>
         </div>
 
         <div className="racers-page-total">
@@ -200,49 +184,42 @@ useEffect(() => {
         </div>
         {admin ? (
           <>
-                    <div className="racers-create">
-          <InputText
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            placeholder="Versenyző neve"
-          />
+            <div className="racers-create">
+              <InputText
+                value={name}
+                onChange={(event) => setName(event.target.value)}
+                placeholder="Versenyző neve"
+              />
 
-          <InputNumber
-            value={startNumber}
-            onValueChange={(
-              event: InputNumberValueChangeEvent,
-            ) => setStartNumber(event.value ?? 0)}
-            useGrouping={false}
-            min={1}
-            placeholder="Rajtszám"
-          />
+              <InputNumber
+                value={startNumber}
+                onValueChange={(event: InputNumberValueChangeEvent) =>
+                  setStartNumber(event.value ?? 0)
+                }
+                useGrouping={false}
+                min={1}
+                placeholder="Rajtszám"
+              />
 
-          <Dropdown
-            value={selectedTeam}
-            options={teams}
-            optionLabel="name"
-            onChange={(event) =>
-              setSelectedTeam(event.value)
-            }
-            placeholder="Csapat"
-          />
+              <Dropdown
+                value={selectedTeam}
+                options={teams}
+                optionLabel="name"
+                onChange={(event) => setSelectedTeam(event.value)}
+                placeholder="Csapat"
+              />
 
-          <Button
-            label="Hozzáadás"
-            icon="pi pi-plus"
-            onClick={handleSave}
-            disabled={
-              !name.trim() ||
-              !selectedTeam ||
-              startNumber <= 0
-            }
-          />
-        </div>
-
+              <Button
+                label="Hozzáadás"
+                icon="pi pi-plus"
+                onClick={handleSave}
+                disabled={!name.trim() || !selectedTeam || startNumber <= 0}
+              />
+            </div>
           </>
-        )
-        
-        :""}
+        ) : (
+          ""
+        )}
       </div>
 
       <div className="racers-list">
@@ -255,23 +232,18 @@ useEffect(() => {
           <div className="racers-empty-state">
             <i className="pi pi-search" />
             <strong>Nincs találat</strong>
-            <p>
-              A megadott keresésre nem található versenyző.
-            </p>
+            <p>A megadott keresésre nem található versenyző.</p>
           </div>
         ) : (
           filteredRacers.map((racer) => {
-            const isExpanded =
-              expandedRacers.includes(racer.id);
+            const isExpanded = expandedRacers.includes(racer.id);
 
             const bestLap = getBestLap(racer);
 
             return (
               <article
                 className={`racer-card ${
-                  isExpanded
-                    ? "racer-card-expanded"
-                    : ""
+                  isExpanded ? "racer-card-expanded" : ""
                 }`}
                 key={racer.id}
               >
@@ -282,16 +254,12 @@ useEffect(() => {
                   aria-expanded={isExpanded}
                 >
                   <div className="racer-card-main">
-                    <div className="racer-start-number">
-                      #{racer.rajt_szam}
-                    </div>
+                    <div className="racer-start-number">#{racer.rajt_szam}</div>
 
                     <div className="racer-card-title">
                       <strong>{racer.name}</strong>
 
-                      <span>
-                        {getTeamName(racer.team_id)}
-                      </span>
+                      <span>{getTeamName(racer.team_id)}</span>
                     </div>
                   </div>
 
@@ -303,18 +271,12 @@ useEffect(() => {
 
                     <div>
                       <span>Összidő</span>
-                      <strong>
-                        {secondsToHHMMSS(
-                          getTotalTime(racer),
-                        )}
-                      </strong>
+                      <strong>{secondsToHHMMSS(getTotalTime(racer))}</strong>
                     </div>
 
                     <i
                       className={`pi ${
-                        isExpanded
-                          ? "pi-chevron-up"
-                          : "pi-chevron-down"
+                        isExpanded ? "pi-chevron-up" : "pi-chevron-down"
                       }`}
                     />
                   </div>
@@ -325,36 +287,31 @@ useEffect(() => {
                     <div className="racer-statistics">
                       <div>
                         <span>Csapat</span>
-                        <strong>
-                          {getTeamName(racer.team_id)}
-                        </strong>
+                        <strong>{getTeamName(racer.team_id)}</strong>
                       </div>
 
                       <div>
                         <span>Mért körök</span>
-                        <strong>
-                          {racer.laps.length}
-                        </strong>
+                        <strong>{racer.laps.length}</strong>
+                      </div>
+
+                      <div>
+                        <span> Átlag</span>
+                        <strong>{secondsToHHMMSS(get_avg(racer))}</strong>
                       </div>
 
                       <div>
                         <span>Legjobb kör</span>
                         <strong>
                           {bestLap
-                            ? secondsToHHMMSS(
-                                bestLap.time_ms,
-                              )
+                            ? secondsToHHMMSS(bestLap.time_ms)
                             : "--:--:--"}
                         </strong>
                       </div>
 
                       <div>
                         <span>Összidő</span>
-                        <strong>
-                          {secondsToHHMMSS(
-                            getTotalTime(racer),
-                          )}
-                        </strong>
+                        <strong>{secondsToHHMMSS(getTotalTime(racer))}</strong>
                       </div>
                     </div>
 
@@ -362,8 +319,7 @@ useEffect(() => {
                       <div className="racer-no-laps">
                         <i className="pi pi-stopwatch" />
                         <span>
-                          Ehhez a versenyzőhöz még nincs
-                          rögzített kör.
+                          Ehhez a versenyzőhöz még nincs rögzített kör.
                         </span>
                       </div>
                     ) : (
@@ -374,23 +330,13 @@ useEffect(() => {
                         </div>
 
                         {[...racer.laps]
-                          .sort(
-                            (a, b) =>
-                              a.lap_no - b.lap_no,
-                          )
+                          .sort((a, b) => a.lap_no - b.lap_no)
                           .map((lap) => (
-                            <div
-                              className="racer-lap-row"
-                              key={lap.id}
-                            >
-                              <span data-label="Kör">
-                                {lap.lap_no}. kör
-                              </span>
+                            <div className="racer-lap-row" key={lap.id}>
+                              <span data-label="Kör">{lap.lap_no}. kör</span>
 
                               <strong data-label="Idő">
-                                {secondsToHHMMSS(
-                                  lap.time_ms,
-                                )}
+                                {secondsToHHMMSS(lap.time_ms)}
                               </strong>
                             </div>
                           ))}

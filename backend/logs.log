@@ -702,3 +702,1239 @@
 2026-07-08 21:35:57,490 | INFO | on_kill: qwea - eltelt idő: 7 ms
 2026-07-08 21:35:57,501 | INFO | on_kill: lap elmentve – lap_no=7, time_ms=7
 2026-07-08 21:35:57,559 | INFO | 3 changes detected
+2026-07-11 11:44:54,990 | INFO | 3 changes detected
+2026-07-11 11:46:03,050 | INFO | 3 changes detected
+2026-07-11 11:51:33,872 | INFO | 3 changes detected
+2026-07-11 11:51:39,532 | INFO | 3 changes detected
+2026-07-11 11:51:45,363 | INFO | 3 changes detected
+2026-07-11 11:51:55,830 | INFO | Start beállítás: rider_now=1, rider_next=3
+2026-07-11 11:51:55,909 | INFO | 3 changes detected
+2026-07-11 11:52:00,643 | INFO | on_reset: teszt - eltelt idő: 4 ms
+2026-07-11 11:52:00,665 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=4
+2026-07-11 11:52:00,743 | INFO | 3 changes detected
+2026-07-11 11:52:04,942 | INFO | on_reset: teszt - eltelt idő: 4 ms
+2026-07-11 11:52:04,955 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=4
+2026-07-11 11:52:04,962 | INFO | Stop utáni váltás: rider_now=3, rider_next=1
+2026-07-11 11:52:05,020 | INFO | 3 changes detected
+2026-07-11 11:52:07,404 | INFO | on_reset: titus - eltelt idő: 2 ms
+2026-07-11 11:52:07,421 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=2
+2026-07-11 11:52:07,428 | INFO | Stop utáni váltás: rider_now=1, rider_next=3
+2026-07-11 11:52:07,471 | INFO | 3 changes detected
+2026-07-11 11:52:11,188 | INFO | on_kill: teszt - eltelt idő: 3 ms
+2026-07-11 11:52:11,204 | INFO | on_kill: lap elmentve – lap_no=3, time_ms=3
+2026-07-11 11:52:11,274 | INFO | 3 changes detected
+2026-07-11 13:00:07,505 | INFO | Start beállítás: rider_now=1, rider_next=2
+2026-07-11 13:00:17,750 | INFO | Start beállítás: rider_now=5, rider_next=6
+2026-07-11 13:00:17,757 | INFO | Start beállítás: rider_now=1, rider_next=2
+2026-07-11 13:00:17,904 | INFO | Start beállítás: rider_now=7, rider_next=7
+2026-07-11 13:00:18,372 | INFO | Start beállítás: rider_now=8, rider_next=9
+2026-07-11 13:06:50,193 | INFO | on_reset: Barna - eltelt idő: 391 ms
+2026-07-11 13:06:50,204 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=391
+2026-07-11 13:06:54,600 | INFO | on_reset: Faragó Tomi - eltelt idő: 407 ms
+2026-07-11 13:06:54,608 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=407
+2026-07-11 13:09:16,204 | INFO | on_reset: Ricsi - eltelt idő: 538 ms
+2026-07-11 13:09:16,212 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=538
+2026-07-11 13:11:08,254 | INFO | on_reset: Karcsi - eltelt idő: 650 ms
+2026-07-11 13:11:08,267 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=650
+2026-07-11 13:12:59,048 | INFO | on_reset: Faragó Tomi - eltelt idő: 364 ms
+2026-07-11 13:12:59,055 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=364
+2026-07-11 13:13:04,540 | INFO | on_reset: Barna - eltelt idő: 374 ms
+2026-07-11 13:13:04,547 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=374
+2026-07-11 13:18:24,161 | INFO | on_reset: Ricsi - eltelt idő: 547 ms
+2026-07-11 13:18:24,171 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=547
+2026-07-11 13:19:13,714 | INFO | on_reset: Faragó Tomi - eltelt idő: 374 ms
+2026-07-11 13:19:13,722 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=374
+2026-07-11 13:20:05,209 | INFO | on_reset: Barna - eltelt idő: 420 ms
+2026-07-11 13:20:05,217 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=420
+2026-07-11 13:22:24,375 | INFO | on_reset: Karcsi - eltelt idő: 676 ms
+2026-07-11 13:22:24,382 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=676
+2026-07-11 13:25:45,431 | INFO | on_reset: Faragó Tomi - eltelt idő: 391 ms
+2026-07-11 13:25:45,439 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=391
+2026-07-11 13:27:10,871 | INFO | on_reset: Barna - eltelt idő: 425 ms
+2026-07-11 13:27:10,879 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=425
+2026-07-11 13:27:45,772 | INFO | on_reset: Ricsi - eltelt idő: 561 ms
+2026-07-11 13:27:45,784 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=561
+2026-07-11 13:31:57,870 | INFO | on_reset: Faragó Tomi - eltelt idő: 372 ms
+2026-07-11 13:31:57,878 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=372
+2026-07-11 13:33:52,530 | INFO | on_reset: Karcsi - eltelt idő: 688 ms
+2026-07-11 13:33:52,536 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=688
+2026-07-11 13:34:41,904 | INFO | on_reset: Barna - eltelt idő: 451 ms
+2026-07-11 13:34:41,911 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=451
+2026-07-11 13:37:17,444 | INFO | on_reset: Ricsi - eltelt idő: 571 ms
+2026-07-11 13:37:17,456 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=571
+2026-07-11 13:38:17,489 | INFO | on_reset: Faragó Tomi - eltelt idő: 379 ms
+2026-07-11 13:38:17,500 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=379
+2026-07-11 13:38:17,508 | INFO | Stop utáni váltás: rider_now=2, rider_next=3
+2026-07-11 13:41:48,906 | INFO | on_reset: Barna - eltelt idő: 426 ms
+2026-07-11 13:41:48,914 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=426
+2026-07-11 13:44:28,339 | INFO | on_reset: Karcsi - eltelt idő: 635 ms
+2026-07-11 13:44:28,348 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=635
+2026-07-11 13:45:55,515 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 458 ms
+2026-07-11 13:45:55,524 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=458
+2026-07-11 13:46:11,337 | INFO | on_reset: Ricsi - eltelt idő: 533 ms
+2026-07-11 13:46:11,345 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=533
+2026-07-11 13:49:11,998 | INFO | on_reset: Barna - eltelt idő: 443 ms
+2026-07-11 13:49:12,011 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=443
+2026-07-11 13:53:07,809 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 432 ms
+2026-07-11 13:53:07,815 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=432
+2026-07-11 13:55:51,511 | INFO | on_reset: Karcsi - eltelt idő: 683 ms
+2026-07-11 13:55:51,519 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=683
+2026-07-11 13:55:54,060 | INFO | on_reset: Ricsi - eltelt idő: 582 ms
+2026-07-11 13:55:54,069 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=582
+2026-07-11 13:55:54,075 | INFO | Stop utáni váltás: rider_now=6, rider_next=5
+2026-07-11 13:56:30,088 | INFO | on_reset: Barna - eltelt idő: 438 ms
+2026-07-11 13:56:30,095 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=438
+2026-07-11 14:00:55,561 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 467 ms
+2026-07-11 14:00:55,574 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=467
+2026-07-11 14:03:13,981 | INFO | on_reset: Barna - eltelt idő: 403 ms
+2026-07-11 14:03:13,991 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=403
+2026-07-11 14:03:13,998 | INFO | Stop utáni váltás: rider_now=9, rider_next=10
+2026-07-11 14:05:33,654 | INFO | on_reset: Réka - eltelt idő: 579 ms
+2026-07-11 14:05:33,662 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=579
+2026-07-11 14:06:53,219 | INFO | on_reset: Karcsi - eltelt idő: 661 ms
+2026-07-11 14:06:53,227 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=661
+2026-07-11 14:08:31,890 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 456 ms
+2026-07-11 14:08:31,901 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=456
+2026-07-11 14:10:03,151 | INFO | on_reset: Marci - eltelt idő: 409 ms
+2026-07-11 14:10:03,160 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=409
+2026-07-11 14:15:44,188 | INFO | on_reset: Réka - eltelt idő: 610 ms
+2026-07-11 14:15:44,195 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=610
+2026-07-11 14:15:54,882 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 442 ms
+2026-07-11 14:15:54,892 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=442
+2026-07-11 14:15:54,900 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-07-11 14:16:44,718 | INFO | on_reset: Marci - eltelt idő: 401 ms
+2026-07-11 14:16:44,726 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=401
+2026-07-11 14:17:50,707 | INFO | on_kill: Karcsi - eltelt idő: 657 ms
+2026-07-11 14:17:50,715 | INFO | on_kill: lap elmentve – lap_no=7, time_ms=657
+2026-07-11 14:23:27,977 | INFO | on_reset: Marci - eltelt idő: 403 ms
+2026-07-11 14:23:27,990 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=403
+2026-07-11 14:24:44,845 | INFO | on_reset: Kókusz - eltelt idő: 529 ms
+2026-07-11 14:24:44,857 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=529
+2026-07-11 14:26:24,927 | INFO | on_reset: Réka - eltelt idő: 640 ms
+2026-07-11 14:26:24,936 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=640
+2026-07-11 14:30:38,516 | INFO | on_reset: Marci - eltelt idő: 430 ms
+2026-07-11 14:30:38,523 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=430
+2026-07-11 14:32:57,728 | INFO | on_reset: Kókusz - eltelt idő: 492 ms
+2026-07-11 14:32:57,737 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=492
+2026-07-11 14:37:27,157 | INFO | on_reset: Réka - eltelt idő: 662 ms
+2026-07-11 14:37:27,169 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=662
+2026-07-11 14:37:58,825 | INFO | on_reset: Marci - eltelt idő: 440 ms
+2026-07-11 14:37:58,833 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=440
+2026-07-11 14:43:52,012 | INFO | on_reset: Kókusz - eltelt idő: 654 ms
+2026-07-11 14:43:52,021 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=654
+2026-07-11 14:43:52,027 | INFO | Stop utáni váltás: rider_now=4, rider_next=1
+2026-07-11 14:44:57,010 | INFO | on_reset: Marci - eltelt idő: 418 ms
+2026-07-11 14:44:57,021 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=418
+2026-07-11 14:44:57,028 | INFO | Stop utáni váltás: rider_now=10, rider_next=11
+2026-07-11 14:48:27,145 | INFO | Start beállítás: rider_now=7, rider_next=7
+2026-07-11 14:48:41,612 | INFO | on_reset: Réka - eltelt idő: 674 ms
+2026-07-11 14:48:41,622 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=674
+2026-07-11 14:49:56,637 | INFO | on_reset: András - eltelt idő: 364 ms
+2026-07-11 14:49:56,649 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=364
+2026-07-11 14:52:39,114 | INFO | on_reset: Zoli - eltelt idő: 462 ms
+2026-07-11 14:52:39,124 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=462
+2026-07-11 14:56:18,556 | INFO | on_reset: András - eltelt idő: 381 ms
+2026-07-11 14:56:18,564 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=381
+2026-07-11 14:59:04,436 | INFO | on_reset: Réka - eltelt idő: 622 ms
+2026-07-11 14:59:04,444 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=622
+2026-07-11 14:59:16,788 | INFO | on_reset: Karcsi - eltelt idő: 649 ms
+2026-07-11 14:59:16,801 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=649
+2026-07-11 14:59:47,189 | INFO | on_reset: Zoli - eltelt idő: 428 ms
+2026-07-11 14:59:47,197 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=428
+2026-07-11 15:02:47,458 | INFO | on_reset: András - eltelt idő: 388 ms
+2026-07-11 15:02:47,468 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=388
+2026-07-11 15:07:17,832 | INFO | on_reset: Zoli - eltelt idő: 450 ms
+2026-07-11 15:07:17,842 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=450
+2026-07-11 15:09:12,224 | INFO | on_reset: András - eltelt idő: 384 ms
+2026-07-11 15:09:12,236 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=384
+2026-07-11 15:09:31,522 | INFO | on_kill: Karcsi - eltelt idő: 614 ms
+2026-07-11 15:09:31,531 | INFO | on_kill: lap elmentve – lap_no=9, time_ms=614
+2026-07-11 15:09:48,759 | INFO | on_reset: Réka - eltelt idő: 644 ms
+2026-07-11 15:09:48,769 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=644
+2026-07-11 15:09:48,775 | INFO | Stop utáni váltás: rider_now=5, rider_next=6
+2026-07-11 15:09:54,748 | INFO | Start beállítás: rider_now=7, rider_next=7
+2026-07-11 15:15:04,099 | INFO | on_reset: Zoli - eltelt idő: 466 ms
+2026-07-11 15:15:04,106 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=466
+2026-07-11 15:15:51,421 | INFO | on_reset: András - eltelt idő: 399 ms
+2026-07-11 15:15:51,431 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=399
+2026-07-11 15:18:15,640 | INFO | on_reset: Ricsi - eltelt idő: 506 ms
+2026-07-11 15:18:15,651 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=506
+2026-07-11 15:20:40,897 | INFO | on_reset: Karcsi - eltelt idő: 646 ms
+2026-07-11 15:20:40,904 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=646
+2026-07-11 15:22:18,131 | INFO | on_reset: András - eltelt idő: 386 ms
+2026-07-11 15:22:18,143 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=386
+2026-07-11 15:22:37,927 | INFO | on_reset: Zoli - eltelt idő: 453 ms
+2026-07-11 15:22:37,942 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=453
+2026-07-11 15:27:09,854 | INFO | on_reset: Ricsi - eltelt idő: 534 ms
+2026-07-11 15:27:09,863 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=534
+2026-07-11 15:28:50,094 | INFO | on_reset: András - eltelt idő: 391 ms
+2026-07-11 15:28:50,103 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=391
+2026-07-11 15:28:50,110 | INFO | Stop utáni váltás: rider_now=1, rider_next=2
+2026-07-11 15:30:20,073 | INFO | on_reset: Zoli - eltelt idő: 462 ms
+2026-07-11 15:30:20,085 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=462
+2026-07-11 15:35:54,736 | INFO | on_reset: Faragó Tomi - eltelt idő: 424 ms
+2026-07-11 15:35:54,744 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=424
+2026-07-11 15:35:56,908 | INFO | on_reset: Faragó Tomi - eltelt idő: 2 ms
+2026-07-11 15:35:56,917 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=2
+2026-07-11 15:36:48,015 | INFO | on_reset: Ricsi - eltelt idő: 578 ms
+2026-07-11 15:36:48,023 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=578
+2026-07-11 15:37:22,020 | INFO | on_reset: Karcsi - eltelt idő: 1001 ms
+2026-07-11 15:37:22,029 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=1001
+2026-07-11 15:37:22,036 | INFO | Stop utáni váltás: rider_now=7, rider_next=7
+2026-07-11 15:37:27,948 | INFO | on_kill: Karcsi - eltelt idő: 5 ms
+2026-07-11 15:37:27,957 | INFO | on_kill: lap elmentve – lap_no=12, time_ms=5
+2026-07-11 15:37:58,548 | INFO | on_reset: Zoli - eltelt idő: 458 ms
+2026-07-11 15:37:58,560 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=458
+2026-07-11 15:37:58,566 | INFO | Stop utáni váltás: rider_now=11, rider_next=12
+2026-07-11 15:42:46,327 | INFO | on_reset: Faragó Tomi - eltelt idő: 409 ms
+2026-07-11 15:42:46,337 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=409
+2026-07-11 15:45:37,897 | INFO | on_reset: Gábor - eltelt idő: 459 ms
+2026-07-11 15:45:37,904 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=459
+2026-07-11 15:46:40,115 | INFO | on_reset: Ricsi - eltelt idő: 592 ms
+2026-07-11 15:47:14,060 | INFO | on_reset: Ricsi - eltelt idő: 626 ms
+2026-07-11 15:47:14,069 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=626
+2026-07-11 15:49:36,926 | INFO | on_reset: Faragó Tomi - eltelt idő: 410 ms
+2026-07-11 15:49:59,464 | INFO | on_reset: Faragó Tomi - eltelt idő: 433 ms
+2026-07-11 15:53:48,404 | INFO | Start beállítás: rider_now=8, rider_next=9
+2026-07-11 15:55:44,339 | INFO | Start beállítás: rider_now=5, rider_next=6
+2026-07-11 15:55:50,050 | INFO | on_reset: Ricsi - eltelt idő: 5 ms
+2026-07-11 15:56:28,925 | INFO | Start beállítás: rider_now=5, rider_next=6
+2026-07-11 15:56:31,398 | INFO | on_reset: Ricsi - eltelt idő: 8 ms
+2026-07-11 15:56:31,410 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=8
+2026-07-11 15:56:31,420 | INFO | Stop utáni váltás: rider_now=6, rider_next=5
+2026-07-11 15:56:37,855 | INFO | Start beállítás: rider_now=1, rider_next=2
+2026-07-11 16:01:48,778 | INFO | on_reset: Gábor - eltelt idő: 480 ms
+2026-07-11 16:01:48,787 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=480
+2026-07-11 16:03:32,518 | INFO | on_reset: Faragó Tomi - eltelt idő: 414 ms
+2026-07-11 16:03:32,527 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=414
+2026-07-11 16:07:20,134 | INFO | on_reset: Réka - eltelt idő: 648 ms
+2026-07-11 16:07:20,144 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=648
+2026-07-11 16:09:53,679 | INFO | on_reset: Gábor - eltelt idő: 484 ms
+2026-07-11 16:09:53,689 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=484
+2026-07-11 16:09:53,694 | INFO | Stop utáni váltás: rider_now=12, rider_next=13
+2026-07-11 16:10:28,274 | INFO | on_reset: Faragó Tomi - eltelt idő: 415 ms
+2026-07-11 16:10:28,282 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=415
+2026-07-11 16:11:12,895 | INFO | Start beállítás: rider_now=7, rider_next=7
+2026-07-11 16:17:12,427 | INFO | on_reset: Fodor Tomi - eltelt idő: 438 ms
+2026-07-11 16:17:12,435 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=438
+2026-07-11 16:17:26,759 | INFO | on_reset: Faragó Tomi - eltelt idő: 418 ms
+2026-07-11 16:17:26,774 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=418
+2026-07-11 16:17:26,781 | INFO | Stop utáni váltás: rider_now=2, rider_next=3
+2026-07-11 16:18:53,878 | INFO | on_reset: Réka - eltelt idő: 693 ms
+2026-07-11 16:18:53,888 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=693
+2026-07-11 16:21:55,251 | INFO | on_reset: Karcsi - eltelt idő: 642 ms
+2026-07-11 16:21:55,264 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=642
+2026-07-11 16:24:42,253 | INFO | on_reset: Fodor Tomi - eltelt idő: 449 ms
+2026-07-11 16:24:42,262 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=449
+2026-07-11 16:24:45,153 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 438 ms
+2026-07-11 16:24:45,161 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=438
+2026-07-11 16:30:56,735 | INFO | on_reset: Réka - eltelt idő: 722 ms
+2026-07-11 16:30:56,741 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=722
+2026-07-11 16:32:08,417 | INFO | on_reset: Fodor Tomi - eltelt idő: 446 ms
+2026-07-11 16:32:08,439 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=446
+2026-07-11 16:32:14,376 | INFO | on_reset: Karcsi - eltelt idő: 619 ms
+2026-07-11 16:32:14,385 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=619
+2026-07-11 16:32:40,408 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 475 ms
+2026-07-11 16:32:40,416 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=475
+2026-07-11 16:39:57,968 | INFO | on_reset: Fodor Tomi - eltelt idő: 469 ms
+2026-07-11 16:39:57,976 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=469
+2026-07-11 16:40:06,257 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 445 ms
+2026-07-11 16:40:06,265 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=445
+2026-07-11 16:43:09,725 | INFO | on_reset: Karcsi - eltelt idő: 655 ms
+2026-07-11 16:43:09,738 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=655
+2026-07-11 16:43:34,417 | INFO | on_reset: Réka - eltelt idő: 757 ms
+2026-07-11 16:43:34,424 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=757
+2026-07-11 16:47:34,617 | INFO | on_reset: Fodor Tomi - eltelt idő: 456 ms
+2026-07-11 16:47:34,628 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=456
+2026-07-11 16:47:34,639 | INFO | Stop utáni váltás: rider_now=13, rider_next=8
+2026-07-11 16:47:54,374 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 468 ms
+2026-07-11 16:47:54,384 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=468
+2026-07-11 16:53:57,102 | INFO | on_kill: Karcsi - eltelt idő: 647 ms
+2026-07-11 16:53:57,119 | INFO | on_kill: lap elmentve – lap_no=16, time_ms=647
+2026-07-11 16:55:43,378 | INFO | on_reset: Viktor - eltelt idő: 488 ms
+2026-07-11 16:55:43,385 | INFO | on_reset: lap elmentve – lap_no=1, time_ms=488
+2026-07-11 16:55:47,629 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 473 ms
+2026-07-11 16:55:47,641 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=473
+2026-07-11 16:55:47,650 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-07-11 16:56:09,327 | INFO | on_reset: Réka - eltelt idő: 754 ms
+2026-07-11 16:56:09,337 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=754
+2026-07-11 17:03:51,926 | INFO | on_reset: Viktor - eltelt idő: 488 ms
+2026-07-11 17:03:51,939 | INFO | on_reset: lap elmentve – lap_no=2, time_ms=488
+2026-07-11 17:04:45,270 | INFO | on_reset: Kókusz - eltelt idő: 537 ms
+2026-07-11 17:04:45,276 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=537
+2026-07-11 17:08:56,327 | INFO | on_reset: Réka - eltelt idő: 767 ms
+2026-07-11 17:08:56,340 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=767
+2026-07-11 17:08:56,347 | INFO | Stop utáni váltás: rider_now=5, rider_next=6
+2026-07-11 17:12:19,013 | INFO | on_reset: Viktor - eltelt idő: 507 ms
+2026-07-11 17:12:19,021 | INFO | on_reset: lap elmentve – lap_no=3, time_ms=507
+2026-07-11 17:13:31,157 | INFO | on_reset: Kókusz - eltelt idő: 525 ms
+2026-07-11 17:13:31,164 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=525
+2026-07-11 17:18:31,012 | INFO | on_reset: Ricsi - eltelt idő: 574 ms
+2026-07-11 17:18:31,023 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=574
+2026-07-11 17:20:40,230 | INFO | on_reset: Viktor - eltelt idő: 501 ms
+2026-07-11 17:20:40,237 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=501
+2026-07-11 17:22:17,508 | INFO | on_reset: Kókusz - eltelt idő: 526 ms
+2026-07-11 17:22:17,517 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=526
+2026-07-11 17:22:17,525 | INFO | Stop utáni váltás: rider_now=4, rider_next=1
+2026-07-11 17:26:44,840 | INFO | on_reset: Ricsi - eltelt idő: 493 ms
+2026-07-11 17:26:44,848 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=493
+2026-07-11 17:29:00,711 | INFO | on_reset: András - eltelt idő: 403 ms
+2026-07-11 17:29:00,719 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=403
+2026-07-11 17:29:22,870 | INFO | on_reset: Viktor - eltelt idő: 522 ms
+2026-07-11 17:29:22,887 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=522
+2026-07-11 17:29:22,895 | INFO | Stop utáni váltás: rider_now=8, rider_next=9
+2026-07-11 17:35:19,389 | INFO | on_reset: Ricsi - eltelt idő: 514 ms
+2026-07-11 17:35:19,405 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=514
+2026-07-11 17:35:23,627 | INFO | on_reset: András - eltelt idő: 382 ms
+2026-07-11 17:35:23,641 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=382
+2026-07-11 17:36:04,193 | INFO | on_reset: Barna - eltelt idő: 401 ms
+2026-07-11 17:36:04,201 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=401
+2026-07-11 17:38:10,697 | INFO | Start beállítás: rider_now=7, rider_next=7
+2026-07-11 17:41:52,115 | INFO | on_reset: András - eltelt idő: 388 ms
+2026-07-11 17:41:52,126 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=388
+2026-07-11 17:42:51,020 | INFO | on_reset: Barna - eltelt idő: 406 ms
+2026-07-11 17:42:51,027 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=406
+2026-07-11 17:44:09,495 | INFO | on_reset: Ricsi - eltelt idő: 530 ms
+2026-07-11 17:44:09,507 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=530
+2026-07-11 17:48:19,849 | INFO | on_reset: András - eltelt idő: 387 ms
+2026-07-11 17:48:19,857 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=387
+2026-07-11 17:49:20,367 | INFO | on_kill: Karcsi - eltelt idő: 669 ms
+2026-07-11 17:49:20,375 | INFO | on_kill: lap elmentve – lap_no=17, time_ms=669
+2026-07-11 17:49:44,181 | INFO | on_reset: Barna - eltelt idő: 413 ms
+2026-07-11 17:49:44,195 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=413
+2026-07-11 17:53:10,962 | INFO | on_reset: Ricsi - eltelt idő: 541 ms
+2026-07-11 17:53:10,982 | INFO | on_reset: lap elmentve – lap_no=16, time_ms=541
+2026-07-11 17:53:10,992 | INFO | Stop utáni váltás: rider_now=6, rider_next=5
+2026-07-11 17:54:49,395 | INFO | on_reset: András - eltelt idő: 389 ms
+2026-07-11 17:54:49,406 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=389
+2026-07-11 17:56:29,502 | INFO | on_reset: Barna - eltelt idő: 405 ms
+2026-07-11 17:56:29,511 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=405
+2026-07-11 18:01:22,877 | INFO | on_reset: András - eltelt idő: 393 ms
+2026-07-11 18:01:22,884 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=393
+2026-07-11 18:03:38,003 | INFO | on_reset: Barna - eltelt idő: 428 ms
+2026-07-11 18:03:38,016 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=428
+2026-07-11 18:05:41,923 | INFO | on_reset: Réka - eltelt idő: 750 ms
+2026-07-11 18:05:41,936 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=750
+2026-07-11 18:07:26,317 | INFO | on_reset: András - eltelt idő: 363 ms
+2026-07-11 18:07:26,332 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=363
+2026-07-11 18:07:26,343 | INFO | Stop utáni váltás: rider_now=1, rider_next=2
+2026-07-11 18:10:16,979 | INFO | on_reset: Barna - eltelt idő: 398 ms
+2026-07-11 18:10:16,985 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=398
+2026-07-11 18:14:42,466 | INFO | on_reset: Faragó Tomi - eltelt idő: 436 ms
+2026-07-11 18:14:42,475 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=436
+2026-07-11 18:17:01,248 | INFO | on_reset: Barna - eltelt idő: 404 ms
+2026-07-11 18:17:01,259 | INFO | on_reset: lap elmentve – lap_no=16, time_ms=404
+2026-07-11 18:17:01,266 | INFO | Stop utáni váltás: rider_now=9, rider_next=10
+2026-07-11 18:18:32,832 | INFO | on_reset: Réka - eltelt idő: 770 ms
+2026-07-11 18:18:32,839 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=770
+2026-07-11 18:21:05,614 | INFO | on_reset: Faragó Tomi - eltelt idő: 383 ms
+2026-07-11 18:21:05,635 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=383
+2026-07-11 18:23:59,838 | INFO | on_reset: Marci - eltelt idő: 418 ms
+2026-07-11 18:23:59,846 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=418
+2026-07-11 18:27:25,939 | INFO | on_reset: Faragó Tomi - eltelt idő: 380 ms
+2026-07-11 18:27:25,953 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=380
+2026-07-11 18:31:06,183 | INFO | on_reset: Marci - eltelt idő: 426 ms
+2026-07-11 18:31:06,193 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=426
+2026-07-11 18:33:02,380 | INFO | on_reset: Réka - eltelt idő: 869 ms
+2026-07-11 18:33:02,389 | INFO | on_reset: lap elmentve – lap_no=16, time_ms=869
+2026-07-11 18:33:59,349 | INFO | on_reset: Faragó Tomi - eltelt idő: 393 ms
+2026-07-11 18:33:59,357 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=393
+2026-07-11 18:38:01,733 | INFO | on_reset: Marci - eltelt idő: 415 ms
+2026-07-11 18:38:01,741 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=415
+2026-07-11 18:40:34,213 | INFO | on_reset: Faragó Tomi - eltelt idő: 394 ms
+2026-07-11 18:40:34,220 | INFO | on_reset: lap elmentve – lap_no=16, time_ms=394
+2026-07-11 18:44:54,152 | INFO | on_reset: Marci - eltelt idő: 412 ms
+2026-07-11 18:44:54,159 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=412
+2026-07-11 18:47:05,395 | INFO | on_reset: Faragó Tomi - eltelt idő: 391 ms
+2026-07-11 18:47:05,403 | INFO | on_reset: lap elmentve – lap_no=17, time_ms=391
+2026-07-11 18:48:23,519 | INFO | on_reset: Réka - eltelt idő: 921 ms
+2026-07-11 18:48:23,527 | INFO | on_reset: lap elmentve – lap_no=17, time_ms=921
+2026-07-11 18:48:23,534 | INFO | Stop utáni váltás: rider_now=5, rider_next=6
+2026-07-11 18:51:20,107 | INFO | Start beállítás: rider_now=7, rider_next=7
+2026-07-11 18:51:53,005 | INFO | on_reset: Marci - eltelt idő: 418 ms
+2026-07-11 18:51:53,021 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=418
+2026-07-11 18:53:28,262 | INFO | on_reset: Faragó Tomi - eltelt idő: 382 ms
+2026-07-11 18:53:28,269 | INFO | on_reset: lap elmentve – lap_no=18, time_ms=382
+2026-07-11 18:53:29,755 | INFO | on_reset: Faragó Tomi - eltelt idő: 1 ms
+2026-07-11 18:53:29,764 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=1
+2026-07-11 18:53:29,771 | INFO | Stop utáni váltás: rider_now=2, rider_next=3
+2026-07-11 18:58:20,540 | INFO | on_reset: Ricsi - eltelt idő: 597 ms
+2026-07-11 18:58:20,548 | INFO | on_reset: lap elmentve – lap_no=17, time_ms=597
+2026-07-11 18:58:41,302 | INFO | on_reset: Marci - eltelt idő: 408 ms
+2026-07-11 18:58:41,311 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=408
+2026-07-11 19:01:10,722 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 460 ms
+2026-07-11 19:01:10,734 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=460
+2026-07-11 19:02:55,959 | INFO | on_reset: Karcsi - eltelt idő: 695 ms
+2026-07-11 19:02:55,967 | INFO | on_reset: lap elmentve – lap_no=18, time_ms=695
+2026-07-11 19:05:31,774 | INFO | on_reset: Marci - eltelt idő: 410 ms
+2026-07-11 19:05:31,784 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=410
+2026-07-11 19:05:31,793 | INFO | Stop utáni váltás: rider_now=10, rider_next=11
+2026-07-11 19:07:40,785 | INFO | on_reset: Ricsi - eltelt idő: 560 ms
+2026-07-11 19:07:40,790 | INFO | on_reset: lap elmentve – lap_no=18, time_ms=560
+2026-07-11 19:08:53,729 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 462 ms
+2026-07-11 19:08:53,738 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=462
+2026-07-11 19:13:10,980 | INFO | on_reset: Zoli - eltelt idő: 459 ms
+2026-07-11 19:13:10,993 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=459
+2026-07-11 19:14:20,895 | INFO | on_reset: Karcsi - eltelt idő: 684 ms
+2026-07-11 19:14:20,908 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=684
+2026-07-11 19:16:15,946 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 442 ms
+2026-07-11 19:16:15,958 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=442
+2026-07-11 19:17:15,605 | INFO | on_reset: Ricsi - eltelt idő: 574 ms
+2026-07-11 19:17:15,619 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=574
+2026-07-11 19:20:35,332 | INFO | on_reset: Zoli - eltelt idő: 444 ms
+2026-07-11 19:20:35,342 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=444
+2026-07-11 19:23:57,119 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 461 ms
+2026-07-11 19:23:57,128 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=461
+2026-07-11 19:25:43,401 | INFO | on_reset: Karcsi - eltelt idő: 682 ms
+2026-07-11 19:25:43,410 | INFO | on_reset: lap elmentve – lap_no=20, time_ms=682
+2026-07-11 19:26:05,176 | INFO | on_reset: Ricsi - eltelt idő: 529 ms
+2026-07-11 19:26:05,184 | INFO | on_reset: lap elmentve – lap_no=20, time_ms=529
+2026-07-11 19:27:59,986 | INFO | on_reset: Zoli - eltelt idő: 444 ms
+2026-07-11 19:27:59,993 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=444
+2026-07-11 19:31:26,789 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 449 ms
+2026-07-11 19:31:26,803 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=449
+2026-07-11 19:31:26,810 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-07-11 19:34:57,211 | INFO | on_reset: Ricsi - eltelt idő: 532 ms
+2026-07-11 19:34:57,218 | INFO | on_reset: lap elmentve – lap_no=21, time_ms=532
+2026-07-11 19:36:22,125 | INFO | on_reset: Zoli - eltelt idő: 502 ms
+2026-07-11 19:36:22,131 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=502
+2026-07-11 19:37:05,138 | INFO | on_reset: Karcsi - eltelt idő: 681 ms
+2026-07-11 19:37:05,146 | INFO | on_reset: lap elmentve – lap_no=21, time_ms=681
+2026-07-11 19:40:03,403 | INFO | on_reset: Kókusz - eltelt idő: 516 ms
+2026-07-11 19:40:03,411 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=516
+2026-07-11 19:43:17,066 | INFO | on_reset: Zoli - eltelt idő: 414 ms
+2026-07-11 19:43:17,079 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=414
+2026-07-11 19:43:50,161 | INFO | on_reset: Ricsi - eltelt idő: 532 ms
+2026-07-11 19:43:50,169 | INFO | on_reset: lap elmentve – lap_no=22, time_ms=532
+2026-07-11 19:48:13,157 | INFO | on_reset: Karcsi - eltelt idő: 668 ms
+2026-07-11 19:48:13,166 | INFO | on_reset: lap elmentve – lap_no=22, time_ms=668
+2026-07-11 19:48:22,572 | INFO | on_reset: Kókusz - eltelt idő: 499 ms
+2026-07-11 19:48:22,581 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=499
+2026-07-11 19:50:54,501 | INFO | on_reset: Zoli - eltelt idő: 457 ms
+2026-07-11 19:50:54,512 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=457
+2026-07-11 19:52:54,411 | INFO | on_reset: Ricsi - eltelt idő: 544 ms
+2026-07-11 19:52:54,425 | INFO | on_reset: lap elmentve – lap_no=23, time_ms=544
+2026-07-11 19:56:35,521 | INFO | on_reset: Kókusz - eltelt idő: 492 ms
+2026-07-11 19:56:35,531 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=492
+2026-07-11 19:56:35,537 | INFO | Stop utáni váltás: rider_now=4, rider_next=1
+2026-07-11 19:56:59,676 | INFO | on_reset: Karcsi - eltelt idő: 526 ms
+2026-07-11 19:56:59,683 | INFO | on_reset: lap elmentve – lap_no=23, time_ms=526
+2026-07-11 19:57:57,370 | INFO | on_reset: Zoli - eltelt idő: 422 ms
+2026-07-11 19:57:57,383 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=422
+2026-07-11 19:57:57,392 | INFO | Stop utáni váltás: rider_now=11, rider_next=12
+2026-07-11 20:02:09,917 | INFO | on_reset: Ricsi - eltelt idő: 555 ms
+2026-07-11 20:02:09,925 | INFO | on_reset: lap elmentve – lap_no=24, time_ms=555
+2026-07-11 20:03:08,123 | INFO | on_reset: András - eltelt idő: 392 ms
+2026-07-11 20:03:08,137 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=392
+2026-07-11 20:05:54,882 | INFO | on_reset: Gábor - eltelt idő: 477 ms
+2026-07-11 20:05:54,889 | INFO | on_reset: lap elmentve – lap_no=4, time_ms=477
+2026-07-11 20:08:12,921 | INFO | on_reset: Karcsi - eltelt idő: 673 ms
+2026-07-11 20:08:12,934 | INFO | on_reset: lap elmentve – lap_no=24, time_ms=673
+2026-07-11 20:10:01,546 | INFO | on_reset: András - eltelt idő: 413 ms
+2026-07-11 20:10:01,556 | INFO | on_reset: lap elmentve – lap_no=16, time_ms=413
+2026-07-11 20:11:20,235 | INFO | on_reset: Ricsi - eltelt idő: 550 ms
+2026-07-11 20:11:20,246 | INFO | on_reset: lap elmentve – lap_no=25, time_ms=550
+2026-07-11 20:13:45,163 | INFO | on_reset: Gábor - eltelt idő: 470 ms
+2026-07-11 20:13:45,175 | INFO | on_reset: lap elmentve – lap_no=5, time_ms=470
+2026-07-11 20:15:59,883 | INFO | on_reset: András - eltelt idő: 358 ms
+2026-07-11 20:15:59,895 | INFO | on_reset: lap elmentve – lap_no=17, time_ms=358
+2026-07-11 20:19:28,141 | INFO | on_reset: Karcsi - eltelt idő: 675 ms
+2026-07-11 20:19:28,147 | INFO | on_reset: lap elmentve – lap_no=25, time_ms=675
+2026-07-11 20:19:58,204 | INFO | on_reset: Ricsi - eltelt idő: 517 ms
+2026-07-11 20:19:58,212 | INFO | on_reset: lap elmentve – lap_no=26, time_ms=517
+2026-07-11 20:21:27,880 | INFO | on_reset: Gábor - eltelt idő: 462 ms
+2026-07-11 20:21:27,891 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=462
+2026-07-11 20:22:26,377 | INFO | on_reset: András - eltelt idő: 386 ms
+2026-07-11 20:22:26,386 | INFO | on_reset: lap elmentve – lap_no=18, time_ms=386
+2026-07-11 20:28:43,886 | INFO | on_reset: András - eltelt idő: 377 ms
+2026-07-11 20:28:43,895 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=377
+2026-07-11 20:28:56,142 | INFO | on_reset: Ricsi - eltelt idő: 537 ms
+2026-07-11 20:28:56,150 | INFO | on_reset: lap elmentve – lap_no=27, time_ms=537
+2026-07-11 20:29:27,113 | INFO | on_reset: Gábor - eltelt idő: 479 ms
+2026-07-11 20:29:27,121 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=479
+2026-07-11 20:30:50,854 | INFO | on_reset: Karcsi - eltelt idő: 682 ms
+2026-07-11 20:30:50,863 | INFO | on_reset: lap elmentve – lap_no=26, time_ms=682
+2026-07-11 20:35:23,184 | INFO | on_reset: András - eltelt idő: 399 ms
+2026-07-11 20:35:23,194 | INFO | on_reset: lap elmentve – lap_no=20, time_ms=399
+2026-07-11 20:37:23,303 | INFO | on_reset: Gábor - eltelt idő: 476 ms
+2026-07-11 20:37:23,316 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=476
+2026-07-11 20:37:23,322 | INFO | Stop utáni váltás: rider_now=12, rider_next=13
+2026-07-11 20:37:59,673 | INFO | on_reset: Ricsi - eltelt idő: 543 ms
+2026-07-11 20:37:59,681 | INFO | on_reset: lap elmentve – lap_no=28, time_ms=543
+2026-07-11 20:41:36,827 | INFO | on_reset: András - eltelt idő: 373 ms
+2026-07-11 20:41:36,834 | INFO | on_reset: lap elmentve – lap_no=21, time_ms=373
+2026-07-11 20:41:36,841 | INFO | Stop utáni váltás: rider_now=1, rider_next=2
+2026-07-11 20:42:44,400 | INFO | on_kill: Karcsi - eltelt idő: 713 ms
+2026-07-11 20:42:44,412 | INFO | on_kill: lap elmentve – lap_no=27, time_ms=713
+2026-07-11 20:44:30,933 | INFO | on_reset: Fodor Tomi - eltelt idő: 427 ms
+2026-07-11 20:44:30,942 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=427
+2026-07-11 20:46:46,335 | INFO | on_kill: Ricsi - eltelt idő: 526 ms
+2026-07-11 20:46:46,346 | INFO | on_kill: lap elmentve – lap_no=29, time_ms=526
+2026-07-11 20:48:43,628 | INFO | on_reset: Faragó Tomi - eltelt idő: 426 ms
+2026-07-11 20:48:43,635 | INFO | on_reset: lap elmentve – lap_no=20, time_ms=426
+2026-07-11 20:49:04,193 | INFO | on_reset: Faragó Tomi - eltelt idő: 20 ms
+2026-07-11 20:49:04,202 | INFO | on_reset: lap elmentve – lap_no=21, time_ms=20
+2026-07-11 20:51:58,241 | INFO | on_reset: Fodor Tomi - eltelt idő: 447 ms
+2026-07-11 20:51:58,251 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=447
+2026-07-11 20:54:10,381 | INFO | Start beállítás: rider_now=5, rider_next=6
+2026-07-11 20:55:38,478 | INFO | on_reset: Faragó Tomi - eltelt idő: 394 ms
+2026-07-11 20:55:38,486 | INFO | on_reset: lap elmentve – lap_no=22, time_ms=394
+2026-07-11 20:59:15,172 | INFO | on_reset: Fodor Tomi - eltelt idő: 436 ms
+2026-07-11 20:59:15,180 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=436
+2026-07-11 21:02:38,537 | INFO | on_reset: Faragó Tomi - eltelt idő: 420 ms
+2026-07-11 21:02:38,546 | INFO | on_reset: lap elmentve – lap_no=23, time_ms=420
+2026-07-11 21:03:58,583 | INFO | on_reset: Ricsi - eltelt idő: 588 ms
+2026-07-11 21:03:58,602 | INFO | on_reset: lap elmentve – lap_no=30, time_ms=588
+2026-07-11 21:06:27,147 | INFO | on_reset: Fodor Tomi - eltelt idő: 431 ms
+2026-07-11 21:06:27,156 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=431
+2026-07-11 21:09:30,609 | INFO | on_reset: Faragó Tomi - eltelt idő: 412 ms
+2026-07-11 21:09:30,625 | INFO | on_reset: lap elmentve – lap_no=24, time_ms=412
+2026-07-11 21:12:49,342 | INFO | on_reset: Ricsi - eltelt idő: 530 ms
+2026-07-11 21:12:49,350 | INFO | on_reset: lap elmentve – lap_no=31, time_ms=530
+2026-07-11 21:13:47,626 | INFO | on_reset: Fodor Tomi - eltelt idő: 440 ms
+2026-07-11 21:13:47,640 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=440
+2026-07-11 21:13:47,649 | INFO | Stop utáni váltás: rider_now=13, rider_next=8
+2026-07-11 21:16:24,432 | INFO | on_reset: Faragó Tomi - eltelt idő: 413 ms
+2026-07-11 21:16:24,445 | INFO | on_reset: lap elmentve – lap_no=25, time_ms=413
+2026-07-11 21:21:57,585 | INFO | on_reset: Ricsi - eltelt idő: 548 ms
+2026-07-11 21:21:57,592 | INFO | on_reset: lap elmentve – lap_no=32, time_ms=548
+2026-07-11 21:22:14,017 | INFO | on_reset: Viktor - eltelt idő: 506 ms
+2026-07-11 21:22:14,029 | INFO | on_reset: lap elmentve – lap_no=6, time_ms=506
+2026-07-11 21:24:35,351 | INFO | on_reset: Faragó Tomi - eltelt idő: 490 ms
+2026-07-11 21:24:35,365 | INFO | on_reset: lap elmentve – lap_no=26, time_ms=490
+2026-07-11 21:24:35,374 | INFO | Stop utáni váltás: rider_now=2, rider_next=3
+2026-07-11 21:30:25,460 | INFO | on_reset: Viktor - eltelt idő: 491 ms
+2026-07-11 21:30:25,470 | INFO | on_reset: lap elmentve – lap_no=7, time_ms=491
+2026-07-11 21:30:51,175 | INFO | on_reset: Ricsi - eltelt idő: 533 ms
+2026-07-11 21:30:51,190 | INFO | on_reset: lap elmentve – lap_no=33, time_ms=533
+2026-07-11 21:31:06,223 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 390 ms
+2026-07-11 21:31:06,230 | INFO | on_reset: lap elmentve – lap_no=16, time_ms=390
+2026-07-11 21:38:50,170 | INFO | on_reset: Viktor - eltelt idő: 504 ms
+2026-07-11 21:38:50,178 | INFO | on_reset: lap elmentve – lap_no=8, time_ms=504
+2026-07-11 21:38:52,193 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 465 ms
+2026-07-11 21:38:52,203 | INFO | on_reset: lap elmentve – lap_no=17, time_ms=465
+2026-07-11 21:39:30,529 | INFO | on_reset: Ricsi - eltelt idő: 519 ms
+2026-07-11 21:39:30,536 | INFO | on_reset: lap elmentve – lap_no=34, time_ms=519
+2026-07-11 21:46:49,374 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 477 ms
+2026-07-11 21:46:49,381 | INFO | on_reset: lap elmentve – lap_no=18, time_ms=477
+2026-07-11 21:46:59,592 | INFO | on_reset: Viktor - eltelt idő: 489 ms
+2026-07-11 21:46:59,600 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=489
+2026-07-11 21:48:36,784 | INFO | on_reset: Ricsi - eltelt idő: 546 ms
+2026-07-11 21:48:36,793 | INFO | on_reset: lap elmentve – lap_no=35, time_ms=546
+2026-07-11 21:54:55,780 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 486 ms
+2026-07-11 21:54:55,788 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=486
+2026-07-11 21:55:18,413 | INFO | on_reset: Viktor - eltelt idő: 498 ms
+2026-07-11 21:55:18,427 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=498
+2026-07-11 21:55:18,433 | INFO | Stop utáni váltás: rider_now=8, rider_next=9
+2026-07-11 21:58:01,497 | INFO | on_reset: Ricsi - eltelt idő: 564 ms
+2026-07-11 21:58:01,506 | INFO | on_reset: lap elmentve – lap_no=36, time_ms=564
+2026-07-11 22:02:23,310 | INFO | on_reset: Barna - eltelt idő: 424 ms
+2026-07-11 22:02:23,317 | INFO | on_reset: lap elmentve – lap_no=17, time_ms=424
+2026-07-11 22:02:55,853 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 480 ms
+2026-07-11 22:02:55,861 | INFO | on_reset: lap elmentve – lap_no=20, time_ms=480
+2026-07-11 22:02:55,867 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-07-11 22:08:00,073 | INFO | on_reset: Ricsi - eltelt idő: 598 ms
+2026-07-11 22:08:00,081 | INFO | on_reset: lap elmentve – lap_no=37, time_ms=598
+2026-07-11 22:11:40,538 | INFO | on_reset: Kókusz - eltelt idő: 524 ms
+2026-07-11 22:11:40,546 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=524
+2026-07-11 22:16:14,896 | INFO | on_reset: Barna - eltelt idő: 831 ms
+2026-07-11 22:16:14,904 | INFO | on_reset: lap elmentve – lap_no=18, time_ms=831
+2026-07-11 22:17:42,989 | INFO | on_reset: Ricsi - eltelt idő: 582 ms
+2026-07-11 22:17:42,999 | INFO | on_reset: lap elmentve – lap_no=38, time_ms=582
+2026-07-11 22:20:13,408 | INFO | on_reset: Kókusz - eltelt idő: 512 ms
+2026-07-11 22:20:13,416 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=512
+2026-07-11 22:28:42,189 | INFO | on_reset: Kókusz - eltelt idő: 508 ms
+2026-07-11 22:28:42,202 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=508
+2026-07-11 22:28:42,213 | INFO | Stop utáni váltás: rider_now=4, rider_next=1
+2026-07-11 22:30:30,501 | INFO | on_reset: Barna - eltelt idő: 855 ms
+2026-07-11 22:30:30,516 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=855
+2026-07-11 22:35:56,999 | INFO | on_reset: András - eltelt idő: 434 ms
+2026-07-11 22:35:57,007 | INFO | on_reset: lap elmentve – lap_no=22, time_ms=434
+2026-07-11 22:36:26,887 | INFO | on_reset: Ricsi - eltelt idő: 1123 ms
+2026-07-11 22:36:26,900 | INFO | on_reset: lap elmentve – lap_no=39, time_ms=1123
+2026-07-11 22:37:31,864 | INFO | on_reset: Barna - eltelt idő: 421 ms
+2026-07-11 22:37:31,872 | INFO | on_reset: lap elmentve – lap_no=20, time_ms=421
+2026-07-11 22:43:12,521 | INFO | on_reset: András - eltelt idő: 435 ms
+2026-07-11 22:43:12,541 | INFO | on_reset: lap elmentve – lap_no=23, time_ms=435
+2026-07-11 22:43:52,784 | INFO | on_reset: Ricsi - eltelt idő: 445 ms
+2026-07-11 22:43:52,792 | INFO | on_reset: lap elmentve – lap_no=40, time_ms=445
+2026-07-11 22:44:24,141 | INFO | on_reset: Barna - eltelt idő: 412 ms
+2026-07-11 22:44:24,160 | INFO | on_reset: lap elmentve – lap_no=21, time_ms=412
+2026-07-11 22:44:24,168 | INFO | Stop utáni váltás: rider_now=9, rider_next=10
+2026-07-11 22:48:58,238 | INFO | on_reset: András - eltelt idő: 345 ms
+2026-07-11 22:48:58,246 | INFO | on_reset: lap elmentve – lap_no=24, time_ms=345
+2026-07-11 22:53:11,240 | INFO | on_kill: Ricsi - eltelt idő: 558 ms
+2026-07-11 22:53:11,254 | INFO | on_kill: lap elmentve – lap_no=41, time_ms=558
+2026-07-11 22:53:16,700 | INFO | on_reset: Marci - eltelt idő: 532 ms
+2026-07-11 22:53:16,710 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=532
+2026-07-11 22:55:35,970 | INFO | on_reset: András - eltelt idő: 397 ms
+2026-07-11 22:55:35,978 | INFO | on_reset: lap elmentve – lap_no=25, time_ms=397
+2026-07-11 23:01:46,126 | INFO | on_reset: Marci - eltelt idő: 509 ms
+2026-07-11 23:01:46,135 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=509
+2026-07-11 23:02:14,328 | INFO | on_reset: András - eltelt idő: 398 ms
+2026-07-11 23:02:14,338 | INFO | on_reset: lap elmentve – lap_no=26, time_ms=398
+2026-07-11 23:07:58,189 | INFO | Start beállítás: rider_now=5, rider_next=6
+2026-07-11 23:08:59,130 | INFO | on_reset: András - eltelt idő: 404 ms
+2026-07-11 23:08:59,138 | INFO | on_reset: lap elmentve – lap_no=27, time_ms=404
+2026-07-11 23:10:58,806 | INFO | on_reset: Marci - eltelt idő: 552 ms
+2026-07-11 23:10:58,814 | INFO | on_reset: lap elmentve – lap_no=16, time_ms=552
+2026-07-11 23:15:41,499 | INFO | on_reset: András - eltelt idő: 402 ms
+2026-07-11 23:15:41,508 | INFO | on_reset: lap elmentve – lap_no=28, time_ms=402
+2026-07-11 23:15:41,516 | INFO | Stop utáni váltás: rider_now=1, rider_next=2
+2026-07-11 23:16:00,001 | INFO | on_reset: Ricsi - eltelt idő: 481 ms
+2026-07-11 23:16:00,026 | INFO | on_reset: lap elmentve – lap_no=42, time_ms=481
+2026-07-11 23:19:56,753 | INFO | on_reset: Marci - eltelt idő: 537 ms
+2026-07-11 23:19:56,765 | INFO | on_reset: lap elmentve – lap_no=17, time_ms=537
+2026-07-11 23:24:33,963 | INFO | on_reset: Faragó Tomi - eltelt idő: 532 ms
+2026-07-11 23:24:33,972 | INFO | on_reset: lap elmentve – lap_no=27, time_ms=532
+2026-07-11 23:24:37,267 | INFO | on_reset: Ricsi - eltelt idő: 517 ms
+2026-07-11 23:24:37,276 | INFO | on_reset: lap elmentve – lap_no=43, time_ms=517
+2026-07-11 23:27:21,240 | INFO | on_reset: Marci - eltelt idő: 444 ms
+2026-07-11 23:27:21,249 | INFO | on_reset: lap elmentve – lap_no=18, time_ms=444
+2026-07-11 23:31:23,785 | INFO | on_reset: Faragó Tomi - eltelt idő: 409 ms
+2026-07-11 23:31:23,794 | INFO | on_reset: lap elmentve – lap_no=28, time_ms=409
+2026-07-11 23:34:22,342 | INFO | on_reset: Ricsi - eltelt idő: 585 ms
+2026-07-11 23:34:22,351 | INFO | on_reset: lap elmentve – lap_no=44, time_ms=585
+2026-07-11 23:34:35,553 | INFO | on_reset: Marci - eltelt idő: 434 ms
+2026-07-11 23:34:35,562 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=434
+2026-07-11 23:38:55,860 | INFO | on_reset: Faragó Tomi - eltelt idő: 452 ms
+2026-07-11 23:38:55,869 | INFO | on_reset: lap elmentve – lap_no=29, time_ms=452
+2026-07-11 23:42:17,389 | INFO | on_reset: Marci - eltelt idő: 461 ms
+2026-07-11 23:42:17,402 | INFO | on_reset: lap elmentve – lap_no=20, time_ms=461
+2026-07-11 23:42:17,408 | INFO | Stop utáni váltás: rider_now=10, rider_next=11
+2026-07-11 23:44:12,228 | INFO | on_reset: Ricsi - eltelt idő: 589 ms
+2026-07-11 23:44:12,237 | INFO | on_reset: lap elmentve – lap_no=45, time_ms=589
+2026-07-11 23:44:54,203 | INFO | on_reset: Zoli - eltelt idő: 156 ms
+2026-07-11 23:44:54,211 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=156
+2026-07-11 23:44:54,221 | INFO | Stop utáni váltás: rider_now=11, rider_next=12
+2026-07-11 23:49:39,849 | INFO | on_kill: Ricsi - eltelt idő: 327 ms
+2026-07-11 23:49:39,859 | INFO | on_kill: lap elmentve – lap_no=46, time_ms=327
+2026-07-11 23:51:21,976 | INFO | on_reset: Faragó Tomi - eltelt idő: 746 ms
+2026-07-11 23:51:21,983 | INFO | on_reset: lap elmentve – lap_no=30, time_ms=746
+2026-07-11 23:58:12,673 | INFO | on_reset: Gábor - eltelt idő: 798 ms
+2026-07-11 23:58:12,681 | INFO | on_reset: lap elmentve – lap_no=9, time_ms=798
+2026-07-11 23:58:15,006 | INFO | on_reset: Faragó Tomi - eltelt idő: 413 ms
+2026-07-11 23:58:15,018 | INFO | on_reset: lap elmentve – lap_no=31, time_ms=413
+2026-07-11 23:58:15,027 | INFO | Stop utáni váltás: rider_now=2, rider_next=3
+2026-07-12 00:03:12,888 | INFO | Start beállítás: rider_now=7, rider_next=7
+2026-07-12 00:05:42,645 | INFO | on_reset: Gábor - eltelt idő: 449 ms
+2026-07-12 00:05:42,652 | INFO | on_reset: lap elmentve – lap_no=10, time_ms=449
+2026-07-12 00:06:14,154 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 479 ms
+2026-07-12 00:06:14,161 | INFO | on_reset: lap elmentve – lap_no=21, time_ms=479
+2026-07-12 00:12:30,792 | INFO | Start beállítás: rider_now=5, rider_next=6
+2026-07-12 00:20:21,660 | INFO | on_reset: Gábor - eltelt idő: 878 ms
+2026-07-12 00:20:21,675 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=878
+2026-07-12 00:22:05,383 | INFO | on_reset: Ricsi - eltelt idő: 574 ms
+2026-07-12 00:22:05,393 | INFO | on_reset: lap elmentve – lap_no=47, time_ms=574
+2026-07-12 00:22:38,259 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 984 ms
+2026-07-12 00:22:38,265 | INFO | on_reset: lap elmentve – lap_no=22, time_ms=984
+2026-07-12 00:27:26,607 | INFO | on_reset: Gábor - eltelt idő: 424 ms
+2026-07-12 00:27:26,619 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=424
+2026-07-12 00:30:15,257 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 456 ms
+2026-07-12 00:30:15,268 | INFO | on_reset: lap elmentve – lap_no=23, time_ms=456
+2026-07-12 00:37:48,848 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 453 ms
+2026-07-12 00:37:48,856 | INFO | on_reset: lap elmentve – lap_no=24, time_ms=453
+2026-07-12 00:37:48,863 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-07-12 00:39:42,902 | INFO | on_reset: Karcsi - eltelt idő: 2189 ms
+2026-07-12 00:39:42,909 | INFO | on_reset: lap elmentve – lap_no=28, time_ms=2189
+2026-07-12 00:40:03,553 | INFO | on_reset: Ricsi - eltelt idő: 1078 ms
+2026-07-12 00:40:03,560 | INFO | on_reset: lap elmentve – lap_no=48, time_ms=1078
+2026-07-12 00:40:09,928 | INFO | on_kill: Karcsi - eltelt idő: 27 ms
+2026-07-12 00:40:09,936 | INFO | on_kill: lap elmentve – lap_no=29, time_ms=27
+2026-07-12 00:41:16,431 | INFO | on_reset: Gábor - eltelt idő: 829 ms
+2026-07-12 00:41:16,445 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=829
+2026-07-12 00:44:34,032 | INFO | Start beállítás: rider_now=7, rider_next=7
+2026-07-12 00:47:07,686 | INFO | on_reset: Kókusz - eltelt idő: 558 ms
+2026-07-12 00:47:07,691 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=558
+2026-07-12 00:50:45,505 | INFO | on_kill: Ricsi - eltelt idő: 641 ms
+2026-07-12 00:50:45,518 | INFO | on_kill: lap elmentve – lap_no=49, time_ms=641
+2026-07-12 00:56:03,876 | INFO | on_reset: Kókusz - eltelt idő: 536 ms
+2026-07-12 00:56:03,885 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=536
+2026-07-12 00:59:20,408 | INFO | on_reset: Gábor - eltelt idő: 1083 ms
+2026-07-12 00:59:20,421 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=1083
+2026-07-12 01:04:39,682 | INFO | on_reset: Kókusz - eltelt idő: 515 ms
+2026-07-12 01:04:39,692 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=515
+2026-07-12 01:04:39,701 | INFO | Stop utáni váltás: rider_now=4, rider_next=1
+2026-07-12 01:07:15,191 | INFO | on_reset: Gábor - eltelt idő: 474 ms
+2026-07-12 01:07:15,201 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=474
+2026-07-12 01:07:15,207 | INFO | Stop utáni váltás: rider_now=12, rider_next=13
+2026-07-12 01:08:02,131 | INFO | on_reset: Karcsi - eltelt idő: 1408 ms
+2026-07-12 01:08:02,140 | INFO | on_reset: lap elmentve – lap_no=30, time_ms=1408
+2026-07-12 01:11:49,127 | INFO | on_reset: András - eltelt idő: 429 ms
+2026-07-12 01:11:49,134 | INFO | on_reset: lap elmentve – lap_no=29, time_ms=429
+2026-07-12 01:14:53,522 | INFO | on_reset: Fodor Tomi - eltelt idő: 458 ms
+2026-07-12 01:14:53,532 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=458
+2026-07-12 01:15:42,083 | INFO | Start beállítás: rider_now=5, rider_next=6
+2026-07-12 01:18:30,714 | INFO | on_reset: András - eltelt idő: 401 ms
+2026-07-12 01:18:30,723 | INFO | on_reset: lap elmentve – lap_no=30, time_ms=401
+2026-07-12 01:19:56,228 | INFO | on_reset: Karcsi - eltelt idő: 714 ms
+2026-07-12 01:19:56,236 | INFO | on_reset: lap elmentve – lap_no=31, time_ms=714
+2026-07-12 01:22:30,331 | INFO | on_reset: Fodor Tomi - eltelt idő: 456 ms
+2026-07-12 01:22:30,339 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=456
+2026-07-12 01:25:03,935 | INFO | on_reset: András - eltelt idő: 393 ms
+2026-07-12 01:25:03,945 | INFO | on_reset: lap elmentve – lap_no=31, time_ms=393
+2026-07-12 01:28:19,545 | INFO | on_reset: Ricsi - eltelt idő: 757 ms
+2026-07-12 01:28:19,568 | INFO | on_reset: lap elmentve – lap_no=50, time_ms=757
+2026-07-12 01:30:10,832 | INFO | on_reset: Fodor Tomi - eltelt idő: 460 ms
+2026-07-12 01:30:10,841 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=460
+2026-07-12 01:31:45,303 | INFO | on_reset: András - eltelt idő: 401 ms
+2026-07-12 01:31:45,315 | INFO | on_reset: lap elmentve – lap_no=32, time_ms=401
+2026-07-12 01:37:52,467 | INFO | on_reset: Fodor Tomi - eltelt idő: 461 ms
+2026-07-12 01:37:52,475 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=461
+2026-07-12 01:38:27,504 | INFO | on_reset: András - eltelt idő: 402 ms
+2026-07-12 01:38:27,518 | INFO | on_reset: lap elmentve – lap_no=33, time_ms=402
+2026-07-12 01:44:22,027 | INFO | on_reset: Karcsi - eltelt idő: 1465 ms
+2026-07-12 01:44:22,037 | INFO | on_reset: lap elmentve – lap_no=32, time_ms=1465
+2026-07-12 01:45:10,971 | INFO | on_reset: András - eltelt idő: 403 ms
+2026-07-12 01:45:10,979 | INFO | on_reset: lap elmentve – lap_no=34, time_ms=403
+2026-07-12 01:45:36,423 | INFO | on_reset: Fodor Tomi - eltelt idő: 463 ms
+2026-07-12 01:45:36,432 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=463
+2026-07-12 01:45:36,440 | INFO | Stop utáni váltás: rider_now=13, rider_next=8
+2026-07-12 01:52:02,239 | INFO | on_reset: András - eltelt idő: 411 ms
+2026-07-12 01:52:02,251 | INFO | on_reset: lap elmentve – lap_no=35, time_ms=411
+2026-07-12 01:52:02,258 | INFO | Stop utáni váltás: rider_now=1, rider_next=2
+2026-07-12 01:53:40,401 | INFO | on_reset: Viktor - eltelt idő: 483 ms
+2026-07-12 01:53:40,409 | INFO | on_reset: lap elmentve – lap_no=11, time_ms=483
+2026-07-12 01:57:13,217 | INFO | on_kill: Karcsi - eltelt idő: 771 ms
+2026-07-12 01:57:13,226 | INFO | on_kill: lap elmentve – lap_no=33, time_ms=771
+2026-07-12 01:59:11,438 | INFO | on_reset: Faragó Tomi - eltelt idő: 429 ms
+2026-07-12 01:59:11,450 | INFO | on_reset: lap elmentve – lap_no=32, time_ms=429
+2026-07-12 02:01:27,754 | INFO | on_reset: Viktor - eltelt idő: 467 ms
+2026-07-12 02:01:27,763 | INFO | on_reset: lap elmentve – lap_no=12, time_ms=467
+2026-07-12 02:09:21,460 | INFO | on_reset: Viktor - eltelt idő: 473 ms
+2026-07-12 02:09:21,469 | INFO | on_reset: lap elmentve – lap_no=13, time_ms=473
+2026-07-12 02:13:41,479 | INFO | on_reset: Faragó Tomi - eltelt idő: 869 ms
+2026-07-12 02:13:41,491 | INFO | on_reset: lap elmentve – lap_no=33, time_ms=869
+2026-07-12 02:17:27,613 | INFO | on_reset: Viktor - eltelt idő: 486 ms
+2026-07-12 02:17:27,622 | INFO | on_reset: lap elmentve – lap_no=14, time_ms=486
+2026-07-12 02:20:41,813 | INFO | on_reset: Faragó Tomi - eltelt idő: 420 ms
+2026-07-12 02:20:41,824 | INFO | on_reset: lap elmentve – lap_no=34, time_ms=420
+2026-07-12 02:25:36,256 | INFO | on_reset: Viktor - eltelt idő: 488 ms
+2026-07-12 02:25:36,268 | INFO | on_reset: lap elmentve – lap_no=15, time_ms=488
+2026-07-12 02:26:23,737 | INFO | on_reset: Ricsi - eltelt idő: 3483 ms
+2026-07-12 02:26:23,745 | INFO | on_reset: lap elmentve – lap_no=51, time_ms=3483
+2026-07-12 02:27:40,197 | INFO | on_reset: Faragó Tomi - eltelt idő: 418 ms
+2026-07-12 02:27:40,206 | INFO | on_reset: lap elmentve – lap_no=35, time_ms=418
+2026-07-12 02:33:42,755 | INFO | on_reset: Viktor - eltelt idő: 486 ms
+2026-07-12 02:33:42,764 | INFO | on_reset: lap elmentve – lap_no=16, time_ms=486
+2026-07-12 02:33:42,773 | INFO | Stop utáni váltás: rider_now=8, rider_next=9
+2026-07-12 02:34:39,027 | INFO | on_reset: Faragó Tomi - eltelt idő: 418 ms
+2026-07-12 02:34:39,041 | INFO | on_reset: lap elmentve – lap_no=36, time_ms=418
+2026-07-12 02:34:39,048 | INFO | Stop utáni váltás: rider_now=2, rider_next=3
+2026-07-12 02:39:59,980 | INFO | on_reset: Ricsi - eltelt idő: 816 ms
+2026-07-12 02:39:59,987 | INFO | on_reset: lap elmentve – lap_no=52, time_ms=816
+2026-07-12 02:40:59,807 | INFO | on_reset: Barna - eltelt idő: 437 ms
+2026-07-12 02:40:59,815 | INFO | on_reset: lap elmentve – lap_no=22, time_ms=437
+2026-07-12 02:43:18,847 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 519 ms
+2026-07-12 02:43:18,855 | INFO | on_reset: lap elmentve – lap_no=25, time_ms=519
+2026-07-12 02:48:08,106 | INFO | on_reset: Barna - eltelt idő: 428 ms
+2026-07-12 02:48:08,114 | INFO | on_reset: lap elmentve – lap_no=23, time_ms=428
+2026-07-12 02:51:56,384 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 517 ms
+2026-07-12 02:51:56,391 | INFO | on_reset: lap elmentve – lap_no=26, time_ms=517
+2026-07-12 02:55:27,267 | INFO | on_reset: Barna - eltelt idő: 439 ms
+2026-07-12 02:55:27,296 | INFO | on_reset: lap elmentve – lap_no=24, time_ms=439
+2026-07-12 03:00:08,226 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 491 ms
+2026-07-12 03:00:08,235 | INFO | on_reset: lap elmentve – lap_no=27, time_ms=491
+2026-07-12 03:02:27,356 | INFO | on_reset: Barna - eltelt idő: 420 ms
+2026-07-12 03:02:27,364 | INFO | on_reset: lap elmentve – lap_no=25, time_ms=420
+2026-07-12 03:08:28,152 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 499 ms
+2026-07-12 03:08:28,159 | INFO | on_reset: lap elmentve – lap_no=28, time_ms=499
+2026-07-12 03:09:47,004 | INFO | on_reset: Barna - eltelt idő: 439 ms
+2026-07-12 03:09:47,018 | INFO | on_reset: lap elmentve – lap_no=26, time_ms=439
+2026-07-12 03:09:47,025 | INFO | Stop utáni váltás: rider_now=9, rider_next=10
+2026-07-12 03:16:36,203 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 488 ms
+2026-07-12 03:16:36,212 | INFO | on_reset: lap elmentve – lap_no=29, time_ms=488
+2026-07-12 03:16:36,219 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-07-12 03:17:42,696 | INFO | on_reset: Marci - eltelt idő: 475 ms
+2026-07-12 03:17:42,702 | INFO | on_reset: lap elmentve – lap_no=21, time_ms=475
+2026-07-12 03:25:24,977 | INFO | on_reset: Marci - eltelt idő: 462 ms
+2026-07-12 03:25:24,988 | INFO | on_reset: lap elmentve – lap_no=22, time_ms=462
+2026-07-12 03:25:59,167 | INFO | on_reset: Kókusz - eltelt idő: 562 ms
+2026-07-12 03:25:59,175 | INFO | on_reset: lap elmentve – lap_no=16, time_ms=562
+2026-07-12 03:33:31,063 | INFO | on_reset: Marci - eltelt idő: 486 ms
+2026-07-12 03:33:31,073 | INFO | on_reset: lap elmentve – lap_no=23, time_ms=486
+2026-07-12 03:35:27,568 | INFO | on_reset: Kókusz - eltelt idő: 568 ms
+2026-07-12 03:35:27,575 | INFO | on_reset: lap elmentve – lap_no=17, time_ms=568
+2026-07-12 03:46:37,237 | INFO | on_reset: Kókusz - eltelt idő: 669 ms
+2026-07-12 03:46:37,246 | INFO | on_reset: lap elmentve – lap_no=18, time_ms=669
+2026-07-12 03:46:37,251 | INFO | Stop utáni váltás: rider_now=4, rider_next=1
+2026-07-12 03:46:53,652 | INFO | on_reset: Marci - eltelt idő: 802 ms
+2026-07-12 03:46:53,670 | INFO | on_reset: lap elmentve – lap_no=24, time_ms=802
+2026-07-12 03:46:53,678 | INFO | Stop utáni váltás: rider_now=10, rider_next=11
+2026-07-12 03:52:51,988 | INFO | on_reset: András - eltelt idő: 374 ms
+2026-07-12 03:52:52,000 | INFO | on_reset: lap elmentve – lap_no=36, time_ms=374
+2026-07-12 03:55:05,717 | INFO | on_reset: Zoli - eltelt idő: 492 ms
+2026-07-12 03:55:05,729 | INFO | on_reset: lap elmentve – lap_no=16, time_ms=492
+2026-07-12 03:58:47,035 | INFO | on_reset: András - eltelt idő: 355 ms
+2026-07-12 03:58:47,045 | INFO | on_reset: lap elmentve – lap_no=37, time_ms=355
+2026-07-12 04:04:26,817 | INFO | on_reset: Ricsi - eltelt idő: 5066 ms
+2026-07-12 04:04:26,826 | INFO | on_reset: lap elmentve – lap_no=53, time_ms=5066
+2026-07-12 04:05:21,824 | INFO | on_reset: András - eltelt idő: 394 ms
+2026-07-12 04:05:21,834 | INFO | on_reset: lap elmentve – lap_no=38, time_ms=394
+2026-07-12 04:10:20,657 | INFO | on_reset: Zoli - eltelt idő: 914 ms
+2026-07-12 04:10:20,666 | INFO | on_reset: lap elmentve – lap_no=17, time_ms=914
+2026-07-12 04:12:02,500 | INFO | on_reset: András - eltelt idő: 400 ms
+2026-07-12 04:12:02,508 | INFO | on_reset: lap elmentve – lap_no=39, time_ms=400
+2026-07-12 04:18:06,170 | INFO | on_reset: Zoli - eltelt idő: 465 ms
+2026-07-12 04:18:06,179 | INFO | on_reset: lap elmentve – lap_no=18, time_ms=465
+2026-07-12 04:18:40,236 | INFO | on_reset: András - eltelt idő: 397 ms
+2026-07-12 04:18:40,243 | INFO | on_reset: lap elmentve – lap_no=40, time_ms=397
+2026-07-12 04:24:59,220 | INFO | on_kill: Ricsi - eltelt idő: 1232 ms
+2026-07-12 04:24:59,229 | INFO | on_kill: lap elmentve – lap_no=54, time_ms=1232
+2026-07-12 04:25:20,025 | INFO | on_reset: András - eltelt idő: 399 ms
+2026-07-12 04:25:20,035 | INFO | on_reset: lap elmentve – lap_no=41, time_ms=399
+2026-07-12 04:25:20,043 | INFO | Stop utáni váltás: rider_now=1, rider_next=2
+2026-07-12 04:25:54,478 | INFO | on_reset: Zoli - eltelt idő: 468 ms
+2026-07-12 04:25:54,485 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=468
+2026-07-12 04:32:39,179 | INFO | on_reset: Faragó Tomi - eltelt idő: 439 ms
+2026-07-12 04:32:39,187 | INFO | on_reset: lap elmentve – lap_no=37, time_ms=439
+2026-07-12 04:33:38,585 | INFO | on_reset: Zoli - eltelt idő: 464 ms
+2026-07-12 04:33:38,591 | INFO | on_reset: lap elmentve – lap_no=20, time_ms=464
+2026-07-12 04:40:00,211 | INFO | on_reset: Faragó Tomi - eltelt idő: 441 ms
+2026-07-12 04:40:00,220 | INFO | on_reset: lap elmentve – lap_no=38, time_ms=441
+2026-07-12 04:41:36,514 | INFO | on_reset: Zoli - eltelt idő: 477 ms
+2026-07-12 04:41:36,521 | INFO | on_reset: lap elmentve – lap_no=21, time_ms=477
+2026-07-12 04:47:24,413 | INFO | on_reset: Faragó Tomi - eltelt idő: 444 ms
+2026-07-12 04:47:24,424 | INFO | on_reset: lap elmentve – lap_no=39, time_ms=444
+2026-07-12 04:49:30,460 | INFO | on_reset: Zoli - eltelt idő: 473 ms
+2026-07-12 04:49:30,468 | INFO | on_reset: lap elmentve – lap_no=22, time_ms=473
+2026-07-12 04:49:30,476 | INFO | Stop utáni váltás: rider_now=11, rider_next=12
+2026-07-12 04:54:58,013 | INFO | on_reset: Faragó Tomi - eltelt idő: 453 ms
+2026-07-12 04:54:58,024 | INFO | on_reset: lap elmentve – lap_no=40, time_ms=453
+2026-07-12 04:57:43,703 | INFO | on_reset: Gábor - eltelt idő: 493 ms
+2026-07-12 04:57:43,713 | INFO | on_reset: lap elmentve – lap_no=16, time_ms=493
+2026-07-12 05:02:15,024 | INFO | on_reset: Faragó Tomi - eltelt idő: 436 ms
+2026-07-12 05:02:15,032 | INFO | on_reset: lap elmentve – lap_no=41, time_ms=436
+2026-07-12 05:05:45,654 | INFO | on_reset: Gábor - eltelt idő: 481 ms
+2026-07-12 05:05:45,662 | INFO | on_reset: lap elmentve – lap_no=17, time_ms=481
+2026-07-12 05:09:30,201 | INFO | on_reset: Faragó Tomi - eltelt idő: 435 ms
+2026-07-12 05:09:30,211 | INFO | on_reset: lap elmentve – lap_no=42, time_ms=435
+2026-07-12 05:09:30,217 | INFO | Stop utáni váltás: rider_now=2, rider_next=3
+2026-07-12 05:13:52,539 | INFO | on_reset: Gábor - eltelt idő: 486 ms
+2026-07-12 05:13:52,547 | INFO | on_reset: lap elmentve – lap_no=18, time_ms=486
+2026-07-12 05:17:28,248 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 478 ms
+2026-07-12 05:17:28,257 | INFO | on_reset: lap elmentve – lap_no=30, time_ms=478
+2026-07-12 05:21:50,777 | INFO | on_reset: Gábor - eltelt idő: 478 ms
+2026-07-12 05:21:50,787 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=478
+2026-07-12 05:21:50,797 | INFO | Stop utáni váltás: rider_now=12, rider_next=13
+2026-07-12 05:23:10,807 | INFO | Start beállítás: rider_now=5, rider_next=6
+2026-07-12 05:25:38,780 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 490 ms
+2026-07-12 05:25:38,790 | INFO | on_reset: lap elmentve – lap_no=31, time_ms=490
+2026-07-12 05:29:25,486 | INFO | on_reset: Fodor Tomi - eltelt idő: 454 ms
+2026-07-12 05:29:25,495 | INFO | on_reset: lap elmentve – lap_no=16, time_ms=454
+2026-07-12 05:32:01,823 | INFO | on_reset: Ricsi - eltelt idő: 531 ms
+2026-07-12 05:32:01,831 | INFO | on_reset: lap elmentve – lap_no=55, time_ms=531
+2026-07-12 05:33:44,043 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 485 ms
+2026-07-12 05:33:44,052 | INFO | on_reset: lap elmentve – lap_no=32, time_ms=485
+2026-07-12 05:36:43,282 | INFO | on_reset: Fodor Tomi - eltelt idő: 437 ms
+2026-07-12 05:36:43,292 | INFO | on_reset: lap elmentve – lap_no=17, time_ms=437
+2026-07-12 05:40:24,063 | INFO | on_reset: Ricsi - eltelt idő: 502 ms
+2026-07-12 05:40:24,072 | INFO | on_reset: lap elmentve – lap_no=56, time_ms=502
+2026-07-12 05:41:47,527 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 483 ms
+2026-07-12 05:41:47,534 | INFO | on_reset: lap elmentve – lap_no=33, time_ms=483
+2026-07-12 05:44:27,266 | INFO | on_reset: Fodor Tomi - eltelt idő: 463 ms
+2026-07-12 05:44:27,275 | INFO | on_reset: lap elmentve – lap_no=18, time_ms=463
+2026-07-12 05:48:34,482 | INFO | on_reset: Ricsi - eltelt idő: 490 ms
+2026-07-12 05:48:34,490 | INFO | on_reset: lap elmentve – lap_no=57, time_ms=490
+2026-07-12 05:49:43,985 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 476 ms
+2026-07-12 05:49:43,993 | INFO | on_reset: lap elmentve – lap_no=34, time_ms=476
+2026-07-12 05:52:05,096 | INFO | on_reset: Fodor Tomi - eltelt idő: 457 ms
+2026-07-12 05:52:05,106 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=457
+2026-07-12 05:52:05,117 | INFO | Stop utáni váltás: rider_now=13, rider_next=8
+2026-07-12 05:53:51,271 | INFO | Start beállítás: rider_now=7, rider_next=7
+2026-07-12 05:56:44,716 | INFO | on_reset: Ricsi - eltelt idő: 490 ms
+2026-07-12 05:56:44,723 | INFO | on_reset: lap elmentve – lap_no=58, time_ms=490
+2026-07-12 05:57:24,588 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 460 ms
+2026-07-12 05:57:24,599 | INFO | on_reset: lap elmentve – lap_no=35, time_ms=460
+2026-07-12 05:57:24,606 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-07-12 06:00:54,503 | INFO | on_reset: Viktor - eltelt idő: 529 ms
+2026-07-12 06:00:54,512 | INFO | on_reset: lap elmentve – lap_no=17, time_ms=529
+2026-07-12 06:05:25,844 | INFO | on_reset: Ricsi - eltelt idő: 521 ms
+2026-07-12 06:05:25,852 | INFO | on_reset: lap elmentve – lap_no=59, time_ms=521
+2026-07-12 06:06:53,482 | INFO | on_reset: Kókusz - eltelt idő: 568 ms
+2026-07-12 06:06:53,489 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=568
+2026-07-12 06:08:09,589 | INFO | on_reset: Karcsi - eltelt idő: 858 ms
+2026-07-12 06:08:09,597 | INFO | on_reset: lap elmentve – lap_no=34, time_ms=858
+2026-07-12 06:09:46,992 | INFO | on_reset: Viktor - eltelt idő: 532 ms
+2026-07-12 06:09:47,001 | INFO | on_reset: lap elmentve – lap_no=18, time_ms=532
+2026-07-12 06:14:50,326 | INFO | on_kill: Ricsi - eltelt idő: 564 ms
+2026-07-12 06:14:50,333 | INFO | on_kill: lap elmentve – lap_no=60, time_ms=564
+2026-07-12 06:16:20,133 | INFO | on_reset: Kókusz - eltelt idő: 566 ms
+2026-07-12 06:16:20,141 | INFO | on_reset: lap elmentve – lap_no=20, time_ms=566
+2026-07-12 06:18:54,860 | INFO | on_reset: Viktor - eltelt idő: 547 ms
+2026-07-12 06:18:54,868 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=547
+2026-07-12 06:25:34,026 | INFO | on_reset: Kókusz - eltelt idő: 553 ms
+2026-07-12 06:25:34,034 | INFO | on_reset: lap elmentve – lap_no=21, time_ms=553
+2026-07-12 06:25:34,040 | INFO | Stop utáni váltás: rider_now=4, rider_next=1
+2026-07-12 06:27:51,332 | INFO | on_reset: Viktor - eltelt idő: 536 ms
+2026-07-12 06:27:51,340 | INFO | on_reset: lap elmentve – lap_no=20, time_ms=536
+2026-07-12 06:31:36,869 | INFO | on_reset: Karcsi - eltelt idő: 1407 ms
+2026-07-12 06:31:36,877 | INFO | on_reset: lap elmentve – lap_no=35, time_ms=1407
+2026-07-12 06:32:42,092 | INFO | on_reset: András - eltelt idő: 428 ms
+2026-07-12 06:32:42,100 | INFO | on_reset: lap elmentve – lap_no=42, time_ms=428
+2026-07-12 06:36:52,937 | INFO | on_reset: Viktor - eltelt idő: 541 ms
+2026-07-12 06:36:52,946 | INFO | on_reset: lap elmentve – lap_no=21, time_ms=541
+2026-07-12 06:36:52,953 | INFO | Stop utáni váltás: rider_now=8, rider_next=9
+2026-07-12 06:39:25,530 | INFO | on_reset: András - eltelt idő: 403 ms
+2026-07-12 06:39:25,544 | INFO | on_reset: lap elmentve – lap_no=43, time_ms=403
+2026-07-12 06:43:28,720 | INFO | on_reset: Karcsi - eltelt idő: 711 ms
+2026-07-12 06:43:28,729 | INFO | on_reset: lap elmentve – lap_no=36, time_ms=711
+2026-07-12 06:43:56,454 | INFO | on_reset: Barna - eltelt idő: 423 ms
+2026-07-12 06:43:56,461 | INFO | on_reset: lap elmentve – lap_no=27, time_ms=423
+2026-07-12 06:46:15,228 | INFO | on_reset: András - eltelt idő: 409 ms
+2026-07-12 06:46:15,238 | INFO | on_reset: lap elmentve – lap_no=44, time_ms=409
+2026-07-12 06:50:55,801 | INFO | on_reset: Barna - eltelt idő: 419 ms
+2026-07-12 06:50:55,812 | INFO | on_reset: lap elmentve – lap_no=28, time_ms=419
+2026-07-12 06:53:04,522 | INFO | on_reset: András - eltelt idő: 409 ms
+2026-07-12 06:53:04,530 | INFO | on_reset: lap elmentve – lap_no=45, time_ms=409
+2026-07-12 06:55:27,606 | INFO | on_reset: Karcsi - eltelt idő: 718 ms
+2026-07-12 06:55:27,619 | INFO | on_reset: lap elmentve – lap_no=37, time_ms=718
+2026-07-12 06:57:54,673 | INFO | on_reset: Barna - eltelt idő: 418 ms
+2026-07-12 06:57:54,686 | INFO | on_reset: lap elmentve – lap_no=29, time_ms=418
+2026-07-12 06:57:59,338 | INFO | Start beállítás: rider_now=5, rider_next=6
+2026-07-12 06:59:43,957 | INFO | on_reset: András - eltelt idő: 399 ms
+2026-07-12 06:59:43,966 | INFO | on_reset: lap elmentve – lap_no=46, time_ms=399
+2026-07-12 07:04:54,671 | INFO | on_reset: Barna - eltelt idő: 419 ms
+2026-07-12 07:04:54,680 | INFO | on_reset: lap elmentve – lap_no=30, time_ms=419
+2026-07-12 07:06:32,221 | INFO | on_reset: András - eltelt idő: 408 ms
+2026-07-12 07:06:32,229 | INFO | on_reset: lap elmentve – lap_no=47, time_ms=408
+2026-07-12 07:07:14,161 | INFO | on_reset: Ricsi - eltelt idő: 554 ms
+2026-07-12 07:07:14,169 | INFO | on_reset: lap elmentve – lap_no=61, time_ms=554
+2026-07-12 07:07:41,179 | INFO | on_kill: Karcsi - eltelt idő: 733 ms
+2026-07-12 07:07:41,189 | INFO | on_kill: lap elmentve – lap_no=38, time_ms=733
+2026-07-12 07:11:54,636 | INFO | on_reset: Barna - eltelt idő: 419 ms
+2026-07-12 07:11:54,644 | INFO | on_reset: lap elmentve – lap_no=31, time_ms=419
+2026-07-12 07:11:54,652 | INFO | Stop utáni váltás: rider_now=9, rider_next=10
+2026-07-12 07:12:24,113 | INFO | Start beállítás: rider_now=7, rider_next=7
+2026-07-12 07:13:17,901 | INFO | on_reset: András - eltelt idő: 405 ms
+2026-07-12 07:13:17,910 | INFO | on_reset: lap elmentve – lap_no=48, time_ms=405
+2026-07-12 07:16:47,069 | INFO | on_reset: Ricsi - eltelt idő: 572 ms
+2026-07-12 07:16:47,078 | INFO | on_reset: lap elmentve – lap_no=62, time_ms=572
+2026-07-12 07:19:12,801 | INFO | on_reset: Marci - eltelt idő: 438 ms
+2026-07-12 07:19:12,811 | INFO | on_reset: lap elmentve – lap_no=25, time_ms=438
+2026-07-12 07:20:00,720 | INFO | on_reset: András - eltelt idő: 402 ms
+2026-07-12 07:20:00,737 | INFO | on_reset: lap elmentve – lap_no=49, time_ms=402
+2026-07-12 07:24:38,475 | INFO | on_reset: Karcsi - eltelt idő: 734 ms
+2026-07-12 07:24:38,483 | INFO | on_reset: lap elmentve – lap_no=39, time_ms=734
+2026-07-12 07:26:14,823 | INFO | on_reset: Marci - eltelt idő: 421 ms
+2026-07-12 07:26:14,832 | INFO | on_reset: lap elmentve – lap_no=26, time_ms=421
+2026-07-12 07:26:27,700 | INFO | on_reset: Ricsi - eltelt idő: 580 ms
+2026-07-12 07:26:27,709 | INFO | on_reset: lap elmentve – lap_no=63, time_ms=580
+2026-07-12 07:26:34,186 | INFO | on_reset: András - eltelt idő: 393 ms
+2026-07-12 07:26:34,195 | INFO | on_reset: lap elmentve – lap_no=50, time_ms=393
+2026-07-12 07:33:02,060 | INFO | on_reset: András - eltelt idő: 387 ms
+2026-07-12 07:33:02,068 | INFO | on_reset: lap elmentve – lap_no=51, time_ms=387
+2026-07-12 07:33:06,436 | INFO | on_reset: Marci - eltelt idő: 411 ms
+2026-07-12 07:33:06,444 | INFO | on_reset: lap elmentve – lap_no=27, time_ms=411
+2026-07-12 07:35:27,842 | INFO | on_kill: Ricsi - eltelt idő: 540 ms
+2026-07-12 07:35:27,852 | INFO | on_kill: lap elmentve – lap_no=64, time_ms=540
+2026-07-12 07:37:13,323 | INFO | on_reset: Karcsi - eltelt idő: 754 ms
+2026-07-12 07:37:13,330 | INFO | on_reset: lap elmentve – lap_no=40, time_ms=754
+2026-07-12 07:39:44,727 | INFO | on_reset: András - eltelt idő: 402 ms
+2026-07-12 07:39:44,738 | INFO | on_reset: lap elmentve – lap_no=52, time_ms=402
+2026-07-12 07:39:44,746 | INFO | Stop utáni váltás: rider_now=1, rider_next=2
+2026-07-12 07:40:00,343 | INFO | on_reset: Marci - eltelt idő: 413 ms
+2026-07-12 07:40:00,357 | INFO | on_reset: lap elmentve – lap_no=28, time_ms=413
+2026-07-12 07:40:00,365 | INFO | Stop utáni váltás: rider_now=10, rider_next=11
+2026-07-12 07:40:22,550 | INFO | on_reset: Faragó Tomi - eltelt idő: 37 ms
+2026-07-12 07:40:22,565 | INFO | on_reset: lap elmentve – lap_no=43, time_ms=37
+2026-07-12 07:40:22,572 | INFO | Stop utáni váltás: rider_now=2, rider_next=3
+2026-07-12 07:47:22,591 | INFO | on_reset: Zoli - eltelt idő: 442 ms
+2026-07-12 07:47:22,600 | INFO | on_reset: lap elmentve – lap_no=23, time_ms=442
+2026-07-12 07:47:53,957 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 451 ms
+2026-07-12 07:47:53,964 | INFO | on_reset: lap elmentve – lap_no=36, time_ms=451
+2026-07-12 07:48:35,455 | INFO | on_reset: Karcsi - eltelt idő: 682 ms
+2026-07-12 07:48:35,464 | INFO | on_reset: lap elmentve – lap_no=41, time_ms=682
+2026-07-12 07:54:22,260 | INFO | on_reset: Zoli - eltelt idő: 419 ms
+2026-07-12 07:54:22,268 | INFO | on_reset: lap elmentve – lap_no=24, time_ms=419
+2026-07-12 07:55:46,117 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 472 ms
+2026-07-12 07:55:46,129 | INFO | on_reset: lap elmentve – lap_no=37, time_ms=472
+2026-07-12 07:59:35,562 | INFO | Start beállítás: rider_now=5, rider_next=6
+2026-07-12 07:59:54,419 | INFO | on_reset: Ricsi - eltelt idő: 18 ms
+2026-07-12 07:59:54,427 | INFO | on_reset: lap elmentve – lap_no=65, time_ms=18
+2026-07-12 07:59:54,435 | INFO | Stop utáni váltás: rider_now=6, rider_next=5
+2026-07-12 08:01:32,792 | INFO | on_reset: Zoli - eltelt idő: 430 ms
+2026-07-12 08:01:32,802 | INFO | on_reset: lap elmentve – lap_no=25, time_ms=430
+2026-07-12 08:02:25,992 | INFO | on_kill: Karcsi - eltelt idő: 830 ms
+2026-07-12 08:02:26,001 | INFO | on_kill: lap elmentve – lap_no=42, time_ms=830
+2026-07-12 08:03:48,257 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 482 ms
+2026-07-12 08:03:48,266 | INFO | on_reset: lap elmentve – lap_no=38, time_ms=482
+2026-07-12 08:08:36,265 | INFO | on_reset: Zoli - eltelt idő: 423 ms
+2026-07-12 08:08:36,274 | INFO | on_reset: lap elmentve – lap_no=26, time_ms=423
+2026-07-12 08:08:36,280 | INFO | Stop utáni váltás: rider_now=11, rider_next=12
+2026-07-12 08:11:12,671 | INFO | on_reset: Réka - eltelt idő: 678 ms
+2026-07-12 08:11:12,684 | INFO | on_reset: lap elmentve – lap_no=18, time_ms=678
+2026-07-12 08:12:12,477 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 504 ms
+2026-07-12 08:12:12,485 | INFO | on_reset: lap elmentve – lap_no=39, time_ms=504
+2026-07-12 08:16:17,469 | INFO | on_reset: Gábor - eltelt idő: 461 ms
+2026-07-12 08:16:17,475 | INFO | on_reset: lap elmentve – lap_no=20, time_ms=461
+2026-07-12 08:20:22,529 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 490 ms
+2026-07-12 08:20:22,541 | INFO | on_reset: lap elmentve – lap_no=40, time_ms=490
+2026-07-12 08:20:22,548 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-07-12 08:23:25,465 | INFO | on_reset: Réka - eltelt idő: 732 ms
+2026-07-12 08:23:25,477 | INFO | on_reset: lap elmentve – lap_no=19, time_ms=732
+2026-07-12 08:23:34,409 | INFO | on_reset: Gábor - eltelt idő: 436 ms
+2026-07-12 08:23:34,417 | INFO | on_reset: lap elmentve – lap_no=21, time_ms=436
+2026-07-12 08:29:50,172 | INFO | on_reset: Kókusz - eltelt idő: 567 ms
+2026-07-12 08:29:50,181 | INFO | on_reset: lap elmentve – lap_no=22, time_ms=567
+2026-07-12 08:30:44,275 | INFO | on_reset: Gábor - eltelt idő: 429 ms
+2026-07-12 08:30:44,284 | INFO | on_reset: lap elmentve – lap_no=22, time_ms=429
+2026-07-12 08:30:44,291 | INFO | Stop utáni váltás: rider_now=12, rider_next=13
+2026-07-12 08:36:30,059 | INFO | on_reset: Réka - eltelt idő: 784 ms
+2026-07-12 08:36:30,067 | INFO | on_reset: lap elmentve – lap_no=20, time_ms=784
+2026-07-12 08:38:45,816 | INFO | on_reset: Fodor Tomi - eltelt idő: 481 ms
+2026-07-12 08:38:45,824 | INFO | on_reset: lap elmentve – lap_no=20, time_ms=481
+2026-07-12 08:38:46,172 | INFO | on_reset: Kókusz - eltelt idő: 535 ms
+2026-07-12 08:38:46,182 | INFO | on_reset: lap elmentve – lap_no=23, time_ms=535
+2026-07-12 08:38:46,189 | INFO | Stop utáni váltás: rider_now=4, rider_next=1
+2026-07-12 08:39:20,453 | INFO | on_reset: András - eltelt idő: 34 ms
+2026-07-12 08:39:20,464 | INFO | on_reset: lap elmentve – lap_no=53, time_ms=34
+2026-07-12 08:39:20,471 | INFO | Stop utáni váltás: rider_now=1, rider_next=2
+2026-07-12 08:46:01,085 | INFO | on_reset: Fodor Tomi - eltelt idő: 435 ms
+2026-07-12 08:46:01,093 | INFO | on_reset: lap elmentve – lap_no=21, time_ms=435
+2026-07-12 08:46:03,093 | INFO | on_reset: Faragó Tomi - eltelt idő: 402 ms
+2026-07-12 08:46:03,102 | INFO | on_reset: lap elmentve – lap_no=44, time_ms=402
+2026-07-12 08:46:48,873 | INFO | Start beállítás: rider_now=7, rider_next=7
+2026-07-12 08:49:26,543 | INFO | on_reset: Réka - eltelt idő: 776 ms
+2026-07-12 08:49:26,556 | INFO | on_reset: lap elmentve – lap_no=21, time_ms=776
+2026-07-12 08:53:16,197 | INFO | on_reset: Fodor Tomi - eltelt idő: 435 ms
+2026-07-12 08:53:16,210 | INFO | on_reset: lap elmentve – lap_no=22, time_ms=435
+2026-07-12 08:53:19,466 | INFO | on_reset: Faragó Tomi - eltelt idő: 436 ms
+2026-07-12 08:53:19,473 | INFO | on_reset: lap elmentve – lap_no=45, time_ms=436
+2026-07-12 08:59:45,424 | INFO | on_reset: Karcsi - eltelt idő: 776 ms
+2026-07-12 08:59:45,442 | INFO | on_reset: lap elmentve – lap_no=43, time_ms=776
+2026-07-12 09:00:17,373 | INFO | on_reset: Fodor Tomi - eltelt idő: 421 ms
+2026-07-12 09:00:17,381 | INFO | on_reset: lap elmentve – lap_no=23, time_ms=421
+2026-07-12 09:00:17,384 | INFO | on_reset: Fodor Tomi - eltelt idő: 0 ms
+2026-07-12 09:00:17,393 | INFO | on_reset: lap elmentve – lap_no=24, time_ms=0
+2026-07-12 09:00:43,622 | INFO | on_reset: Faragó Tomi - eltelt idő: 444 ms
+2026-07-12 09:00:43,640 | INFO | on_reset: lap elmentve – lap_no=46, time_ms=444
+2026-07-12 09:02:55,604 | INFO | on_reset: Réka - eltelt idő: 809 ms
+2026-07-12 09:02:55,614 | INFO | on_reset: lap elmentve – lap_no=22, time_ms=809
+2026-07-12 09:07:41,195 | INFO | on_reset: Faragó Tomi - eltelt idő: 417 ms
+2026-07-12 09:07:41,201 | INFO | on_reset: lap elmentve – lap_no=47, time_ms=417
+2026-07-12 09:07:41,208 | INFO | Stop utáni váltás: rider_now=2, rider_next=3
+2026-07-12 09:07:43,513 | INFO | on_reset: Fodor Tomi - eltelt idő: 446 ms
+2026-07-12 09:07:43,520 | INFO | on_reset: lap elmentve – lap_no=25, time_ms=446
+2026-07-12 09:07:43,528 | INFO | Stop utáni váltás: rider_now=13, rider_next=8
+2026-07-12 09:12:42,738 | INFO | on_reset: Karcsi - eltelt idő: 777 ms
+2026-07-12 09:12:42,745 | INFO | on_reset: lap elmentve – lap_no=44, time_ms=777
+2026-07-12 09:14:23,543 | INFO | on_reset: Barna - eltelt idő: 400 ms
+2026-07-12 09:14:23,552 | INFO | on_reset: lap elmentve – lap_no=32, time_ms=400
+2026-07-12 09:14:26,118 | INFO | on_reset: András - eltelt idő: 404 ms
+2026-07-12 09:14:26,131 | INFO | on_reset: lap elmentve – lap_no=54, time_ms=404
+2026-07-12 09:15:35,020 | INFO | on_reset: Réka - eltelt idő: 759 ms
+2026-07-12 09:15:35,030 | INFO | on_reset: lap elmentve – lap_no=23, time_ms=759
+2026-07-12 09:21:03,351 | INFO | on_reset: Barna - eltelt idő: 399 ms
+2026-07-12 09:21:03,358 | INFO | on_reset: lap elmentve – lap_no=33, time_ms=399
+2026-07-12 09:21:05,336 | INFO | on_reset: András - eltelt idő: 399 ms
+2026-07-12 09:21:05,342 | INFO | on_reset: lap elmentve – lap_no=55, time_ms=399
+2026-07-12 09:25:26,685 | INFO | on_reset: Karcsi - eltelt idő: 763 ms
+2026-07-12 09:25:26,694 | INFO | on_reset: lap elmentve – lap_no=45, time_ms=763
+2026-07-12 09:28:04,857 | INFO | on_reset: András - eltelt idő: 419 ms
+2026-07-12 09:28:04,865 | INFO | on_reset: lap elmentve – lap_no=56, time_ms=419
+2026-07-12 09:28:06,780 | INFO | on_reset: Barna - eltelt idő: 423 ms
+2026-07-12 09:28:06,812 | INFO | on_reset: lap elmentve – lap_no=34, time_ms=423
+2026-07-12 09:28:23,249 | INFO | on_reset: Réka - eltelt idő: 768 ms
+2026-07-12 09:28:23,261 | INFO | on_reset: lap elmentve – lap_no=24, time_ms=768
+2026-07-12 09:34:31,588 | INFO | on_reset: Barna - eltelt idő: 384 ms
+2026-07-12 09:34:31,599 | INFO | on_reset: lap elmentve – lap_no=35, time_ms=384
+2026-07-12 09:34:34,549 | INFO | on_reset: András - eltelt idő: 389 ms
+2026-07-12 09:34:34,556 | INFO | on_reset: lap elmentve – lap_no=57, time_ms=389
+2026-07-12 09:38:17,410 | INFO | on_reset: Karcsi - eltelt idő: 770 ms
+2026-07-12 09:38:17,422 | INFO | on_reset: lap elmentve – lap_no=46, time_ms=770
+2026-07-12 09:40:53,443 | INFO | on_reset: Réka - eltelt idő: 750 ms
+2026-07-12 09:40:53,452 | INFO | on_reset: lap elmentve – lap_no=25, time_ms=750
+2026-07-12 09:40:53,458 | INFO | Stop utáni váltás: rider_now=5, rider_next=6
+2026-07-12 09:41:04,647 | INFO | on_reset: Barna - eltelt idő: 393 ms
+2026-07-12 09:41:04,656 | INFO | on_reset: lap elmentve – lap_no=36, time_ms=393
+2026-07-12 09:41:04,663 | INFO | Stop utáni váltás: rider_now=9, rider_next=10
+2026-07-12 09:41:07,259 | INFO | on_reset: András - eltelt idő: 392 ms
+2026-07-12 09:41:07,267 | INFO | on_reset: lap elmentve – lap_no=58, time_ms=392
+2026-07-12 09:41:07,274 | INFO | Stop utáni váltás: rider_now=1, rider_next=2
+2026-07-12 09:48:55,068 | INFO | on_reset: Gábor - eltelt idő: 470 ms
+2026-07-12 09:48:55,076 | INFO | on_reset: lap elmentve – lap_no=23, time_ms=470
+2026-07-12 09:48:56,798 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 469 ms
+2026-07-12 09:48:56,806 | INFO | on_reset: lap elmentve – lap_no=41, time_ms=469
+2026-07-12 09:50:19,582 | INFO | on_reset: Ricsi - eltelt idő: 566 ms
+2026-07-12 09:50:19,591 | INFO | on_reset: lap elmentve – lap_no=66, time_ms=566
+2026-07-12 09:50:53,640 | INFO | on_kill: Karcsi - eltelt idő: 756 ms
+2026-07-12 09:50:53,649 | INFO | on_kill: lap elmentve – lap_no=47, time_ms=756
+2026-07-12 09:56:31,934 | INFO | on_reset: Gábor - eltelt idő: 456 ms
+2026-07-12 09:56:31,944 | INFO | on_reset: lap elmentve – lap_no=24, time_ms=456
+2026-07-12 09:56:34,111 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 457 ms
+2026-07-12 09:56:34,120 | INFO | on_reset: lap elmentve – lap_no=42, time_ms=457
+2026-07-12 09:59:15,364 | INFO | on_reset: Ricsi - eltelt idő: 535 ms
+2026-07-12 09:59:15,372 | INFO | on_reset: lap elmentve – lap_no=67, time_ms=535
+2026-07-12 10:04:05,317 | INFO | on_reset: Gábor - eltelt idő: 453 ms
+2026-07-12 10:04:05,327 | INFO | on_reset: lap elmentve – lap_no=25, time_ms=453
+2026-07-12 10:04:05,333 | INFO | Stop utáni váltás: rider_now=12, rider_next=13
+2026-07-12 10:04:07,170 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 453 ms
+2026-07-12 10:04:07,182 | INFO | on_reset: lap elmentve – lap_no=43, time_ms=453
+2026-07-12 10:04:07,188 | INFO | Stop utáni váltás: rider_now=3, rider_next=4
+2026-07-12 10:07:59,073 | INFO | on_reset: Ricsi - eltelt idő: 523 ms
+2026-07-12 10:07:59,081 | INFO | on_reset: lap elmentve – lap_no=68, time_ms=523
+2026-07-12 10:11:15,865 | INFO | on_reset: Marci - eltelt idő: 430 ms
+2026-07-12 10:11:15,890 | INFO | on_reset: lap elmentve – lap_no=29, time_ms=430
+2026-07-12 10:13:15,909 | INFO | on_reset: Kókusz - eltelt idő: 548 ms
+2026-07-12 10:13:15,918 | INFO | on_reset: lap elmentve – lap_no=24, time_ms=548
+2026-07-12 10:17:02,823 | INFO | on_reset: Ricsi - eltelt idő: 543 ms
+2026-07-12 10:17:02,831 | INFO | on_reset: lap elmentve – lap_no=69, time_ms=543
+2026-07-12 10:18:29,519 | INFO | on_reset: Marci - eltelt idő: 433 ms
+2026-07-12 10:18:29,528 | INFO | on_reset: lap elmentve – lap_no=30, time_ms=433
+2026-07-12 10:23:03,445 | INFO | on_reset: Kókusz - eltelt idő: 587 ms
+2026-07-12 10:23:03,454 | INFO | on_reset: lap elmentve – lap_no=25, time_ms=587
+2026-07-12 10:25:42,454 | INFO | on_reset: Marci - eltelt idő: 432 ms
+2026-07-12 10:25:42,462 | INFO | on_reset: lap elmentve – lap_no=31, time_ms=432
+2026-07-12 10:27:09,673 | INFO | on_reset: Ricsi - eltelt idő: 606 ms
+2026-07-12 10:27:09,682 | INFO | on_reset: lap elmentve – lap_no=70, time_ms=606
+2026-07-12 10:27:09,691 | INFO | Stop utáni váltás: rider_now=6, rider_next=5
+2026-07-12 10:29:14,709 | INFO | Start beállítás: rider_now=7, rider_next=7
+2026-07-12 10:32:34,060 | INFO | on_reset: Marci - eltelt idő: 411 ms
+2026-07-12 10:32:34,070 | INFO | on_reset: lap elmentve – lap_no=32, time_ms=411
+2026-07-12 10:32:34,076 | INFO | Stop utáni váltás: rider_now=10, rider_next=11
+2026-07-12 10:32:36,216 | INFO | on_reset: Kókusz - eltelt idő: 572 ms
+2026-07-12 10:32:36,238 | INFO | on_reset: lap elmentve – lap_no=26, time_ms=572
+2026-07-12 10:32:36,244 | INFO | Stop utáni váltás: rider_now=4, rider_next=1
+2026-07-12 10:39:28,505 | INFO | on_reset: Zoli - eltelt idő: 414 ms
+2026-07-12 10:39:28,514 | INFO | on_reset: lap elmentve – lap_no=27, time_ms=414
+2026-07-12 10:39:30,090 | INFO | on_reset: Faragó Tomi - eltelt idő: 413 ms
+2026-07-12 10:39:30,098 | INFO | on_reset: lap elmentve – lap_no=48, time_ms=413
+2026-07-12 10:40:46,007 | INFO | on_reset: Réka - eltelt idő: 816 ms
+2026-07-12 10:40:46,014 | INFO | on_reset: lap elmentve – lap_no=26, time_ms=816
+2026-07-12 10:42:23,091 | INFO | on_reset: Karcsi - eltelt idő: 788 ms
+2026-07-12 10:42:23,099 | INFO | on_reset: lap elmentve – lap_no=48, time_ms=788
+2026-07-12 10:46:14,520 | INFO | on_reset: Zoli - eltelt idő: 405 ms
+2026-07-12 10:46:14,529 | INFO | on_reset: lap elmentve – lap_no=28, time_ms=405
+2026-07-12 10:46:16,368 | INFO | on_reset: Faragó Tomi - eltelt idő: 406 ms
+2026-07-12 10:46:16,377 | INFO | on_reset: lap elmentve – lap_no=49, time_ms=406
+2026-07-12 10:52:51,321 | INFO | on_reset: Réka - eltelt idő: 725 ms
+2026-07-12 10:52:51,330 | INFO | on_reset: lap elmentve – lap_no=27, time_ms=725
+2026-07-12 10:53:04,724 | INFO | on_reset: Zoli - eltelt idő: 410 ms
+2026-07-12 10:53:04,732 | INFO | on_reset: lap elmentve – lap_no=29, time_ms=410
+2026-07-12 10:53:07,308 | INFO | on_reset: Faragó Tomi - eltelt idő: 410 ms
+2026-07-12 10:53:07,316 | INFO | on_reset: lap elmentve – lap_no=50, time_ms=410
+2026-07-12 10:55:07,241 | INFO | on_reset: Karcsi - eltelt idő: 764 ms
+2026-07-12 10:55:07,250 | INFO | on_reset: lap elmentve – lap_no=49, time_ms=764
+2026-07-12 10:59:49,399 | INFO | on_reset: Zoli - eltelt idő: 404 ms
+2026-07-12 10:59:49,407 | INFO | on_reset: lap elmentve – lap_no=30, time_ms=404
+2026-07-12 10:59:52,796 | INFO | on_reset: Faragó Tomi - eltelt idő: 405 ms
+2026-07-12 10:59:52,804 | INFO | on_reset: lap elmentve – lap_no=51, time_ms=405
+2026-07-12 11:04:39,254 | INFO | on_reset: Réka - eltelt idő: 707 ms
+2026-07-12 11:04:39,264 | INFO | on_reset: lap elmentve – lap_no=28, time_ms=707
+2026-07-12 11:04:39,270 | INFO | Stop utáni váltás: rider_now=5, rider_next=6
+2026-07-12 11:07:04,417 | INFO | on_reset: Zoli - eltelt idő: 434 ms
+2026-07-12 11:07:04,425 | INFO | on_reset: lap elmentve – lap_no=31, time_ms=434
+2026-07-12 11:07:04,432 | INFO | Stop utáni váltás: rider_now=11, rider_next=12
+2026-07-12 11:07:33,508 | INFO | on_reset: Faragó Tomi - eltelt idő: 460 ms
+2026-07-12 11:07:33,517 | INFO | on_reset: lap elmentve – lap_no=52, time_ms=460
+2026-07-12 11:07:33,524 | INFO | Stop utáni váltás: rider_now=2, rider_next=3
+2026-07-12 11:08:03,956 | INFO | on_reset: Karcsi - eltelt idő: 776 ms
+2026-07-12 11:08:03,963 | INFO | on_reset: lap elmentve – lap_no=50, time_ms=776
+2026-07-12 11:08:08,153 | INFO | on_kill: Karcsi - eltelt idő: 4 ms
+2026-07-12 11:08:08,163 | INFO | on_kill: lap elmentve – lap_no=51, time_ms=4
+2026-07-12 11:14:55,840 | INFO | on_reset: Fodor Tomi - eltelt idő: 471 ms
+2026-07-12 11:14:55,849 | INFO | on_reset: lap elmentve – lap_no=26, time_ms=471
+2026-07-12 11:14:58,578 | INFO | on_reset: Ricsi - eltelt idő: 619 ms
+2026-07-12 11:14:58,586 | INFO | on_reset: lap elmentve – lap_no=71, time_ms=619
+2026-07-12 11:15:44,260 | INFO | on_reset: András - eltelt idő: 490 ms
+2026-07-12 11:15:44,267 | INFO | on_reset: lap elmentve – lap_no=59, time_ms=490
+2026-07-12 11:22:43,459 | INFO | on_reset: Fodor Tomi - eltelt idő: 467 ms
+2026-07-12 11:22:43,466 | INFO | on_reset: lap elmentve – lap_no=27, time_ms=467
+2026-07-12 11:22:45,533 | INFO | on_reset: András - eltelt idő: 421 ms
+2026-07-12 11:22:45,541 | INFO | on_reset: lap elmentve – lap_no=60, time_ms=421
+2026-07-12 11:23:27,871 | INFO | on_reset: Ricsi - eltelt idő: 509 ms
+2026-07-12 11:23:27,881 | INFO | on_reset: lap elmentve – lap_no=72, time_ms=509
+2026-07-12 11:30:09,912 | INFO | on_reset: Fodor Tomi - eltelt idő: 446 ms
+2026-07-12 11:30:09,918 | INFO | on_reset: lap elmentve – lap_no=28, time_ms=446
+2026-07-12 11:30:11,768 | INFO | on_reset: András - eltelt idő: 446 ms
+2026-07-12 11:30:11,775 | INFO | on_reset: lap elmentve – lap_no=61, time_ms=446
+2026-07-12 11:33:02,737 | INFO | Start beállítás: rider_now=7, rider_next=7
+2026-07-12 11:33:42,430 | INFO | on_reset: Ricsi - eltelt idő: 614 ms
+2026-07-12 11:33:42,439 | INFO | on_reset: lap elmentve – lap_no=73, time_ms=614
+2026-07-12 11:33:42,446 | INFO | Stop utáni váltás: rider_now=6, rider_next=5
+2026-07-12 11:37:44,286 | INFO | on_reset: Fodor Tomi - eltelt idő: 454 ms
+2026-07-12 11:37:44,301 | INFO | on_reset: lap elmentve – lap_no=29, time_ms=454
+2026-07-12 11:37:44,307 | INFO | Stop utáni váltás: rider_now=13, rider_next=8
+2026-07-12 11:37:47,304 | INFO | on_reset: András - eltelt idő: 455 ms
+2026-07-12 11:37:47,313 | INFO | on_reset: lap elmentve – lap_no=62, time_ms=455
+2026-07-12 11:45:25,388 | INFO | on_reset: Viktor - eltelt idő: 461 ms
+2026-07-12 11:45:25,413 | INFO | on_reset: lap elmentve – lap_no=22, time_ms=461
+2026-07-12 11:45:33,492 | INFO | on_reset: András - eltelt idő: 466 ms
+2026-07-12 11:45:33,500 | INFO | on_reset: lap elmentve – lap_no=63, time_ms=466
+2026-07-12 11:45:50,436 | INFO | on_reset: Karcsi - eltelt idő: 767 ms
+2026-07-12 11:45:50,445 | INFO | on_reset: lap elmentve – lap_no=52, time_ms=767
+2026-07-12 11:46:46,292 | INFO | on_reset: Réka - eltelt idő: 783 ms
+2026-07-12 11:46:46,304 | INFO | on_reset: lap elmentve – lap_no=29, time_ms=783
+2026-07-12 11:47:51,977 | INFO | on_reset: Viktor - eltelt idő: 146 ms
+2026-07-12 11:47:51,987 | INFO | on_reset: lap elmentve – lap_no=23, time_ms=146
+2026-07-12 11:47:52,240 | INFO | on_reset: Viktor - eltelt idő: 0 ms
+2026-07-12 11:47:52,247 | INFO | on_reset: lap elmentve – lap_no=24, time_ms=0
+2026-07-12 11:53:12,180 | INFO | on_reset: Viktor - eltelt idő: 319 ms
+2026-07-12 11:53:12,187 | INFO | on_reset: lap elmentve – lap_no=25, time_ms=319
+2026-07-12 11:53:17,019 | INFO | on_reset: András - eltelt idő: 463 ms
+2026-07-12 11:53:17,027 | INFO | on_reset: lap elmentve – lap_no=64, time_ms=463
+2026-07-12 11:58:24,738 | INFO | on_reset: Karcsi - eltelt idő: 754 ms
+2026-07-12 11:58:24,746 | INFO | on_reset: lap elmentve – lap_no=53, time_ms=754
+2026-07-12 11:58:49,067 | INFO | on_reset: Réka - eltelt idő: 722 ms
+2026-07-12 11:58:49,076 | INFO | on_reset: lap elmentve – lap_no=30, time_ms=722
+2026-07-12 12:00:58,891 | INFO | on_reset: Viktor - eltelt idő: 466 ms
+2026-07-12 12:00:58,898 | INFO | on_reset: lap elmentve – lap_no=26, time_ms=466
+2026-07-12 12:00:58,906 | INFO | Stop utáni váltás: rider_now=8, rider_next=9
+2026-07-12 12:01:05,677 | INFO | on_reset: András - eltelt idő: 468 ms
+2026-07-12 12:01:05,687 | INFO | on_reset: lap elmentve – lap_no=65, time_ms=468
+2026-07-12 12:01:05,694 | INFO | Stop utáni váltás: rider_now=1, rider_next=2
+2026-07-12 12:08:14,698 | INFO | on_reset: Barna - eltelt idő: 435 ms
+2026-07-12 12:08:14,707 | INFO | on_reset: lap elmentve – lap_no=37, time_ms=435
+2026-07-12 12:10:11,178 | INFO | on_kill: Karcsi - eltelt idő: 706 ms
+2026-07-12 12:10:11,189 | INFO | on_kill: lap elmentve – lap_no=54, time_ms=706
+2026-07-12 12:10:21,417 | INFO | on_reset: Réka - eltelt idő: 692 ms
+2026-07-12 12:10:21,433 | INFO | on_reset: lap elmentve – lap_no=31, time_ms=692
+2026-07-12 12:10:21,443 | INFO | Stop utáni váltás: rider_now=5, rider_next=6
+2026-07-12 12:11:01,147 | INFO | on_reset: Kókusz - eltelt idő: 595 ms
+2026-07-12 12:11:01,155 | INFO | on_reset: lap elmentve – lap_no=27, time_ms=595
+2026-07-12 12:15:24,634 | INFO | on_reset: Barna - eltelt idő: 429 ms
+2026-07-12 12:15:24,642 | INFO | on_reset: lap elmentve – lap_no=38, time_ms=429
+2026-07-12 12:20:46,928 | INFO | on_reset: Ricsi - eltelt idő: 625 ms
+2026-07-12 12:20:46,935 | INFO | on_reset: lap elmentve – lap_no=74, time_ms=625
+2026-07-12 12:20:49,474 | INFO | on_reset: Kókusz - eltelt idő: 588 ms
+2026-07-12 12:20:49,486 | INFO | on_reset: lap elmentve – lap_no=28, time_ms=588
+2026-07-12 12:22:25,858 | INFO | on_reset: Barna - eltelt idő: 421 ms
+2026-07-12 12:22:25,869 | INFO | on_reset: lap elmentve – lap_no=39, time_ms=421
+2026-07-12 12:29:30,487 | INFO | on_reset: Barna - eltelt idő: 424 ms
+2026-07-12 12:29:30,497 | INFO | on_reset: lap elmentve – lap_no=40, time_ms=424
+2026-07-12 12:30:38,010 | INFO | on_reset: Kókusz - eltelt idő: 588 ms
+2026-07-12 12:30:38,020 | INFO | on_reset: lap elmentve – lap_no=29, time_ms=588
+2026-07-12 12:30:38,027 | INFO | Stop utáni váltás: rider_now=4, rider_next=1
+2026-07-12 12:30:40,438 | INFO | on_reset: Ricsi - eltelt idő: 593 ms
+2026-07-12 12:30:40,454 | INFO | on_reset: lap elmentve – lap_no=75, time_ms=593
+2026-07-12 12:31:04,815 | INFO | Start beállítás: rider_now=7, rider_next=7
+2026-07-12 12:36:40,211 | INFO | on_reset: Barna - eltelt idő: 429 ms
+2026-07-12 12:36:40,222 | INFO | on_reset: lap elmentve – lap_no=41, time_ms=429
+2026-07-12 12:36:40,228 | INFO | Stop utáni váltás: rider_now=9, rider_next=10
+2026-07-12 12:38:39,001 | INFO | on_reset: Karcsi - eltelt idő: 454 ms
+2026-07-12 12:38:39,010 | INFO | on_reset: lap elmentve – lap_no=55, time_ms=454
+2026-07-12 12:39:25,909 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 527 ms
+2026-07-12 12:39:25,918 | INFO | on_reset: lap elmentve – lap_no=44, time_ms=527
+2026-07-12 12:39:29,485 | INFO | on_reset: Ricsi - eltelt idő: 529 ms
+2026-07-12 12:39:29,493 | INFO | on_reset: lap elmentve – lap_no=76, time_ms=529
+2026-07-12 12:43:48,191 | INFO | on_reset: Marci - eltelt idő: 427 ms
+2026-07-12 12:43:48,200 | INFO | on_reset: lap elmentve – lap_no=33, time_ms=427
+2026-07-12 12:48:18,427 | INFO | on_reset: Kecskés Zsolt - eltelt idő: 532 ms
+2026-07-12 12:48:18,438 | INFO | on_reset: lap elmentve – lap_no=45, time_ms=532
+2026-07-12 12:49:21,411 | INFO | on_reset: Karcsi - eltelt idő: 642 ms
+2026-07-12 12:49:21,421 | INFO | on_reset: lap elmentve – lap_no=56, time_ms=642
+2026-07-12 12:49:24,957 | INFO | on_kill: Ricsi - eltelt idő: 595 ms
+2026-07-12 12:49:24,966 | INFO | on_kill: lap elmentve – lap_no=77, time_ms=595
+2026-07-12 12:50:54,253 | INFO | on_reset: Marci - eltelt idő: 426 ms
+2026-07-12 12:50:54,260 | INFO | on_reset: lap elmentve – lap_no=34, time_ms=426
+2026-07-12 12:58:16,938 | INFO | on_reset: Marci - eltelt idő: 442 ms
+2026-07-12 12:58:16,946 | INFO | on_reset: lap elmentve – lap_no=35, time_ms=442
+2026-07-12 13:00:15,547 | INFO | on_kill: Kecskés Zsolt - eltelt idő: 717 ms
+2026-07-12 13:00:15,556 | INFO | on_kill: lap elmentve – lap_no=46, time_ms=717
+2026-07-12 13:00:18,782 | INFO | on_kill: Marci - eltelt idő: 121 ms
+2026-07-12 13:00:18,793 | INFO | on_kill: lap elmentve – lap_no=36, time_ms=121
+2026-07-12 13:00:21,682 | INFO | on_kill: Ricsi - eltelt idő: 0 ms
+2026-07-12 13:00:21,691 | INFO | on_kill: lap elmentve – lap_no=78, time_ms=0
+2026-07-12 13:00:23,963 | INFO | on_kill: Karcsi - eltelt idő: 662 ms
+2026-07-12 13:00:23,971 | INFO | on_kill: lap elmentve – lap_no=57, time_ms=662

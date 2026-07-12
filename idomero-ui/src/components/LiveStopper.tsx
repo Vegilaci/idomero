@@ -20,10 +20,10 @@ export default function LiveStopper({
   teamId: number;
   teamName: string;
 }) {
-//admin state ell
+  //admin state ell
   const [admin, setIsAdmin] = useState<boolean>(false);
 
-useEffect(() => {
+  useEffect(() => {
     function refreshAdminState() {
       setIsAdmin(isAdmin());
     }
@@ -41,19 +41,19 @@ useEffect(() => {
     };
   }, []);
 
-//admin state ell 
+  //admin state ell
 
   const [data, setData] = useState<any>(null);
   const [csapat, setCsapat] = useState<any>(null);
   const [aktivTekero, setAktivTekero] = useState<number | null>(null);
-  const [tekerokor,setTekerokor] = useState<number | null>(null);
+  const [tekerokor, setTekerokor] = useState<number | null>(null);
   const [connectionStatus, setConnectionStatus] =
     useState<ConnectionStatus>("connecting");
 
   const [membersWithLaps, setMembersWithLaps] = useState<Member[]>([]);
 
   const wsRef = useRef<WebSocket | null>(null);
-  
+
   const [isKilled, setIsKilled] = useState(false);
   const stopMenuRef = useRef<Menu>(null);
 
@@ -66,8 +66,7 @@ useEffect(() => {
 
     if (Array.isArray(teamData.members)) {
       const activeMember = teamData.members.find(
-        (member: any) =>
-          member?.is_active === true || member?.active === true,
+        (member: any) => member?.is_active === true || member?.active === true,
       );
 
       if (typeof activeMember?.id === "number") {
@@ -77,8 +76,7 @@ useEffect(() => {
 
     return null;
   }
-  
- 
+
   function hasRefreshEvent(payload: any): boolean {
     return (
       payload?.event === "refresh" ||
@@ -107,17 +105,13 @@ useEffect(() => {
     const activeRiderId = getActiveRiderId(teamData);
     setTekerokor(teamData.rider_lap);
 
-    setAktivTekero(
-      typeof activeRiderId === "number" ? activeRiderId : null,
-    );
+    setAktivTekero(typeof activeRiderId === "number" ? activeRiderId : null);
   }
 
   useEffect(() => {
     setConnectionStatus("connecting");
 
-    const ws = new WebSocket(
-      `ws://${Global_ip()}:8000/ws/team/${teamId}`,
-    );
+    const ws = new WebSocket(`ws://${Global_ip()}:8000/ws/team/${teamId}`);
 
     wsRef.current = ws;
 
@@ -136,13 +130,10 @@ useEffect(() => {
             elapsed_s: 0,
           });
           return;
-}
+        }
         if (hasRefreshEvent(parsed)) {
           refreshTeamAndActiveRider().catch((error) => {
-            console.error(
-              "Nem sikerült a csapatadatok frissítése",
-              error,
-            );
+            console.error("Nem sikerült a csapatadatok frissítése", error);
           });
 
           return;
@@ -189,10 +180,7 @@ useEffect(() => {
   }, [teamId]);
 
   async function startLiveStopper(action: string) {
-    if (
-      !wsRef.current ||
-      wsRef.current.readyState !== WebSocket.OPEN
-    ) {
+    if (!wsRef.current || wsRef.current.readyState !== WebSocket.OPEN) {
       console.warn("A WebSocket kapcsolat még nem áll készen");
       return;
     }
@@ -231,9 +219,7 @@ useEffect(() => {
     }
   }
 
-  const members = Array.isArray(csapat?.members)
-    ? csapat.members
-    : [];
+  const members = Array.isArray(csapat?.members) ? csapat.members : [];
 
   const activeMemberWithLaps = membersWithLaps.find(
     (member) => member.id === aktivTekero,
@@ -241,50 +227,44 @@ useEffect(() => {
 
   const previousLap =
     activeMemberWithLaps?.laps?.length > 0
-      ? [...activeMemberWithLaps.laps].sort(
-          (a, b) => b.lap_no - a.lap_no,
-        )[0]
+      ? [...activeMemberWithLaps.laps].sort((a, b) => b.lap_no - a.lap_no)[0]
       : null;
 
   const isConnected = connectionStatus === "connected";
   const isRunning = data?.is_running === true;
 
-function getStatusLabel() {
-  if (isKilled) {
-    return "Lezárva";
+  function getStatusLabel() {
+    if (isKilled) {
+      return "Lezárva";
+    }
+
+    if (connectionStatus === "connecting") {
+      return "Kapcsolódás";
+    }
+
+    if (connectionStatus === "error") {
+      return "Kapcsolati hiba";
+    }
+
+    if (connectionStatus === "disconnected") {
+      return "Nincs kapcsolat";
+    }
+    if (isKilled) {
+      return "Lezárva";
+    }
+
+    return isRunning ? "Aktív" : "Várakozik";
   }
 
-  if (connectionStatus === "connecting") {
-    return "Kapcsolódás";
-  }
-
-  if (connectionStatus === "error") {
-    return "Kapcsolati hiba";
-  }
-
-  if (connectionStatus === "disconnected") {
-    return "Nincs kapcsolat";
-  }
-  if (isKilled) {
-  return "Lezárva";
-}
-
-  return isRunning ? "Aktív" : "Várakozik";
-}
-  
   const cardStatus =
-  connectionStatus === "error" ||
-  connectionStatus === "disconnected"
-    ? "error"
-    : isRunning
-      ? "running"
-      : "waiting";
-
+    connectionStatus === "error" || connectionStatus === "disconnected"
+      ? "error"
+      : isRunning
+        ? "running"
+        : "waiting";
 
   return (
-    <article
-      className={`team-timer-card team-timer-card-${cardStatus}`}
-    >
+    <article className={`team-timer-card team-timer-card-${cardStatus}`}>
       <header className="team-card-header">
         <div className="team-title-group">
           <div className="team-number">
@@ -295,9 +275,7 @@ function getStatusLabel() {
         </div>
 
         <span
-          className={`team-status ${
-            isRunning ? "team-status-running" : ""
-          }`}
+          className={`team-status ${isRunning ? "team-status-running" : ""}`}
         >
           <span className="team-status-dot" />
           {getStatusLabel()}
@@ -332,14 +310,12 @@ function getStatusLabel() {
 
                 <div className="member-stable-content">
                   {isActive && (
-                    <span className="active-rider-label">
-                      Jelenleg pályán
-                    </span>
+                    <span className="active-rider-label">Jelenleg pályán</span>
                   )}
 
-                  <strong className="member-stable-name">
-                    {member.name}
-                  </strong>
+                  <strong className="member-stable-name">{member.name}</strong>
+
+                  <strong>{member.rajt_szam}</strong>
                 </div>
 
                 {isActive && (
@@ -361,9 +337,7 @@ function getStatusLabel() {
       </section>
       <section className="lap-reference-panel">
         <div className="lap-reference-item">
-          <span className="lap-reference-label">
-            Aktuális idő
-          </span>
+          <span className="lap-reference-label">Aktuális idő</span>
 
           <strong className="lap-reference-value lap-reference-current">
             {secondsToHHMMSS(
@@ -373,85 +347,77 @@ function getStatusLabel() {
         </div>
 
         <div className="lap-reference-item">
-          <span className="lap-reference-label">
-            Előző kör
-          </span>
+          <span className="lap-reference-label">Előző kör</span>
 
           <strong className="lap-reference-value">
-            {previousLap
-              ? secondsToHHMMSS(previousLap.time_ms)
-              : "--:--:--"}
+            {previousLap ? secondsToHHMMSS(previousLap.time_ms) : "--:--:--"}
           </strong>
         </div>
       </section>
       <footer className="team-card-footer">
         <div className="team-actions">
-          {admin ? 
-          (<>
-                    <Button
-            label="Start"
-            icon="pi pi-play"
-            onClick={() => startLiveStopper("start")}
-            disabled={!isConnected || isRunning}
-            className="team-action-button team-action-start"
-          />
+          {admin ? (
+            <>
+              <Button
+                label="Start"
+                icon="pi pi-play"
+                onClick={() => startLiveStopper("start")}
+                disabled={!isConnected || isRunning}
+                className="team-action-button team-action-start"
+              />
 
-          <Button
-            label="Köridő"
-            icon="pi pi-replay"
-            onClick={() => startLiveStopper("reset")}
-            disabled={!isConnected}
-            outlined
-            className="team-action-button"
-          />
+              <Button
+                label="Köridő"
+                icon="pi pi-replay"
+                onClick={() => startLiveStopper("reset")}
+                disabled={!isConnected}
+                outlined
+                className="team-action-button"
+              />
 
-          <div className="team-stop-control">
-            <Button
-              label="Stop"
-              icon="pi pi-stop"
-              onClick={() => startLiveStopper("stop")}
-              disabled={!isConnected || !isRunning || isKilled}
-              severity="danger"
-              outlined
-              className="team-action-button team-stop-main"
-            />
+              <div className="team-stop-control">
+                <Button
+                  label="Stop"
+                  icon="pi pi-stop"
+                  onClick={() => startLiveStopper("stop")}
+                  disabled={!isConnected || !isRunning || isKilled}
+                  severity="danger"
+                  outlined
+                  className="team-action-button team-stop-main"
+                />
 
-            <Menu
-              ref={stopMenuRef}
-              popup
-              className="team-stop-menu"
-              model={[
-                {
-                  label: "Full stop",
-                  icon: "pi pi-power-off",
-                  command: () => startLiveStopper("kill"),
-                  disabled: !isConnected || isKilled,
-                },
-              ]}
-            />
+                <Menu
+                  ref={stopMenuRef}
+                  popup
+                  className="team-stop-menu"
+                  model={[
+                    {
+                      label: "Full stop",
+                      icon: "pi pi-power-off",
+                      command: () => startLiveStopper("kill"),
+                      disabled: !isConnected || isKilled,
+                    },
+                  ]}
+                />
 
-            <Button
-              icon="pi pi-chevron-down"
-              onClick={(event) => stopMenuRef.current?.toggle(event)}
-              disabled={!isConnected || isKilled}
-              severity="danger"
-              outlined
-              className="team-stop-dropdown "
-              aria-label="További stop műveletek"
-            />
-          </div>
-          
-          </>)
-          : ""}
+                <Button
+                  icon="pi pi-chevron-down"
+                  onClick={(event) => stopMenuRef.current?.toggle(event)}
+                  disabled={!isConnected || isKilled}
+                  severity="danger"
+                  outlined
+                  className="team-stop-dropdown "
+                  aria-label="További stop műveletek"
+                />
+              </div>
+            </>
+          ) : (
+            ""
+          )}
         </div>
 
-
-
-        
         <div className="team-connection">
-          <span
-            className={`connection-dot connection-${connectionStatus}`}
-          />
+          <span className={`connection-dot connection-${connectionStatus}`} />
 
           {connectionStatus === "connected"
             ? "Élő kapcsolat"
