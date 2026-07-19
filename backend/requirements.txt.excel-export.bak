@@ -4,4 +4,3 @@ SQLAlchemy
 aiosqlite
 databases
 python-multipart
-openpyxl

@@ -5,11 +5,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.database import Base, engine
 from app.websocket_manager import WebSocketManager
 from app.routers import teams, members, laps
-from app.routers import export_members
 from app.routers.ws_docs import router as ws_docs_router
 from app.routers.ws_timer import router as ws_timer_router
 
-Base.metadata.create_all(bind=engine)  # đź”Ą automatikus DB lĂ©trehozĂˇs
+Base.metadata.create_all(bind=engine)  # 🔥 automatikus DB létrehozás
 
 app = FastAPI(
     title="Realtime Race Timer API",
@@ -31,7 +30,6 @@ app.add_middleware(
 app.include_router(teams.router)
 app.include_router(members.router)
 app.include_router(laps.router)
-app.include_router(export_members.router)
 app.include_router(ws_docs_router)
 app.include_router(ws_timer_router)
 
