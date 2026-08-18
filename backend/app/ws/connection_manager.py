@@ -1,7 +1,7 @@
 import asyncio
 import time
 import json
-from on_click_event.switch_active_riders import switch_active_riders_onStart,switch_on_stop, on_reset
+from on_click_event.switch_active_riders import switch_active_riders_onStart, switch_on_stop, on_reset, on_kill
 from typing import Dict, List, Optional
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
@@ -166,6 +166,10 @@ class ConnectionManager:
         })
 
         await self.start_stopwatch(team_id, switch_active_rider=False)
+    
+
+
+
 
     async def reset_stopwatch(self, team_id: str):
         if team_id not in self.stopwatches:
@@ -202,10 +206,19 @@ class ConnectionManager:
 
         # Reset után azonnal újraindítjuk a stoppert.
         await self.start_stopwatch(team_id, switch_active_rider=False)
+
+        
     async def kill_stopwatch(self, team_id: str):
         sw = self.stopwatches.get(team_id)
         if not sw:
             return
+
+        if sw.running:
+            elapsed_before_kill = time.monotonic() - sw.start_time + sw.elapsed
+        else:
+            elapsed_before_kill = sw.elapsed
+
+        on_kill(int(team_id), int(elapsed_before_kill))
 
         sw.running = False
         sw.elapsed = 0.0

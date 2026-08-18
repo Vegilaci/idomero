@@ -12,6 +12,7 @@ class Team(Base):
     members = relationship("Member", back_populates="team", cascade="all, delete")
     rider_now = Column(Integer, default=0)
     rider_next = Column(Integer, default=0)
+    rider_lap = Column(Integer, default=0)
 
 
 class Member(Base):

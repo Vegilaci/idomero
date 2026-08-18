@@ -5,11 +5,7 @@ import type { InputNumberValueChangeEvent } from "primereact/inputnumber";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
 
-import {
-  GetVersenyzo,
-  Add_versenyzo,
-  ExportVersenyzokExcel,
-} from "../api/versenyzok";
+import { GetVersenyzo, Add_versenyzo } from "../api/versenyzok";
 import { getTeamSummary } from "../api/teams";
 
 import type { TeamSummary } from "../types/teams";
@@ -53,7 +49,6 @@ export default function Versenyzok() {
   const [racers, setRacers] = useState<Member[]>([]);
   const [teams, setTeams] = useState<TeamSummary[]>([]);
   const [loading, setLoading] = useState(true);
-  const [exportLoading, setExportLoading] = useState(false);
   const [expandedRacers, setExpandedRacers] = useState<number[]>([]);
 
   const loadData = async () => {
@@ -68,7 +63,7 @@ export default function Versenyzok() {
       setRacers(racersData);
       setTeams(teamsData);
     } catch (error) {
-      console.error("VersenyzĹ‘k betĂ¶ltĂ©se sikertelen", error);
+      console.error("Versenyzők betöltése sikertelen", error);
     } finally {
       setLoading(false);
     }
@@ -144,20 +139,10 @@ export default function Versenyzok() {
 
       await loadData();
     } catch (error) {
-      console.error("VersenyzĹ‘ mentĂ©se sikertelen", error);
+      console.error("Versenyző mentése sikertelen", error);
     }
   };
 
-  const handleExcelExport = async () => {
-    try {
-      setExportLoading(true);
-      await ExportVersenyzokExcel();
-    } catch (error) {
-      console.error("Excel export sikertelen", error);
-    } finally {
-      setExportLoading(false);
-    }
-  };
   const toggleRacer = (racerId: number) => {
     setExpandedRacers((current) =>
       current.includes(racerId)
@@ -170,18 +155,18 @@ export default function Versenyzok() {
     <section className="racers-page">
       <header className="racers-page-header">
         <div>
-          <span className="racers-page-eyebrow">NevezĂ©si lista</span>
+          <span className="racers-page-eyebrow">Nevezési lista</span>
 
-          <h1>VersenyzĹ‘k</h1>
+          <h1>Versenyzők</h1>
 
-          <p>VersenyzĹ‘k, rajtszĂˇmok, csapatok Ă©s mĂ©rt kĂ¶rĂ¶k ĂˇttekintĂ©se.</p>
+          <p>Versenyzők, rajtszámok, csapatok és mért körök áttekintése.</p>
         </div>
 
         <div className="racers-page-total">
           <i className="pi pi-user" />
 
           <div>
-            <span>Ă–sszes versenyzĹ‘</span>
+            <span>Összes versenyző</span>
             <strong>{racers.length}</strong>
           </div>
         </div>
@@ -194,24 +179,16 @@ export default function Versenyzok() {
           <InputText
             value={search}
             onChange={(event) => setSearch(event.target.value)}
-            placeholder="KeresĂ©s nĂ©vre, csapatra vagy rajtszĂˇmra"
+            placeholder="Keresés névre, csapatra vagy rajtszámra"
           />
         </div>
-        <Button
-          label="Excel export"
-          icon="pi pi-file-excel"
-          severity="success"
-          outlined
-          loading={exportLoading}
-          onClick={handleExcelExport}
-        />
         {admin ? (
           <>
             <div className="racers-create">
               <InputText
                 value={name}
                 onChange={(event) => setName(event.target.value)}
-                placeholder="VersenyzĹ‘ neve"
+                placeholder="Versenyző neve"
               />
 
               <InputNumber
@@ -221,7 +198,7 @@ export default function Versenyzok() {
                 }
                 useGrouping={false}
                 min={1}
-                placeholder="RajtszĂˇm"
+                placeholder="Rajtszám"
               />
 
               <Dropdown
@@ -233,7 +210,7 @@ export default function Versenyzok() {
               />
 
               <Button
-                label="HozzĂˇadĂˇs"
+                label="Hozzáadás"
                 icon="pi pi-plus"
                 onClick={handleSave}
                 disabled={!name.trim() || !selectedTeam || startNumber <= 0}
@@ -249,13 +226,13 @@ export default function Versenyzok() {
         {loading ? (
           <div className="racers-empty-state">
             <span className="loader" />
-            <p>VersenyzĹ‘k betĂ¶ltĂ©se...</p>
+            <p>Versenyzők betöltése...</p>
           </div>
         ) : filteredRacers.length === 0 ? (
           <div className="racers-empty-state">
             <i className="pi pi-search" />
-            <strong>Nincs talĂˇlat</strong>
-            <p>A megadott keresĂ©sre nem talĂˇlhatĂł versenyzĹ‘.</p>
+            <strong>Nincs találat</strong>
+            <p>A megadott keresésre nem található versenyző.</p>
           </div>
         ) : (
           filteredRacers.map((racer) => {
@@ -288,12 +265,12 @@ export default function Versenyzok() {
 
                   <div className="racer-card-summary">
                     <div>
-                      <span>KĂ¶rĂ¶k</span>
+                      <span>Körök</span>
                       <strong>{racer.laps.length}</strong>
                     </div>
 
                     <div>
-                      <span>Ă–sszidĹ‘</span>
+                      <span>Összidő</span>
                       <strong>{secondsToHHMMSS(getTotalTime(racer))}</strong>
                     </div>
 
@@ -314,17 +291,17 @@ export default function Versenyzok() {
                       </div>
 
                       <div>
-                        <span>MĂ©rt kĂ¶rĂ¶k</span>
+                        <span>Mért körök</span>
                         <strong>{racer.laps.length}</strong>
                       </div>
 
                       <div>
-                        <span> Ătlag</span>
+                        <span> Átlag</span>
                         <strong>{secondsToHHMMSS(get_avg(racer))}</strong>
                       </div>
 
                       <div>
-                        <span>Legjobb kĂ¶r</span>
+                        <span>Legjobb kör</span>
                         <strong>
                           {bestLap
                             ? secondsToHHMMSS(bestLap.time_ms)
@@ -333,7 +310,7 @@ export default function Versenyzok() {
                       </div>
 
                       <div>
-                        <span>Ă–sszidĹ‘</span>
+                        <span>Összidő</span>
                         <strong>{secondsToHHMMSS(getTotalTime(racer))}</strong>
                       </div>
                     </div>
@@ -342,23 +319,23 @@ export default function Versenyzok() {
                       <div className="racer-no-laps">
                         <i className="pi pi-stopwatch" />
                         <span>
-                          Ehhez a versenyzĹ‘hĂ¶z mĂ©g nincs rĂ¶gzĂ­tett kĂ¶r.
+                          Ehhez a versenyzőhöz még nincs rögzített kör.
                         </span>
                       </div>
                     ) : (
                       <div className="racer-laps-table">
                         <div className="racer-laps-table-header">
-                          <span>KĂ¶r</span>
-                          <span>IdĹ‘</span>
+                          <span>Kör</span>
+                          <span>Idő</span>
                         </div>
 
                         {[...racer.laps]
                           .sort((a, b) => a.lap_no - b.lap_no)
                           .map((lap) => (
                             <div className="racer-lap-row" key={lap.id}>
-                              <span data-label="KĂ¶r">{lap.lap_no}. kĂ¶r</span>
+                              <span data-label="Kör">{lap.lap_no}. kör</span>
 
-                              <strong data-label="IdĹ‘">
+                              <strong data-label="Idő">
                                 {secondsToHHMMSS(lap.time_ms)}
                               </strong>
                             </div>
